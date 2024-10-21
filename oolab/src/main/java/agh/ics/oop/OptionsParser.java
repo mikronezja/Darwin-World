@@ -5,7 +5,7 @@ import agh.ics.oop.model.MoveDirections;
 import java.util.Arrays;
 
 public class OptionsParser {
-    public static MoveDirections[] translatingDirections(String[] args) {
+    public static MoveDirections[] translateDirections(String[] args) {
         MoveDirections[] directions = new MoveDirections[args.length] ;
         int i = 0;
         for (String arg : args) {
