@@ -11,7 +11,7 @@ public class World {
         System.out.println("system zakończył działanie");
     }
 
-    public static void run(MoveDirections[] directions) {
+    private static void run(MoveDirections[] directions) {
         System.out.println("Start");
         for (MoveDirections command : directions) {
             switch (command) {
