@@ -6,12 +6,12 @@ public class World {
 
     public static void main(String[] args) {
         System.out.println("system wystartował");
-        MoveDirections[] directions = OptionsParser.translatingDirections(args);
+        MoveDirections[] directions = OptionsParser.translateDirections(args);
         run(directions);
         System.out.println("system zakończył działanie");
     }
 
-    public static void run(MoveDirections[] directions) {
+    private static void run(MoveDirections[] directions) {
         System.out.println("Start");
         for (MoveDirections command : directions) {
             switch (command) {
