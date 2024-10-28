@@ -1,5 +1,6 @@
 package agh.ics.oop;
 
+import agh.ics.oop.model.Animal;
 import agh.ics.oop.model.MoveDirections;
 import agh.ics.oop.model.Vector2d;
 
@@ -16,6 +17,9 @@ public class World {
         Vector2d position2 = new Vector2d(-2,1);
         System.out.println(position2);
         System.out.println(position1.add(position2));
+
+        Animal krowa = new Animal();
+        System.out.println(krowa.getPosition().toString());
     }
 
     private static void run(MoveDirections[] directions) {
