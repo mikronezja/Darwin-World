@@ -4,11 +4,13 @@ import agh.ics.oop.model.Animal;
 import agh.ics.oop.model.MoveDirections;
 import agh.ics.oop.model.Vector2d;
 
+import java.util.List;
+
 public class World {
 
     public static void main(String[] args) {
         System.out.println("system wystartował");
-        MoveDirections[] directions = OptionsParser.translateDirections(args);
+        List<MoveDirections> directions = OptionsParser.translateDirections(args);
         run(directions);
         System.out.println("system zakończył działanie");
 
@@ -20,9 +22,14 @@ public class World {
 
         Animal krowa = new Animal();
         System.out.println(krowa.getPosition().toString());
+
+        List<MoveDirections> directionsToSimulation = OptionsParser.translateDirections(args);
+        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
+        Simulation simulation = new Simulation(positions, directionsToSimulation);
+        simulation.run();
     }
 
-    private static void run(MoveDirections[] directions) {
+    private static void run(List<MoveDirections> directions) {
         System.out.println("Start");
         for (MoveDirections command : directions) {
             switch (command) {
