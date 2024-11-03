@@ -3,7 +3,6 @@ package agh.ics.oop;
 import agh.ics.oop.model.MoveDirections;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class OptionsParser {
@@ -16,7 +15,6 @@ public class OptionsParser {
                 case "r" -> moveDirections.add(MoveDirections.RIGHT);
                 case "l" -> moveDirections.add(MoveDirections.LEFT);
             }
-
         }
         return moveDirections;
     }

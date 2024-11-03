@@ -21,11 +21,11 @@ public class World {
         System.out.println(position1.add(position2));
 
         Animal krowa = new Animal();
-        System.out.println(krowa.getPosition().toString());
+        System.out.println(krowa.toString());
 
         List<MoveDirections> directionsToSimulation = OptionsParser.translateDirections(args);
-        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directionsToSimulation);
+        List<Vector2d> positionsToSimulation = List.of(new Vector2d(2,2), new Vector2d(3,4));
+        Simulation simulation = new Simulation(positionsToSimulation, directionsToSimulation);
         simulation.run();
     }
 

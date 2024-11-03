@@ -7,14 +7,15 @@ public class Animal {
     private static final Vector2d UPPER_RIGHT_MAP_CORNER = new Vector2d(4,4);
     private static final Vector2d LOWER_LEFT_MAP_CORNER = new Vector2d(0,0);
 
-    public Animal(){}
+    public Animal(){
+    }
 
     public Animal(Vector2d position){
         this.position = position;
     }
 
     public String toString(){
-        return "Pozycja: %s, Kierunek: %s.".formatted(position.toString(),direction.toString());
+        return "Pozycja: %s, Orientacja: %s".formatted(position.toString(),direction.toString());
     }
 
     public boolean isAt(Vector2d position){
@@ -27,17 +28,21 @@ public class Animal {
             case LEFT -> this.direction = this.direction.previous();
             case FORWARD -> {
                 Vector2d possibleMove = this.position.add(this.direction.toUnitVector());
-                if (possibleMove.precedes(UPPER_RIGHT_MAP_CORNER) && possibleMove.follows(LOWER_LEFT_MAP_CORNER)){
+                if (ifMovePossible(possibleMove)){
                     this.position = possibleMove;
                 }
             }
             case BACKWARD -> {
                 Vector2d possibleMove = this.position.subtract(this.direction.toUnitVector());
-                if (possibleMove.precedes(UPPER_RIGHT_MAP_CORNER) && possibleMove.follows(LOWER_LEFT_MAP_CORNER)){
+                if (ifMovePossible(possibleMove)){
                     this.position = possibleMove;
                 }
             }
         }
+    }
+
+    private boolean ifMovePossible(Vector2d position){
+        return position.precedes(UPPER_RIGHT_MAP_CORNER) && position.follows(LOWER_LEFT_MAP_CORNER);
     }
 
     public MapDirections getDirection() {
