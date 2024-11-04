@@ -3,11 +3,12 @@ package agh.ics.oop.model;
 public class Animal {
 
     private MapDirections direction = MapDirections.NORTH;
-    private Vector2d position = new Vector2d(2,2);
+    private Vector2d position;
     private static final Vector2d UPPER_RIGHT_MAP_CORNER = new Vector2d(4,4);
     private static final Vector2d LOWER_LEFT_MAP_CORNER = new Vector2d(0,0);
 
     public Animal(){
+        this(new Vector2d(2,2));
     }
 
     public Animal(Vector2d position){
