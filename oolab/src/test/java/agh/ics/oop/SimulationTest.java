@@ -1,9 +1,6 @@
 package agh.ics.oop;
 
-import agh.ics.oop.model.Animal;
-import agh.ics.oop.model.MapDirections;
-import agh.ics.oop.model.MoveDirections;
-import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,11 +8,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 class SimulationTest {
 
+    RectangularMap map = new RectangularMap(5,5);
+
     @Test
     void rotatingRight(){
         List<Vector2d> position = List.of(new Vector2d(2,2));
         List<MoveDirections> direction = List.of(MoveDirections.RIGHT);
-        Simulation simulation = new Simulation(position, direction);
+        Simulation simulation = new Simulation(position, direction, map);
 
         simulation.run();
         assertEquals(MapDirections.EAST, simulation.getAnimals().get(0).getDirection());
@@ -34,7 +33,7 @@ class SimulationTest {
     void rotatingLeft(){
         List<Vector2d> position = List.of(new Vector2d(2,2));
         List<MoveDirections> direction = List.of(MoveDirections.LEFT);
-        Simulation simulation = new Simulation(position, direction);
+        Simulation simulation = new Simulation(position, direction, map);
 
         simulation.run();
         assertEquals(MapDirections.WEST, simulation.getAnimals().get(0).getDirection());
@@ -53,7 +52,7 @@ class SimulationTest {
     void correctMoveForward(){
         List<Vector2d> position = List.of(new Vector2d(2,2));
         List<MoveDirections> direction = List.of(MoveDirections.FORWARD, MoveDirections.RIGHT);
-        Simulation simulation = new Simulation(position, direction);
+        Simulation simulation = new Simulation(position, direction, map);
 
         simulation.run();
         assertEquals(new Vector2d(2,3),simulation.getAnimals().get(0).getPosition());
@@ -72,7 +71,7 @@ class SimulationTest {
     void correctMoveBackward(){
         List<Vector2d> position = List.of(new Vector2d(2,2));
         List<MoveDirections> direction = List.of(MoveDirections.BACKWARD, MoveDirections.RIGHT);
-        Simulation simulation = new Simulation(position, direction);
+        Simulation simulation = new Simulation(position, direction, map);
 
         simulation.run();
         assertEquals(new Vector2d(2,1),simulation.getAnimals().get(0).getPosition());
@@ -96,7 +95,7 @@ class SimulationTest {
         // 2: turn right, forward
         // 3: backward backward
         // 4: turn left, forward
-        Simulation simulation = new Simulation(positions, directions);
+        Simulation simulation = new Simulation(positions, directions, map);
         simulation.run();
         assertEquals(new Vector2d(2,4), simulation.getAnimals().get(0).getPosition());
         assertEquals(new Vector2d(4,2), simulation.getAnimals().get(1).getPosition());
@@ -106,14 +105,14 @@ class SimulationTest {
 
     @Test
     void correctInterpretationOfInputDirection(){
-        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(2,2));
+        List<Vector2d> positions = List.of(new Vector2d(1,2), new Vector2d(3,2));
         String[] arguments = {"f", "ziemniak", "b", "r", "ogórek", "l", "f", "pomarańcza", "f"};
         List<MoveDirections> directions = OptionsParser.translateDirections(arguments);
 
-        Simulation simulation = new Simulation(positions, directions);
+        Simulation simulation = new Simulation(positions, directions, map);
         simulation.run();
 
-        assertEquals(new Vector2d(3,3), simulation.getAnimals().get(0).getPosition());
-        assertEquals(new Vector2d(1,1), simulation.getAnimals().get(1).getPosition());
+        assertEquals(new Vector2d(2,3), simulation.getAnimals().get(0).getPosition());
+        assertEquals(new Vector2d(2,1), simulation.getAnimals().get(1).getPosition());
     }
 }
