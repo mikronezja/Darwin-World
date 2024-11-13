@@ -70,7 +70,7 @@ class RectangularMapTest {
         map.place(raphael);
 
         map.move(leonardo,MoveDirections.FORWARD);
-        
+
         map.move(donatello,MoveDirections.RIGHT);
         map.move(donatello,MoveDirections.FORWARD);
 

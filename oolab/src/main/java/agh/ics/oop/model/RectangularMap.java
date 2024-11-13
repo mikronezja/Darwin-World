@@ -8,12 +8,13 @@ import java.util.Map;
 public class RectangularMap implements WorldMap {
 
     private Map<Vector2d, Animal> animals = new HashMap<>();
-    private final Vector2d UPPER_RIGHT_MAP_CORNER;
-    private final Vector2d LOWER_LEFT_MAP_CORNER = new Vector2d(0, 0);;
+    private final Vector2d upperRightMapCorner;
+    private final Vector2d lowerLeftMapCorner = new Vector2d(0, 0);
     // Szerokość i wysokość mapy to odpowiednio x i y UPPER_RIGHT_MAP_CORNER zwiększone o 1
+    private MapVisualizer visualizer = new MapVisualizer(this);
 
     public RectangularMap(int width, int height) {
-        UPPER_RIGHT_MAP_CORNER = new Vector2d(width-1, height-1);
+        upperRightMapCorner = new Vector2d(width-1, height-1);
     }
 
     @Override
@@ -50,12 +51,12 @@ public class RectangularMap implements WorldMap {
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return position.precedes(UPPER_RIGHT_MAP_CORNER) && position.follows(LOWER_LEFT_MAP_CORNER) && !isOccupied(position);
+        return position.precedes(upperRightMapCorner) && position.follows(lowerLeftMapCorner) && !isOccupied(position);
     }
 
     @Override
     public String toString() {
-        return new MapVisualizer(this).draw(LOWER_LEFT_MAP_CORNER,UPPER_RIGHT_MAP_CORNER);
+        return visualizer.draw(lowerLeftMapCorner,upperRightMapCorner);
     }
 
 }
