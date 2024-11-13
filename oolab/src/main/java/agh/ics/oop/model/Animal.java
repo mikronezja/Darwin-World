@@ -16,41 +16,43 @@ public class Animal {
     }
 
     public String toString(){
-        return "Pozycja: %s, Orientacja: %s".formatted(position.toString(),direction.toString());
+        return "%s".formatted(direction.toString());
     }
 
     public boolean isAt(Vector2d position){
         return this.position.equals(position);
     }
 
-    public void move(MoveDirections direction){
-        switch (direction){
+    public void move(MoveDirections direction, MoveValidator moveValidator){
+        switch (direction) {
             case RIGHT -> this.direction = this.direction.next();
             case LEFT -> this.direction = this.direction.previous();
             case FORWARD -> {
                 Vector2d possibleMove = this.position.add(this.direction.toUnitVector());
-                if (ifMovePossible(possibleMove)){
+                if (moveValidator.canMoveTo(possibleMove)) {
                     this.position = possibleMove;
                 }
             }
             case BACKWARD -> {
                 Vector2d possibleMove = this.position.subtract(this.direction.toUnitVector());
-                if (ifMovePossible(possibleMove)){
+                if (moveValidator.canMoveTo(possibleMove)) {
                     this.position = possibleMove;
                 }
             }
         }
     }
 
-    private boolean ifMovePossible(Vector2d position){
-        return position.precedes(UPPER_RIGHT_MAP_CORNER) && position.follows(LOWER_LEFT_MAP_CORNER);
-    }
-
     public MapDirections getDirection() {
         return direction;
+    }
+    public void setDirection(MapDirections direction) {
+        this.direction=direction;
     }
 
     public Vector2d getPosition() {
         return position;
+    }
+    public void setPosition(Vector2d position) {
+        this.position = position;
     }
 }
