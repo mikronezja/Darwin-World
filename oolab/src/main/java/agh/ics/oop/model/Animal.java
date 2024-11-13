@@ -16,7 +16,7 @@ public class Animal {
     }
 
     public String toString(){
-        return "%s".formatted(direction.toString());
+        return direction.toString();
     }
 
     public boolean isAt(Vector2d position){
@@ -45,14 +45,8 @@ public class Animal {
     public MapDirections getDirection() {
         return direction;
     }
-    public void setDirection(MapDirections direction) {
-        this.direction=direction;
-    }
 
     public Vector2d getPosition() {
         return position;
-    }
-    public void setPosition(Vector2d position) {
-        this.position = position;
     }
 }
