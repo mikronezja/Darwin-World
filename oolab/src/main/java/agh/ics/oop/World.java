@@ -1,9 +1,6 @@
 package agh.ics.oop;
 
-import agh.ics.oop.model.Animal;
-import agh.ics.oop.model.MoveDirections;
-import agh.ics.oop.model.RectangularMap;
-import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.*;
 
 import java.util.List;
 
@@ -31,6 +28,12 @@ public class World {
         System.out.println(map);
         simulation.run();
         System.out.println(map);
+
+        GrassField field = new GrassField(2);
+        Simulation symulacja = new Simulation(positionsToSimulation, directionsToSimulation, field);
+        System.out.println(field);
+        symulacja.run();
+        System.out.println(field);
     }
 
     private static void run(List<MoveDirections> directions) {
