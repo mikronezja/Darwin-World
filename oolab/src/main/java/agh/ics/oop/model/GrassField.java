@@ -2,9 +2,7 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.model.util.MapVisualizer;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class GrassField extends AbstractWorldMap {
 
@@ -25,37 +23,37 @@ public class GrassField extends AbstractWorldMap {
     }
 
     @Override
-    public boolean place(Animal animal) {
-        Vector2d position = animal.getPosition();
-        if (canMoveTo(position) || (!canMoveTo(position) && objectAt(position).getClass()== Grass.class)) {
-                    animals.put(animal.getPosition(), animal);
-                    upperRightMapCorner = position.upperRight(upperRightMapCorner);
-                    lowerLeftMapCorner = position.lowerLeft(lowerLeftMapCorner);
-                    return true;
-        }
-        return false;
-    }
-
-
-    @Override
     public boolean isOccupied(Vector2d position) {
         return super.isOccupied(position) || grasses.containsKey(position);
     }
 
     @Override
     public WorldElement objectAt(Vector2d position) {
-        if (animals.containsKey(position)){
-            return animals.get(position);
+        if (Objects.equals(null, super.objectAt(position))) {
+            if (grasses.containsKey(position)){
+                return grasses.get(position);
+            }
         }
-        if (grasses.containsKey(position)){
-            return grasses.get(position);
-        }
-        return null;
+        return super.objectAt(position);
     }
 
     @Override
     public String toString() {
+        calculateBoundaries();
         return visualizer.draw(lowerLeftMapCorner,upperRightMapCorner);
+    }
+
+    private void calculateBoundaries(){
+        for (Vector2d position : animals.keySet()){
+            upperRightMapCorner = position.upperRight(upperRightMapCorner);
+            lowerLeftMapCorner = position.lowerLeft(lowerLeftMapCorner);
+        }
+    }
+
+    public List<WorldElement> getElements(){
+        List<WorldElement> elements = super.getElements();
+        elements.addAll((grasses.values()));
+        return elements;
     }
 
 }

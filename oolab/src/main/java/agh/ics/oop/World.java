@@ -30,9 +30,9 @@ public class World {
         System.out.println(map);
 
         GrassField field = new GrassField(2);
-        Simulation symulacja = new Simulation(positionsToSimulation, directionsToSimulation, field);
+        Simulation fieldSimulation = new Simulation(positionsToSimulation, directionsToSimulation, field);
         System.out.println(field);
-        symulacja.run();
+        fieldSimulation.run();
         System.out.println(field);
     }
 

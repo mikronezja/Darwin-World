@@ -9,7 +9,7 @@ public class RandomPositionGenerator implements Iterable<Vector2d>{
     private int howMany;
     private int generationRange;
     private final List<Vector2d> positions = new ArrayList<Vector2d>();
-    Random rand = new Random();
+    private Random rand = new Random();
 
     RandomPositionGenerator(int maxWidth, int maxHeight, int howMany) {
         this.maxWidth = maxWidth;
@@ -34,9 +34,11 @@ public class RandomPositionGenerator implements Iterable<Vector2d>{
 
             @Override
             public Vector2d next() {
-                int randomNumber = rand.nextInt(generationRange+1);
+                int randomNumber = rand.nextInt(generationRange);
                 Vector2d position = positions.get(randomNumber);
                 generationRange--;
+                Collections.swap(positions, randomNumber, generationRange);
+                positions.remove(generationRange);
                 howMany--;
                 return position;
             }
