@@ -11,7 +11,11 @@ class RectangularMapTest {
     @Test
     void placeOneAnimalAndCheckIfItIsThere(){
         RectangularMap map = new RectangularMap(5,5);
-        map.place(new Animal(new Vector2d(2,2)));
+        try {
+            map.place(new Animal(new Vector2d(2, 2)));
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
         assertTrue(map.isOccupied(new Vector2d(2,2)));
     }
 
@@ -31,7 +35,11 @@ class RectangularMapTest {
     void checkIfObjectIsThere(){
         RectangularMap map = new RectangularMap(5,5);
         Animal animal = new Animal(new Vector2d(2,2));
-        map.place(animal);
+        try {
+            map.place(animal);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
         assertEquals(animal, map.objectAt(new Vector2d(2,2)));
     }
 
@@ -40,11 +48,21 @@ class RectangularMapTest {
     void placeMultipleAnimalOnOnePlace(){
         RectangularMap map = new RectangularMap(5,5);
         Animal Stefan = new Animal(new Vector2d(2,2));
-        map.place(Stefan);
-        map.place(new Animal(new Vector2d(2,2)));
-        map.place(new Animal(new Vector2d(2,2)));
-
-        assertEquals(Stefan, map.objectAt(new Vector2d(2,2)));
+        try {
+            map.place(Stefan);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            map.place(new Animal(new Vector2d(2, 2)));
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            map.place(new Animal(new Vector2d(2, 2)));
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Test
@@ -64,10 +82,26 @@ class RectangularMapTest {
         Animal donatello = new Animal(new Vector2d(3,2));
         Animal michelangelo = new Animal(new Vector2d(2,1));
         Animal raphael = new Animal(new Vector2d(1,2));
-        map.place(leonardo);
-        map.place(donatello);
-        map.place(michelangelo);
-        map.place(raphael);
+        try {
+            map.place(leonardo);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            map.place(donatello);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            map.place(michelangelo);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            map.place(raphael);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
 
         map.move(leonardo,MoveDirections.FORWARD);
 

@@ -8,7 +8,13 @@ public class World {
 
     public static void main(String[] args) {
         System.out.println("system wystartował");
-        List<MoveDirections> directions = OptionsParser.translateDirections(args);
+        List<MoveDirections> directions = List.of();
+        try {
+            directions = OptionsParser.translateDirections(args);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
         run(directions);
         System.out.println("system zakończył działanie");
 
@@ -21,19 +27,24 @@ public class World {
         Animal krowa = new Animal();
         System.out.println(krowa.toString());
 
-        List<MoveDirections> directionsToSimulation = OptionsParser.translateDirections(args);
+        List<MoveDirections> directionsToSimulation=List.of();
+        try {
+            directionsToSimulation = OptionsParser.translateDirections(args);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
+
         List<Vector2d> positionsToSimulation = List.of(new Vector2d(2,2), new Vector2d(3,4));
         RectangularMap map = new RectangularMap(5,5);
+        map.addObservator(new ConsoleMapDisplay());
         Simulation simulation = new Simulation(positionsToSimulation, directionsToSimulation, map);
-        System.out.println(map);
         simulation.run();
-        System.out.println(map);
 
         GrassField field = new GrassField(2);
+        field.addObservator(new ConsoleMapDisplay());
         Simulation fieldSimulation = new Simulation(positionsToSimulation, directionsToSimulation, field);
-        System.out.println(field);
         fieldSimulation.run();
-        System.out.println(field);
     }
 
     private static void run(List<MoveDirections> directions) {

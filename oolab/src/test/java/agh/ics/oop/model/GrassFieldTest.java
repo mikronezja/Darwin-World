@@ -9,7 +9,11 @@ class GrassFieldTest {
         @Test
         void placeOneAnimalAndCheckIfItIsThere(){
             GrassField field = new GrassField(0);
-            field.place(new Animal(new Vector2d(2,2)));
+            try {
+                field.place(new Animal(new Vector2d(2, 2)));
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
             assertTrue(field.isOccupied(new Vector2d(2,2)));
         }
 
@@ -29,7 +33,11 @@ class GrassFieldTest {
         void checkIfObjectIsThere(){
             GrassField field = new GrassField(10);
             Animal animal = new Animal(new Vector2d(2,2));
-            field.place(animal);
+            try {
+                field.place(animal);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
             assertEquals(animal, field.objectAt(new Vector2d(2,2)));
         }
 
@@ -38,9 +46,21 @@ class GrassFieldTest {
         void placeMultipleAnimalOnOnePlace(){
             GrassField field = new GrassField(10);
             Animal Stefan = new Animal(new Vector2d(2,2));
-            field.place(Stefan);
-            field.place(new Animal(new Vector2d(2,2)));
-            field.place(new Animal(new Vector2d(2,2)));
+            try {
+                field.place(Stefan);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                field.place(new Animal(new Vector2d(2, 2)));
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                field.place(new Animal(new Vector2d(2, 2)));
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
 
             assertEquals(Stefan, field.objectAt(new Vector2d(2,2)));
         }
@@ -51,10 +71,12 @@ class GrassFieldTest {
             assertTrue(field.canMoveTo(new Vector2d(100,-100)));
             assertTrue(field.canMoveTo(new Vector2d(-100,100)));
             Animal animalFirst =new Animal(new Vector2d(2,2));
-            if (field.place(animalFirst)){
+            try {
+                field.place(animalFirst);
                 assertFalse(field.canMoveTo(new Vector2d(2,2)));
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
             }
-
         }
 
         @Test
@@ -64,10 +86,27 @@ class GrassFieldTest {
             Animal donatello = new Animal(new Vector2d(3,2));
             Animal michelangelo = new Animal(new Vector2d(2,1));
             Animal raphael = new Animal(new Vector2d(1,2));
-            field.place(leonardo);
-            field.place(donatello);
-            field.place(michelangelo);
-            field.place(raphael);
+            try {
+                field.place(leonardo);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                field.place(donatello);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                field.place(michelangelo);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+            try {
+                field.place(raphael);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
+
 
             field.move(leonardo,MoveDirections.FORWARD);
 

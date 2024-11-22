@@ -7,7 +7,8 @@ import java.util.*;
 public class GrassField extends AbstractWorldMap {
 
     private Map<Vector2d, Grass> grasses = new HashMap<>();
-
+    private Vector2d upperRightGrassesCorner = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
+    private Vector2d lowerLeftGrassesCorner = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
     private Vector2d upperRightMapCorner = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
     private Vector2d lowerLeftMapCorner = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
 
@@ -16,8 +17,8 @@ public class GrassField extends AbstractWorldMap {
         int maxHeight = (int)Math.ceil(Math.sqrt(howManyGrasses * 10));
         RandomPositionGenerator randomPositionGenerator = new RandomPositionGenerator(maxWidth, maxHeight, howManyGrasses);
         for(Vector2d grassPosition : randomPositionGenerator) {
-            upperRightMapCorner = grassPosition.upperRight(upperRightMapCorner);
-            lowerLeftMapCorner = grassPosition.lowerLeft(lowerLeftMapCorner);
+            upperRightGrassesCorner = grassPosition.upperRight(upperRightGrassesCorner);
+            lowerLeftGrassesCorner = grassPosition.lowerLeft(lowerLeftGrassesCorner);
             grasses.put(grassPosition, new Grass(grassPosition));
         }
     }
@@ -37,18 +38,8 @@ public class GrassField extends AbstractWorldMap {
         return super.objectAt(position);
     }
 
-    @Override
-    public String toString() {
-        calculateBoundaries();
-        return visualizer.draw(lowerLeftMapCorner,upperRightMapCorner);
-    }
 
-    private void calculateBoundaries(){
-        for (Vector2d position : animals.keySet()){
-            upperRightMapCorner = position.upperRight(upperRightMapCorner);
-            lowerLeftMapCorner = position.lowerLeft(lowerLeftMapCorner);
-        }
-    }
+
 
     public List<WorldElement> getElements(){
         List<WorldElement> elements = super.getElements();
@@ -56,4 +47,14 @@ public class GrassField extends AbstractWorldMap {
         return elements;
     }
 
+    @Override
+    public Boundary getCurrentBounds(){
+        upperRightMapCorner=upperRightGrassesCorner;
+        lowerLeftMapCorner=lowerLeftGrassesCorner;
+        for (Vector2d position : animals.keySet()){
+            upperRightMapCorner = position.upperRight(upperRightMapCorner);
+            lowerLeftMapCorner = position.lowerLeft(lowerLeftMapCorner);
+        }
+        return new Boundary(lowerLeftMapCorner, upperRightMapCorner);
+    }
 }
