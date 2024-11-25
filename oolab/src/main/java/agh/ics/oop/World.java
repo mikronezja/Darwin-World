@@ -11,12 +11,12 @@ public class World {
         List<MoveDirections> directions = List.of();
         try {
             directions = OptionsParser.translateDirections(args);
+            run(directions);
+            System.out.println("system zakończył działanie");
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
-            System.exit(0);
         }
-        run(directions);
-        System.out.println("system zakończył działanie");
+
 
         Vector2d position1 = new Vector2d(1,2);
         System.out.println(position1);

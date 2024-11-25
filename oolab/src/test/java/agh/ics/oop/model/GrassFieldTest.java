@@ -37,6 +37,7 @@ class GrassFieldTest {
                 field.place(animal);
             } catch (IncorrectPositionException e) {
                 System.out.println(e.getMessage());
+                assertNotNull(field.objectAt(new Vector2d(2,2)));
             }
             assertEquals(animal, field.objectAt(new Vector2d(2,2)));
         }
