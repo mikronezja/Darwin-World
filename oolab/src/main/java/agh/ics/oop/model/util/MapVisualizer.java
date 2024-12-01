@@ -33,7 +33,7 @@ public class MapVisualizer {
      * @param upperRight The upper right corner of the region that is drawn.
      * @return String representation of the selected region of the map.
      */
-    public String draw(Vector2d lowerLeft, Vector2d upperRight) {
+    public synchronized String draw(Vector2d lowerLeft, Vector2d upperRight) {
         StringBuilder builder = new StringBuilder();
         for (int i = upperRight.getY() + 1; i >= lowerLeft.getY() - 1; i--) {
             if (i == upperRight.getY() + 1) {

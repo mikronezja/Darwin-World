@@ -2,6 +2,7 @@ package agh.ics.oop;
 
 import agh.ics.oop.model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class World {
@@ -12,7 +13,7 @@ public class World {
         try {
             directions = OptionsParser.translateDirections(args);
             run(directions);
-            System.out.println("system zakończył działanie");
+
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
@@ -39,12 +40,40 @@ public class World {
         RectangularMap map = new RectangularMap(5,5);
         map.addObservator(new ConsoleMapDisplay());
         Simulation simulation = new Simulation(positionsToSimulation, directionsToSimulation, map);
-        simulation.run();
+        //simulation.run();
+        /* Zakomentowane by lepiej odczytać wyniki runSynci runAsync*/
 
         GrassField field = new GrassField(2);
         field.addObservator(new ConsoleMapDisplay());
         Simulation fieldSimulation = new Simulation(positionsToSimulation, directionsToSimulation, field);
-        fieldSimulation.run();
+        //fieldSimulation.run();
+        /* Zakomentowane by lepiej odczytać wyniki runSynci runAsync*/
+
+//        List<Simulation> simulations = List.of(simulation, fieldSimulation);
+//        SimulationEngine engine = new SimulationEngine(simulations);
+//        engine.runAsync();
+//        engine.awaitSimulationsEnd();
+
+
+        List<Vector2d> positionsToALotOfSimulations = List.of(new Vector2d(2,2), new Vector2d(3,4), new Vector2d(1,3));
+        List<Simulation> aLotOfSimulations = new ArrayList<>();
+        ConsoleMapDisplay observer = new ConsoleMapDisplay();
+        for (int i = 0; i < 1068; i++) {
+            RectangularMap simMap = new RectangularMap(5,5);
+            simMap.addObservator(observer);
+            aLotOfSimulations.add(new Simulation(positionsToALotOfSimulations, directionsToSimulation, simMap));
+        }
+        for (int i = 0; i < 1069; i++){
+            GrassField simField = new GrassField(5);
+            simField.addObservator(observer);
+            aLotOfSimulations.add(new Simulation(positionsToALotOfSimulations, directionsToSimulation, simField));
+        }
+
+        SimulationEngine engineWithALotOfSimulations = new SimulationEngine(aLotOfSimulations);
+        engineWithALotOfSimulations.runAsyncInThreadPool();
+        engineWithALotOfSimulations.awaitSimulationsEnd();
+
+        System.out.println("system zakończył działanie");
     }
 
     private static void run(List<MoveDirections> directions) {
