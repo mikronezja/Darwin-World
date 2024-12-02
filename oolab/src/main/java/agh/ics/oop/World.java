@@ -52,7 +52,11 @@ public class World {
 //        List<Simulation> simulations = List.of(simulation, fieldSimulation);
 //        SimulationEngine engine = new SimulationEngine(simulations);
 //        engine.runAsync();
-//        engine.awaitSimulationsEnd();
+//        try{
+//            engine.awaitSimulationsEnd();
+//        }catch (InterruptedException e){
+//            System.out.println("Nastąpiło przerwanie: "+e);
+//        }
 
 
         List<Vector2d> positionsToALotOfSimulations = List.of(new Vector2d(2,2), new Vector2d(3,4), new Vector2d(1,3));
@@ -60,18 +64,23 @@ public class World {
         ConsoleMapDisplay observer = new ConsoleMapDisplay();
         for (int i = 0; i < 1068; i++) {
             RectangularMap simMap = new RectangularMap(5,5);
-            simMap.addObservator(observer);
+            simMap.addObservator(new ConsoleMapDisplay());
             aLotOfSimulations.add(new Simulation(positionsToALotOfSimulations, directionsToSimulation, simMap));
         }
         for (int i = 0; i < 1069; i++){
             GrassField simField = new GrassField(5);
-            simField.addObservator(observer);
+            simField.addObservator(new ConsoleMapDisplay());
             aLotOfSimulations.add(new Simulation(positionsToALotOfSimulations, directionsToSimulation, simField));
         }
 
         SimulationEngine engineWithALotOfSimulations = new SimulationEngine(aLotOfSimulations);
         engineWithALotOfSimulations.runAsyncInThreadPool();
-        engineWithALotOfSimulations.awaitSimulationsEnd();
+        try{
+            engineWithALotOfSimulations.awaitSimulationsEnd();
+        }catch (InterruptedException e){
+            System.out.println("Minąłczas na wykonanie wątków: "+e);
+        }
+
 
         System.out.println("system zakończył działanie");
     }

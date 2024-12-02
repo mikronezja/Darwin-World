@@ -1,6 +1,4 @@
-package agh.ics.oop.model;
-
-import agh.ics.oop.Simulation;
+package agh.ics.oop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,28 +40,15 @@ public class SimulationEngine {
         executorService.shutdown();
     }
 
-    public void awaitSimulationsEnd(){
+    public void awaitSimulationsEnd() throws InterruptedException{
         if (simulationsThreads!=null && !simulationsThreads.isEmpty()){
             for (Thread simulationThread: simulationsThreads){
-                try{
-                    simulationThread.join();
-                }
-                catch (InterruptedException e){
-                    Thread.currentThread().interrupt();
-                    System.err.println("Wątek przerwany");
-                }
+                simulationThread.join();
             }
         }
         else if (executorService!=null){
-            try{
-                if (!executorService.awaitTermination(10, TimeUnit.SECONDS)) {
-                    System.err.println("10 s minęło. Zakończenie wątków");
-                    executorService.shutdownNow();
-                }
-            }
-            catch (InterruptedException e){
-                Thread.currentThread().interrupt();
-                System.err.println("Czekanie zostało przerwane.");
+            if (!executorService.awaitTermination(10, TimeUnit.SECONDS)) {
+                System.err.println("10 s minęło. Zakończenie wątków");
                 executorService.shutdownNow();
             }
         }
