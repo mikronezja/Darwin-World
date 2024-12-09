@@ -8,14 +8,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 
 import java.util.List;
 
-public class SimulationPresenter implements MapChangeListener {
+public class SimulationWindowPresenter implements MapChangeListener {
 
     private WorldMap worldMap;
 

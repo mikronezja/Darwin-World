@@ -1,14 +1,12 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
-import agh.ics.oop.presenter.SimulationPresenter;
+import agh.ics.oop.presenter.SimulationMenuPresenter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-
-import java.util.List;
 
 public class SimulationApp extends Application {
 
@@ -16,9 +14,9 @@ public class SimulationApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.show();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
+        loader.setLocation(getClass().getClassLoader().getResource("simulationMenu.fxml"));
         BorderPane viewRoot = loader.load();
-        SimulationPresenter presenter = loader.getController();
+        SimulationMenuPresenter presenter = loader.getController();
         configureStage(primaryStage, viewRoot);
 
         AbstractWorldMap map = new GrassField(5);
