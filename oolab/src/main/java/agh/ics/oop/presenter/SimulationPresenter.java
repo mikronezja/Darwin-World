@@ -46,7 +46,7 @@ public class SimulationPresenter implements MapChangeListener {
         mapGrid.add(label, 0, 0);
         GridPane.setHalignment(label, HPos.CENTER);
         int relativeShiftOfX = 1 - boundary.lowerLeftCorner().getX();
-        int relativeShiftOfY = 1 - boundary.lowerLeftCorner().getY();
+        int relativeShiftOfY = 1 + boundary.upperRightCorner().getY();
         int widthtOfMap = boundary.upperRightCorner().getX() - boundary.lowerLeftCorner().getX() + 1;
         int heightOfMap = boundary.upperRightCorner().getY() - boundary.lowerLeftCorner().getY() + 1;
 
@@ -76,7 +76,7 @@ public class SimulationPresenter implements MapChangeListener {
             Vector2d positionOfElement = element.getPosition();
             Label animal = new Label();
             animal.setText(element.toString());
-            mapGrid.add(animal, positionOfElement.getX()+ relativeShiftOfX, positionOfElement.getY() + relativeShiftOfY);
+            mapGrid.add(animal, positionOfElement.getX() + relativeShiftOfX, relativeShiftOfY - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
     }
