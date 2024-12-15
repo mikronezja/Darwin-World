@@ -25,16 +25,19 @@ public class SimulationWindowPresenter implements MapChangeListener {
     @FXML
     private Label whatMoveHappened;
     @FXML
-    private TextField moveInput;
-    @FXML
     private VBox bottomElements;
 
 
-    public void setWorldMap(WorldMap worldMap) {
+    public void setWorldMap(WorldMap worldMap, String moveInput) {
         this.worldMap = worldMap;
-        mainBorderPane.setMargin(moveInput, new Insets(12,12,12,12));
         mainBorderPane.setMargin(bottomElements, new Insets(12,12,12,12));
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
+        List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
+        List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.split(" "));
+        Simulation simulation = new Simulation(positions, directions, worldMap);
+        List<Simulation> simulationsList = List.of(simulation);
+        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
+        simulationEngine.runAsync();
     }
 
     public void drawMap(WorldMap map) {
@@ -45,7 +48,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
         mapGrid.add(label, 0, 0);
         GridPane.setHalignment(label, HPos.CENTER);
         int relativeShiftOfX = 1 - boundary.lowerLeftCorner().getX();
-        int relativeShiftOfY = 1 - boundary.lowerLeftCorner().getY();
+        int relativeShiftOfY = 1 + boundary.upperRightCorner().getY();
         int widthtOfMap = boundary.upperRightCorner().getX() - boundary.lowerLeftCorner().getX() + 1;
         int heightOfMap = boundary.upperRightCorner().getY() - boundary.lowerLeftCorner().getY() + 1;
 
@@ -75,13 +78,13 @@ public class SimulationWindowPresenter implements MapChangeListener {
             Vector2d positionOfElement = element.getPosition();
             Label animal = new Label();
             animal.setText(element.toString());
-            mapGrid.add(animal, positionOfElement.getX()+ relativeShiftOfX, positionOfElement.getY() + relativeShiftOfY);
+            mapGrid.add(animal, positionOfElement.getX() + relativeShiftOfX, relativeShiftOfY - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
     }
 
     private void clearGrid() {
-        mapGrid.getChildren().retainAll(mapGrid.getChildren().get(0)); // hack to retain visible grid lines
+        mapGrid.getChildren().retainAll(mapGrid.getChildren().get(0));
         mapGrid.getColumnConstraints().clear();
         mapGrid.getRowConstraints().clear();
     }
@@ -93,15 +96,5 @@ public class SimulationWindowPresenter implements MapChangeListener {
             whatMoveHappened.setText(message);
         });
 
-    }
-
-    @FXML
-    private void onSimulationStartClicked(){
-        List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
-        List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.getText().split(" "));
-        Simulation simulation = new Simulation(positions, directions, worldMap);
-        List<Simulation> simulationsList = List.of(simulation);
-        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
-        simulationEngine.runAsync();
     }
 }

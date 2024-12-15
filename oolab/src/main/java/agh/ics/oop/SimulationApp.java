@@ -16,12 +16,7 @@ public class SimulationApp extends Application {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("simulationMenu.fxml"));
         BorderPane viewRoot = loader.load();
-        SimulationMenuPresenter presenter = loader.getController();
         configureStage(primaryStage, viewRoot);
-
-        AbstractWorldMap map = new GrassField(5);
-        presenter.setWorldMap(map);
-        map.addObservator(presenter);
     }
 
     private void configureStage(Stage primaryStage, BorderPane viewRoot) {

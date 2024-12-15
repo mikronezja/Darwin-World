@@ -14,12 +14,8 @@
     <top>
         <TextField fx:id="moveInput" BorderPane.alignment="BOTTOM_CENTER" maxWidth="750"/>
     </top>
-    <center>
-        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="BASELINE_CENTER"></GridPane>
-    </center>
     <bottom>
         <VBox BorderPane.alignment="BASELINE_CENTER" alignment="BASELINE_CENTER" fx:id="bottomElements">
-            <Label fx:id="whatMoveHappened" textAlignment="CENTER"/>
             <Button fx:id="startingSimulation" text="Start" onAction="#onSimulationStartClicked" prefWidth="100" prefHeight="50"/>
         </VBox>
     </bottom>
