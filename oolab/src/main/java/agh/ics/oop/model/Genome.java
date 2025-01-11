@@ -1,17 +1,19 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.Simulation;
+
 public class Genome
 {
    private final int[] genome; // since not resizeable we can use a static array
-   public Genome(int length)
+   public Genome()
    {
-        genome = new int[length];
+        genome = new int[Simulation.getGenomLength()];
         createGenome();
    }
 
-    public Genome(int length, int[] genome1, int energy1, int[] genome2, int energy2)
+    public Genome(int[] genome1, int energy1, int[] genome2, int energy2)
     {
-        genome = new int[length];
+        genome = new int[Simulation.getGenomLength()];
         createGenome(genome1, energy1, genome2, energy2);
         mutate();
     }

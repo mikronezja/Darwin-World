@@ -11,6 +11,8 @@ public class Simulation implements Runnable{
     private final List<MoveDirections> directions;
     private final List<Animal> animals = new ArrayList<>();
     private final WorldMap worldMap;
+    private static final int genomLength = 10; // cos sie tu zrobi
+    private static final int startingEnergy = 10;
     // Moim zdaniem w tym wypadku będzie lepszym wyborem ArrayList, gdyż
     // chcemy sprawnie iterować po kolejnych elementach naszej listy, a ArrayList
     // zapewnia nam szybszy dostęp gdy odwołujemy się do elementu po indeksie
@@ -52,4 +54,7 @@ public class Simulation implements Runnable{
         return Collections.unmodifiableList(animals);
     }
 
+    public static int getGenomLength() { return genomLength; }
+
+    public static int getStartingEnergy() {return startingEnergy;}
 }
