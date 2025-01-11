@@ -4,8 +4,8 @@ public class Animal implements WorldElement{
 
     private MapDirections direction = MapDirections.NORTH;
     private Vector2d position;
-    private static final Vector2d UPPER_RIGHT_MAP_CORNER = new Vector2d(4,4);
-    private static final Vector2d LOWER_LEFT_MAP_CORNER = new Vector2d(0,0);
+
+    // usuniete info do wymiaru mapki
 
     public Animal(){
         this(new Vector2d(2,2));
