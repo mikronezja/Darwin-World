@@ -3,6 +3,8 @@ package agh.ics.oop.model;
 import agh.ics.oop.model.MoveDirections;
 import agh.ics.oop.model.Vector2d;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -51,6 +53,14 @@ public interface WorldMap extends MoveValidator {
      */
 
     Boundary getCurrentBounds();
+
+    /**
+     *
+     * @return List of <WorldElement>
+     *
+     */
+
+    List<WorldElement> getElements();
 
     /**
      *

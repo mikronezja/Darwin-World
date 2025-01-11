@@ -34,8 +34,15 @@ public class Simulation implements Runnable{
         int howManyAnimals = animals.size();
         if (howManyAnimals > 0) {
             for (int i=0; i<directions.size(); i++){
-                int ind = i%howManyAnimals;
-                worldMap.move(animals.get(ind), directions.get(i));
+                try{
+                    Thread.sleep(500);
+                    int ind = i%howManyAnimals;
+                    worldMap.move(animals.get(ind), directions.get(i));
+                }
+                catch(InterruptedException e){
+                    System.out.println("Poruszanie zwierzaka zostało przerwane");
+                }
+
             }
         }
 
