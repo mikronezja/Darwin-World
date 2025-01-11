@@ -8,14 +8,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 
 import java.util.List;
 
-public class SimulationPresenter implements MapChangeListener {
+public class SimulationWindowPresenter implements MapChangeListener {
 
     private WorldMap worldMap;
 
@@ -26,16 +25,19 @@ public class SimulationPresenter implements MapChangeListener {
     @FXML
     private Label whatMoveHappened;
     @FXML
-    private TextField moveInput;
-    @FXML
     private VBox bottomElements;
 
 
-    public void setWorldMap(WorldMap worldMap) {
+    public void setWorldMap(WorldMap worldMap, String moveInput) {
         this.worldMap = worldMap;
-        mainBorderPane.setMargin(moveInput, new Insets(12,12,12,12));
         mainBorderPane.setMargin(bottomElements, new Insets(12,12,12,12));
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
+        List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
+        List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.split(" "));
+        Simulation simulation = new Simulation(positions, directions, worldMap);
+        List<Simulation> simulationsList = List.of(simulation);
+        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
+        simulationEngine.runAsync();
     }
 
     public void drawMap(WorldMap map) {
@@ -82,7 +84,7 @@ public class SimulationPresenter implements MapChangeListener {
     }
 
     private void clearGrid() {
-        mapGrid.getChildren().retainAll(mapGrid.getChildren().get(0)); // hack to retain visible grid lines
+        mapGrid.getChildren().retainAll(mapGrid.getChildren().get(0));
         mapGrid.getColumnConstraints().clear();
         mapGrid.getRowConstraints().clear();
     }
@@ -94,15 +96,5 @@ public class SimulationPresenter implements MapChangeListener {
             whatMoveHappened.setText(message);
         });
 
-    }
-
-    @FXML
-    private void onSimulationStartClicked(){
-        List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
-        List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.getText().split(" "));
-        Simulation simulation = new Simulation(positions, directions, worldMap);
-        List<Simulation> simulationsList = List.of(simulation);
-        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
-        simulationEngine.runAsync();
     }
 }
