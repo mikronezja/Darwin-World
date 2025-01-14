@@ -10,6 +10,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
 import java.util.List;
@@ -17,6 +18,9 @@ import java.util.List;
 public class SimulationWindowPresenter implements MapChangeListener {
 
     private WorldMap worldMap;
+
+    private Image north = new Image("north.png");
+
 
     @FXML
     private BorderPane mainBorderPane;
