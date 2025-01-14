@@ -168,4 +168,5 @@ public class Animal implements WorldElement
     public int[] getGenomeAsIntList() { return genome.getGenome(); }
     public int getKidsNumber() { return kids.size(); }
     public int getDescendantsNumber() { return descendants.size(); }
+    public int getHowManyDaysIsAlive() { return howManyDaysIsAlive; }
 }

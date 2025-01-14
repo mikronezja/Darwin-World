@@ -14,6 +14,7 @@ public class Simulation implements Runnable{
     private final WorldMap worldMap;
     private static final int genomLength = 10; // cos sie tu zrobi
     private static final int startingEnergy = 10;
+    private static final int minReproductionEnergy = 10; // to w globe ?
     private static final int subtractingEnergyWhileReproducing = 10;
     private static final int minNumberOfmutations = 10;
     private static final int maxNumberOfmutations = 10;
@@ -39,6 +40,15 @@ public class Simulation implements Runnable{
         }
     }
 
+    public Simulation(WorldMap worldMap)
+    {
+
+
+    }
+
+
+
+
     public void run(){
         int howManyAnimals = animals.size();
         if (howManyAnimals > 0) {
@@ -56,6 +66,8 @@ public class Simulation implements Runnable{
         }
 
     }
+
+
 
     public List<Animal> getAnimals() {
         return Collections.unmodifiableList(animals);
