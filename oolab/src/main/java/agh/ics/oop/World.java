@@ -26,8 +26,8 @@ public class World {
         System.out.println(position2);
         System.out.println(position1.add(position2));
 
-        Animal krowa = new Animal();
-        System.out.println(krowa.toString());
+////        Animal krowa = new Animal();
+//        System.out.println(krowa.toString());
 
         List<MoveDirections> directionsToSimulation=List.of();
         try {
