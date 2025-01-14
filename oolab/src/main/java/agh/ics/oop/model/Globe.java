@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 public class Globe implements ProjectWorldMap{
 
+
     private Vector2d upperRightMapCorner;
     private Vector2d lowerLeftMapCorner = new Vector2d(0, 0);
     private Vector2d upperRightEquatorCorner;
@@ -106,5 +107,6 @@ public class Globe implements ProjectWorldMap{
     @Override
     public boolean canMoveTo(Vector2d position) {
         return position.follows(lowerLeftMapCorner) && position.precedes(upperRightMapCorner);
+
     }
 }
