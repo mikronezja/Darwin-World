@@ -2,9 +2,12 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
 
+import java.util.Random;
+
 public class Genome
 {
    private final int[] genome; // since not resizeable we can use a static array
+
    public Genome()
    {
         genome = new int[Simulation.getGenomLength()];
@@ -15,7 +18,7 @@ public class Genome
     {
         genome = new int[Simulation.getGenomLength()];
         createGenome(genome1, energy1, genome2, energy2);
-        mutate();
+        mutate(mutationNumber());
     }
 
    public int[] getGenome()
@@ -61,9 +64,25 @@ public class Genome
         }
     }
 
-   private void mutate()
+   private void mutate( int mutations )
    {
-        int position = Math.min(genome.length-1,(int)(Math.random() * genome.length));
-        genome[position] = (int)Math.round(Math.random() * 7);
+        int[] indexes = new int[genome.length];
+        for (int i = 0; i < genome.length; i++) { indexes[i] = i; } //losuje indeksy od 0 ... genome.length - 1
+
+        for (int i = 0; i < Math.min(mutations,genome.length); i++ )
+        {
+            int generated_position = (int)(Math.random() * ( genome.length - 1 - i)); // losuje pozycje ktora ma zmienic
+            genome[indexes[generated_position]] = (int)Math.round(Math.random() * 7); //  losuje na jaki genom ma byc genom zmieniony
+
+            // swap
+            int tempIndex = indexes[indexes.length - 1 - i];
+            indexes[indexes.length - 1 - i] = indexes[generated_position];
+            indexes[generated_position] = tempIndex;
+        }
+   }
+
+   private int mutationNumber()
+   {
+       return (int)Math.floor(Math.random() * (Simulation.getMaxNumberOfmutations() - Simulation.getMinNumberOfmutations() + 1) + Simulation.getMinNumberOfmutations());
    }
 }
