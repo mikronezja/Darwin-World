@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,8 +10,10 @@ import java.util.List;
 
 public class Simulation implements Runnable{
 
-    private final List<Animal> animals = new ArrayList<>();
+    private final List<Animal> aliveAnimals = new ArrayList<>();
+    private final List<Animal> deadAnimals = new ArrayList<>();
     private final ProjectWorldMap worldMap;
+    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
 
     private final int dailyPlants = 0; // ile roslinek dziennie bedzie roslo
 
@@ -21,33 +24,35 @@ public class Simulation implements Runnable{
 
     public Simulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith, int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn, int genomeLength) {
         this.worldMap = worldMap;
+        randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX()+1, worldMap.getCurrentBounds().upperRightCorner().getY()+1);
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
-            Animal animal = new Animal();
+            Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn);
             try {
                 worldMap.place(animal);
-                animals.add(animal);
+                aliveAnimals.add(animal);
             } catch (IncorrectPositionException e) {
                 System.out.println(e.getMessage());
             }
-
         }
     }
 
 
     public void run(){
-        int howManyAnimals = animals.size();
-        if (howManyAnimals > 0) {
-            for (int i=0; i<directions.size(); i++){
-                try{
-                    Thread.sleep(500);
-                    int ind = i%howManyAnimals;
-                    worldMap.move(animals.get(ind), directions.get(i));
+        int howManyAnimalsAlive = aliveAnimals.size();
+        if (howManyAnimalsAlive > 0) {
+            for(Animal animal : aliveAnimals) {
+                if (!animal.isAlive()) {
+                    worldMap.killAnimal(animal);
+                    deadAnimals.add(animal);
+                    aliveAnimals.remove(animal);
                 }
-                catch(InterruptedException e){
-                    System.out.println("Poruszanie zwierzaka zostało przerwane");
-                }
-
             }
+            for(Animal animal : aliveAnimals) {
+                worldMap.move(animal);
+            }
+            worldMap.eatingPlants();
+            worldMap.animalsReproducing();
+            worldMap.growPlants();
         }
 
     }
@@ -55,7 +60,7 @@ public class Simulation implements Runnable{
 
 
     public List<Animal> getAnimals() {
-        return Collections.unmodifiableList(animals);
+        return Collections.unmodifiableList(aliveAnimals);
     }
 
 }

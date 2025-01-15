@@ -38,10 +38,10 @@ public class SimulationWindowPresenter implements MapChangeListener {
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
         List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
         List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.split(" "));
-        Simulation simulation = new Simulation(positions, directions, worldMap);
-        List<Simulation> simulationsList = List.of(simulation);
-        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
-        simulationEngine.runAsync();
+//        Simulation simulation = new Simulation(positions, directions, worldMap);
+//        List<Simulation> simulationsList = List.of(simulation);
+//        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
+//        simulationEngine.runAsync();
     }
 
     public void drawMap(WorldMap map) {
