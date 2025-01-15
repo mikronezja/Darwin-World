@@ -9,15 +9,9 @@ import java.util.List;
 
 public class Simulation implements Runnable{
 
-    private final List<MoveDirections> directions;
     private final List<Animal> animals = new ArrayList<>();
-    private final WorldMap worldMap;
-    private static final int genomLength = 10; // cos sie tu zrobi
-    private static final int startingEnergy = 10;
-    private static final int minReproductionEnergy = 10; // to w globe ?
-    private static final int subtractingEnergyWhileReproducing = 10;
-    private static final int minNumberOfmutations = 10;
-    private static final int maxNumberOfmutations = 10;
+    private final ProjectWorldMap worldMap;
+
     private final int dailyPlants = 0; // ile roslinek dziennie bedzie roslo
 
 
@@ -25,11 +19,10 @@ public class Simulation implements Runnable{
     // chcemy sprawnie iterować po kolejnych elementach naszej listy, a ArrayList
     // zapewnia nam szybszy dostęp gdy odwołujemy się do elementu po indeksie
 
-    public Simulation(List<Vector2d> positions, List<MoveDirections> directions, WorldMap worldMap) {
-        this.directions = directions;
+    public Simulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith, int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn, int genomeLength) {
         this.worldMap = worldMap;
-        for (Vector2d position : positions) {
-            Animal animal = new Animal(position);
+        for (int i=0;i<howManyAnimalsToStartWith;i++) {
+            Animal animal = new Animal();
             try {
                 worldMap.place(animal);
                 animals.add(animal);
@@ -39,14 +32,6 @@ public class Simulation implements Runnable{
 
         }
     }
-
-    public Simulation(WorldMap worldMap)
-    {
-
-
-    }
-
-
 
 
     public void run(){
@@ -72,9 +57,5 @@ public class Simulation implements Runnable{
     public List<Animal> getAnimals() {
         return Collections.unmodifiableList(animals);
     }
-    public static int getGenomLength() { return genomLength; }
-    public static int getStartingEnergy() {return startingEnergy;}
-    public static int getSubtractingEnergyWhileReproducing() {return subtractingEnergyWhileReproducing;}
-    public static int getMinNumberOfmutations() {return minNumberOfmutations;}
-    public static int getMaxNumberOfmutations() {return maxNumberOfmutations;}
+
 }
