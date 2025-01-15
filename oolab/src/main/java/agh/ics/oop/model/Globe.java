@@ -136,4 +136,8 @@ public class Globe implements ProjectWorldMap{
         }
     }
 
+    @Override
+    public Boundary getCurrentBounds() {
+        return new Boundary(lowerLeftMapCorner,upperRightMapCorner);
+    }
 }

@@ -25,14 +25,23 @@ public class Animal implements WorldElement
     private final Animal[] parents; // zależy czy jest pierwszy czy ma jakichś rodziców
     private Genome genome;
     private int currentGenomeIndex;
-    // usuniete info do wymiaru mapki
+
+
+    private final int minReproductionEnergy;
+    private final int subtractingEnergyWhileReproducing;
+    private final int minNumberOfmutations;
+    private final int maxNumberOfmutations;
 
     // starting position of Animal
-    public Animal(Vector2d position)
+    public Animal(Vector2d position, int genomLength, int startingEnergy, int minReproductionEnergy, int subtractingEnergyWhileReproducing, int minNumberOfmutations, int maxNumberOfmutations)
     {
-        this.position =  randomPositionForSpawningAnimalsGenerator.getRandomPosition(); // generates a random position
-        this.energy = Simulation.getStartingEnergy();
-        this.genome = new Genome();
+        this.position = position;
+        this.minReproductionEnergy = minReproductionEnergy;
+        this.subtractingEnergyWhileReproducing = subtractingEnergyWhileReproducing;
+        this.minNumberOfmutations = minNumberOfmutations;
+        this.maxNumberOfmutations = maxNumberOfmutations;
+        this.energy = startingEnergy;
+        this.genome = new Genome(genomLength, minNumberOfmutations, maxNumberOfmutations);
         parents = null;
         generateStartingGenomeIndex();
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ]; // randomly generates how its turned
@@ -42,9 +51,13 @@ public class Animal implements WorldElement
     public Animal(Vector2d position, Animal[] parents)
     {
         this.position = parents[0].getPosition(); // generates a position determined by its parents
-        this.energy = Simulation.getSubtractingEnergyWhileReproducing() * 2;
+        this.energy = parents[0].getSubtractingEnergyWhileReproducing() * 2;
+        this.minReproductionEnergy = parents[0].getMinReproductionEnergy();
+        this.subtractingEnergyWhileReproducing = parents[0].getSubtractingEnergyWhileReproducing();
+        this.minNumberOfmutations = parents[0].getMinNumberOfmutations();
+        this.maxNumberOfmutations = parents[0].getMaxNumberOfmutations();
         this.parents = parents;
-        this.genome = new Genome(parents[0].getGenomeAsIntList(),parents[0].getEnergy(),parents[1].getGenomeAsIntList(),parents[1].getEnergy());
+        this.genome = new Genome(parents[0].getGenomeAsIntList(),parents[0].getEnergy(),parents[1].getGenomeAsIntList(),parents[1].getEnergy(),minNumberOfmutations, maxNumberOfmutations);
         generateStartingGenomeIndex();
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ];
     }
@@ -57,6 +70,7 @@ public class Animal implements WorldElement
         return this.position.equals(position);
     }
 
+
     public void move(MoveValidator moveValidator)
     {
         // corrected position based on map coordinates
@@ -65,20 +79,21 @@ public class Animal implements WorldElement
 
         if (!moveValidator.canMoveTo(possibleMove))
         {
-                if (possibleMove.getX() < moveValidator.lowerLeftCorner().getX()) // lewo
+                Boundary boundary = moveValidator.getCurrentBounds();
+                if (possibleMove.getX() < boundary.lowerLeftCorner().getX()) // lewo
                 {
-                    possibleMove = new Vector2d(moveValidator.upperRightCorner().getX(), possibleMove.getY());
+                    possibleMove = new Vector2d(boundary.upperRightCorner().getX(), possibleMove.getY());
                 }
-                if (possibleMove.getY() > moveValidator.upperRightCorner().getY() ||
-                    possibleMove.getY() < moveValidator.lowerLeftCorner().getY()
+                if (possibleMove.getY() > boundary.upperRightCorner().getY() ||
+                    possibleMove.getY() < boundary.lowerLeftCorner().getY()
                 ) /// gora lub dol
                 {
                     possibleMove = this.position;
                     this.direction = direction.nextByN(4); // obrot o 180 stopni
                 }
-                if (possibleMove.getX() > moveValidator.upperRightCorner().getX())
+                if (possibleMove.getX() > boundary.upperRightCorner().getX())
                 {
-                    possibleMove = new Vector2d(moveValidator.lowerLeftCorner().getX(), possibleMove.getY());
+                    possibleMove = new Vector2d(boundary.lowerLeftCorner().getX(), possibleMove.getY());
                 }
         }
         this.position = possibleMove;
@@ -87,17 +102,17 @@ public class Animal implements WorldElement
 
     private void generateStartingGenomeIndex()
     {
-        this.currentGenomeIndex = (int)Math.round(Math.random() * (Simulation.getGenomLength() - 1) );
+        this.currentGenomeIndex = (int)Math.round(Math.random() * (genome.getGenome().length - 1) );
     }
 
     private void increaseGenomeIndex()
     {
-        this.currentGenomeIndex = (this.currentGenomeIndex + 1) % Simulation.getGenomLength();
+        this.currentGenomeIndex = (this.currentGenomeIndex + 1) % genome.getGenome().length;
     }
 
     private void decreaseEnergyLevelSinceAnimalReproduced()
     {
-        this.energy -= Simulation.getSubtractingEnergyWhileReproducing();
+        this.energy -= this.subtractingEnergyWhileReproducing;
     }
 
     private void addKid(Animal kid)
@@ -152,4 +167,17 @@ public class Animal implements WorldElement
     public int getKidsNumber() { return kids.size(); }
     public int getDescendantsNumber() { return descendants.size(); }
     public int getHowManyDaysIsAlive() { return howManyDaysIsAlive; }
+
+    public int getSubtractingEnergyWhileReproducing() {
+        return subtractingEnergyWhileReproducing;
+    }
+    public int getMinNumberOfmutations() {
+        return minNumberOfmutations;
+    }
+    public int getMaxNumberOfmutations() {
+        return maxNumberOfmutations;
+    }
+    public int getMinReproductionEnergy() {
+        return minReproductionEnergy;
+    }
 }
