@@ -1,6 +1,7 @@
 package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
+import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class Animal implements WorldElement
     private Vector2d position;
     private int energy;
     private int consumedPlants = 0;
+    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
     private int howManyDaysIsAlive = 0;
     private int probabilityOfNotMoving = 0;
 
@@ -28,7 +30,7 @@ public class Animal implements WorldElement
     // starting position of Animal
     public Animal(Vector2d position)
     {
-        this.position = position; // generates a random position
+        this.position =  randomPositionForSpawningAnimalsGenerator.getRandomPosition(); // generates a random position
         this.energy = Simulation.getStartingEnergy();
         this.genome = new Genome();
         parents = null;
@@ -53,25 +55,6 @@ public class Animal implements WorldElement
 
     public boolean isAt(Vector2d position){
         return this.position.equals(position);
-    }
-
-    public void move(MoveDirections direction, MoveValidator moveValidator){
-        switch (direction) {
-            case RIGHT -> this.direction = this.direction.next();
-            case LEFT -> this.direction = this.direction.previous();
-            case FORWARD -> {
-                Vector2d possibleMove = this.position.add(this.direction.toUnitVector());
-                if (moveValidator.canMoveTo(possibleMove)) {
-                    this.position = possibleMove;
-                }
-            }
-            case BACKWARD -> {
-                Vector2d possibleMove = this.position.subtract(this.direction.toUnitVector());
-                if (moveValidator.canMoveTo(possibleMove)) {
-                    this.position = possibleMove;
-                }
-            }
-        }
     }
 
     public void move(MoveValidator moveValidator)
