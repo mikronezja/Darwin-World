@@ -1,5 +1,6 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.AnimalComparator;
 import agh.ics.oop.model.util.RandomPositionForPlantsGenerator;
 import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
@@ -16,8 +17,8 @@ public class Globe implements ProjectWorldMap{
     private Vector2d lowerLeftEquatorCorner;
     private Map<Vector2d, Plant> plants = new HashMap<>();
     private RandomPositionForPlantsGenerator positionForPlantsGenerator;
-    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
-    private Map<Vector2d, List<Animal>> animals = new HashMap<>();
+    private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
+    private Map<Vector2d, TreeSet<Animal>> animals = new HashMap<>();
     private UUID id = UUID.randomUUID();
 
     public Globe(int height, int width, int howManyPlants, int howManyEnergyFromPlants) {
@@ -25,6 +26,8 @@ public class Globe implements ProjectWorldMap{
         this.lowerLeftEquatorCorner = new Vector2d(0, ((height/5)*2)+1);
         this.upperRightEquatorCorner = new Vector2d(width-1, ((height/5)*2)+((height+2)/5));
         this.positionForPlantsGenerator = new RandomPositionForPlantsGenerator(height,width, upperRightEquatorCorner, lowerLeftEquatorCorner);
+
+
         for (int i=0; i<howManyPlants; i++) {
             Vector2d position = positionForPlantsGenerator.generatePosition();
             if (position == null){
@@ -37,13 +40,13 @@ public class Globe implements ProjectWorldMap{
 
     @Override
     public void place(Animal animal) throws IncorrectPositionException {
-        Vector2d position = randomPositionForSpawningAnimalsGenerator.getRandomPosition();
+        Vector2d position = animal.getPosition();
         if (isOccupied(position)) {
             animals.get(position).add(animal);
         }
         else {
-            List<Animal> temporaryList = List.of(animal);
-            animals.put(position, temporaryList);
+            animals.computeIfAbsent(position, k -> new TreeSet<>(ANIMAL_COMPARATOR))
+                    .add(animal);
         }
 
     }
@@ -52,22 +55,23 @@ public class Globe implements ProjectWorldMap{
     public void move(Animal animal) {
 
         Vector2d positionBeforeMove = animal.getPosition();
-        List<Animal> listOfAnimalsOnPositionBeforeMove = animals.get(positionBeforeMove);
-        listOfAnimalsOnPositionBeforeMove.remove(animal);
+        TreeSet<Animal> setOfAnimalsBeforeMove = animals.get(positionBeforeMove);
+        setOfAnimalsBeforeMove.remove(animal);
+
         animal.move(this);
+
         if (animal.getPosition().equals(positionBeforeMove)) {
-            listOfAnimalsOnPositionBeforeMove.add(animal);
+            setOfAnimalsBeforeMove.add(animal);
         }
         else{
-            if (listOfAnimalsOnPositionBeforeMove.size() == 0) {
+            if (setOfAnimalsBeforeMove.isEmpty()) {
                 animals.remove(positionBeforeMove);
             }
             if (animals.containsKey(animal.getPosition())) {
                 animals.get(animal.getPosition()).add(animal);
             }
-            else{
-                animals.put(animal.getPosition(), List.of(animal));
-            }
+            animals.computeIfAbsent(animal.getPosition(), k -> new TreeSet<>(ANIMAL_COMPARATOR))
+                    .add(animal);
         }
 
     }
@@ -92,7 +96,7 @@ public class Globe implements ProjectWorldMap{
         return Stream.concat(
                         animals.values()
                                 .stream()
-                                .flatMap(List::stream)
+                                .flatMap(TreeSet::stream)
                                 .collect(Collectors.toList())
                                 .stream(),
                         plants.values().stream())
@@ -107,7 +111,29 @@ public class Globe implements ProjectWorldMap{
     @Override
     public boolean canMoveTo(Vector2d position) {
         return position.follows(lowerLeftMapCorner) && position.precedes(upperRightMapCorner);
+    }
 
+    private void animalsReproduceAt(Vector2d position)
+    {
+        animals.get(position).headSet( animals.get(position).first() );
+    }
+
+    private void animalsEatAt(Vector2d position)
+    {
+        if (animals.containsKey(position) && !animals.get(position).isEmpty())
+        {
+            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first());
+            Animal winningAnimal;
+            if( winningAnimals.size() == 1)
+            {
+                winningAnimal.eatPlant();
+            }
+            else
+            {
+                
+            }
+
+        }
     }
 
     @Override

@@ -1,6 +1,7 @@
 package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
+import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class Animal implements WorldElement
     private Vector2d position;
     private int energy;
     private int consumedPlants = 0;
+    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
     private int howManyDaysIsAlive = 0;
     private int probabilityOfNotMoving = 0;
 
