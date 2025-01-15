@@ -24,7 +24,7 @@ public abstract class AbstractWorldMap implements WorldMap {
     public void move(Animal animal, MoveDirections direction) {
         if (objectAt(animal.getPosition()).equals(animal)) {
             animals.remove(animal.getPosition());
-            animal.move(direction, this);
+            //animal.move(direction, this);
             animals.put(animal.getPosition(), animal);
             mapChanged("Zwierze poruszyło sie");
         }

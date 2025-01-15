@@ -54,7 +54,7 @@ public class Globe implements ProjectWorldMap{
         Vector2d positionBeforeMove = animal.getPosition();
         List<Animal> listOfAnimalsOnPositionBeforeMove = animals.get(positionBeforeMove);
         listOfAnimalsOnPositionBeforeMove.remove(animal);
-        //animal.move(this);
+        animal.move(this);
         if (animal.getPosition().equals(positionBeforeMove)) {
             listOfAnimalsOnPositionBeforeMove.add(animal);
         }
@@ -108,5 +108,10 @@ public class Globe implements ProjectWorldMap{
     public boolean canMoveTo(Vector2d position) {
         return position.follows(lowerLeftMapCorner) && position.precedes(upperRightMapCorner);
 
+    }
+
+    @Override
+    public Boundary getCurrentBounds() {
+        return new Boundary(lowerLeftMapCorner,upperRightMapCorner);
     }
 }

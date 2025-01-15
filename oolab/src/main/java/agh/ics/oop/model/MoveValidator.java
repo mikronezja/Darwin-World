@@ -13,5 +13,10 @@ public interface MoveValidator {
      */
     boolean canMoveTo(Vector2d position);
 
+    /**
+     * @return current boundaries of map
+     */
+
+    Boundary getCurrentBounds();
 
 }

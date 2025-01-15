@@ -48,11 +48,7 @@ public interface WorldMap extends MoveValidator {
      */
     WorldElement objectAt(Vector2d position);
 
-    /**
-     * @return current boundaries of map
-     */
 
-    Boundary getCurrentBounds();
 
     /**
      *
