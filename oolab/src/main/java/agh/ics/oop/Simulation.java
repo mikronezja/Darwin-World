@@ -12,6 +12,7 @@ public class Simulation implements Runnable{
 
     private final List<Animal> aliveAnimals = new ArrayList<>();
     private final List<Animal> deadAnimals = new ArrayList<>();
+    List<Animal> animalsToRemove = new ArrayList<>();
     private final ProjectWorldMap worldMap;
     private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
 
@@ -39,13 +40,17 @@ public class Simulation implements Runnable{
 
     public void run(){
         int howManyAnimalsAlive = aliveAnimals.size();
-        if (howManyAnimalsAlive > 0) {
+        while (howManyAnimalsAlive > 0) {
             for(Animal animal : aliveAnimals) {
                 if (!animal.isAlive()) {
                     worldMap.killAnimal(animal);
                     deadAnimals.add(animal);
-                    aliveAnimals.remove(animal);
+                    animalsToRemove.add(animal);
                 }
+            }
+            if (animalsToRemove.size()>0){
+                aliveAnimals.removeAll(animalsToRemove);
+                animalsToRemove.clear();
             }
             for(Animal animal : aliveAnimals) {
                 worldMap.move(animal);
@@ -53,6 +58,7 @@ public class Simulation implements Runnable{
             worldMap.eatingPlants();
             worldMap.animalsReproducing();
             worldMap.growPlants();
+            howManyAnimalsAlive = aliveAnimals.size();
         }
 
     }

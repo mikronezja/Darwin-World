@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.GridPane?>
 
+<?import javafx.scene.control.Button?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             minHeight="550.0" minWidth="850.0"
@@ -13,9 +14,4 @@
     <center>
         <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="BASELINE_CENTER"></GridPane>
     </center>
-    <bottom>
-        <VBox BorderPane.alignment="BASELINE_CENTER" alignment="BASELINE_CENTER" fx:id="bottomElements">
-            <Label fx:id="whatMoveHappened" textAlignment="CENTER"/>
-        </VBox>
-    </bottom>
 </BorderPane>

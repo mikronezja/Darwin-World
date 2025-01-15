@@ -6,70 +6,76 @@ import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+import static java.lang.Math.min;
+
 public class SimulationWindowPresenter implements MapChangeListener {
 
-    private WorldMap worldMap;
+    private ProjectWorldMap worldMap;
 
-    private Image north = new Image("north.png");
+    private Stage stage;
+
+    private Image northImage = new Image("NORTH.png");
+    private Image northEastImage = new Image("NORTH_EAST.png");
+    private Image eastImage = new Image("EAST.png");
+    private Image southEastImage = new Image("SOUTH_EAST.png");
+    private Image southImage = new Image("SOUTH.png");
+    private Image southWestImage = new Image("SOUTH_WEST.png");
+    private Image westImage = new Image("WEST.png");
+    private Image northWestImage = new Image("NORTH_WEST.png");
+
 
 
     @FXML
     private BorderPane mainBorderPane;
     @FXML
     private GridPane mapGrid;
-    @FXML
-    private Label whatMoveHappened;
-    @FXML
-    private VBox bottomElements;
 
 
-    public void setWorldMap(WorldMap worldMap, String moveInput) {
+
+    public void setupSimulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith, int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn, int genomeLength, Stage simulationStage) {
         this.worldMap = worldMap;
-        mainBorderPane.setMargin(bottomElements, new Insets(12,12,12,12));
+        stage = simulationStage;
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
-        List<Vector2d> positions = List.of(new Vector2d(1,2),new Vector2d(3,4));
-        List<MoveDirections> directions = OptionsParser.translateDirections(moveInput.split(" "));
-//        Simulation simulation = new Simulation(positions, directions, worldMap);
-//        List<Simulation> simulationsList = List.of(simulation);
-//        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
-//        simulationEngine.runAsync();
+        Simulation simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn, maxMutationInNewborn, genomeLength);
+        List<Simulation> simulationsList = List.of(simulation);
+        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
+        simulationEngine.runAsync();
     }
 
-    public void drawMap(WorldMap map) {
+    public void drawMap(ProjectWorldMap map) {
         clearGrid();
         Boundary boundary = map.getCurrentBounds();
         Label label = new Label();
-        label.setText("y/x");
-        mapGrid.add(label, 0, 0);
         GridPane.setHalignment(label, HPos.CENTER);
-        int relativeShiftOfX = 1 - boundary.lowerLeftCorner().getX();
-        int relativeShiftOfY = 1 + boundary.upperRightCorner().getY();
-        int widthtOfMap = boundary.upperRightCorner().getX() - boundary.lowerLeftCorner().getX() + 1;
-        int heightOfMap = boundary.upperRightCorner().getY() - boundary.lowerLeftCorner().getY() + 1;
+        int widthtOfMap = boundary.upperRightCorner().getX();
+        int heightOfMap = boundary.upperRightCorner().getY();
+
+        double windowWidthToMapWidthRatio = stage.getWidth() / widthtOfMap;
+        double windowHeightToMapWidthRatio = stage.getHeight() / heightOfMap;
 
         int cellWidth = 50;
         int cellHight = 50;
 
-        for (int i = 0; i < widthtOfMap;i++){
-            Label coordinates = new Label();
-            coordinates.setText(String.valueOf((boundary.lowerLeftCorner().getX()+i)));
-            mapGrid.add(coordinates, i+ 1, 0);
-            GridPane.setHalignment(coordinates, HPos.CENTER);
-        }
-        for (int i = 0; i < heightOfMap;i++){
-            Label coordinates = new Label();
-            coordinates.setText(String.valueOf((boundary.upperRightCorner().getY()-i)));
-            mapGrid.add(coordinates, 0, i+1);
-            GridPane.setHalignment(coordinates, HPos.CENTER);
+        for (int i = 0; i <= widthtOfMap;i++){
+            for (int j = 0; j <= heightOfMap;j++){
+                Label coordinates = new Label();
+                coordinates.setText(".");
+                mapGrid.add(coordinates, i, j);
+                GridPane.setHalignment(coordinates, HPos.CENTER);
+            }
         }
         for (int i = 0; i < widthtOfMap+1;i++){
             mapGrid.getColumnConstraints().add(new ColumnConstraints(cellWidth));
@@ -82,7 +88,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
             Vector2d positionOfElement = element.getPosition();
             Label animal = new Label();
             animal.setText(element.toString());
-            mapGrid.add(animal, positionOfElement.getX() + relativeShiftOfX, relativeShiftOfY - positionOfElement.getY());
+            mapGrid.add(animal, positionOfElement.getX() , boundary.upperRightCorner().getY() - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
     }
@@ -94,10 +100,9 @@ public class SimulationWindowPresenter implements MapChangeListener {
     }
 
     @Override
-    public void mapChanged(WorldMap worldMap, String message) {
+    public void mapChanged(ProjectWorldMap worldMap, String message) {
         Platform.runLater(() -> {
             drawMap(worldMap);
-            whatMoveHappened.setText(message);
         });
 
     }
