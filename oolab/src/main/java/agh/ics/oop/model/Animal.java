@@ -15,7 +15,6 @@ public class Animal implements WorldElement
     private Vector2d position;
     private int energy;
     private int consumedPlants = 0;
-    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
     private int howManyDaysIsAlive = 0;
     private int probabilityOfNotMoving = 0;
 
