@@ -18,8 +18,8 @@ public class RandomPositionForPlantsGenerator{
     public RandomPositionForPlantsGenerator(int height, int width, Vector2d upperRightEquatorCorner, Vector2d lowerLeftEquatorCorner) {
         this.upperRightEquatorCorner = upperRightEquatorCorner;
         this.lowerLeftEquatorCorner = lowerLeftEquatorCorner;
-        for (int i=0; i<=width; i++){
-            for (int j=0; j<=height; j++){
+        for (int i=0; i<width; i++){
+            for (int j=0; j<height; j++){
                 Vector2d position = new Vector2d(i,j);
                 if (position.follows(lowerLeftEquatorCorner) && position.precedes(upperRightEquatorCorner)){
                     positionsMoreDesirable.add(position);

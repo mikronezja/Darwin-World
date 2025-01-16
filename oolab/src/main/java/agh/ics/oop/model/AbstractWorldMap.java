@@ -17,7 +17,7 @@ public abstract class AbstractWorldMap implements WorldMap {
             throw new IncorrectPositionException(position);
         }else {
             animals.put(animal.getPosition(), animal);
-            mapChanged("Zwierzę zotało położone");
+            //mapChanged("Zwierzę zotało położone");
         }
     }
 
@@ -26,7 +26,7 @@ public abstract class AbstractWorldMap implements WorldMap {
             animals.remove(animal.getPosition());
             //animal.move(direction, this);
             animals.put(animal.getPosition(), animal);
-            mapChanged("Zwierze poruszyło sie");
+            //mapChanged("Zwierze poruszyło sie");
         }
     }
 
@@ -64,11 +64,11 @@ public abstract class AbstractWorldMap implements WorldMap {
         observators.remove(observator);
     }
 
-    protected void mapChanged(String message) {
-        for (MapChangeListener observator : observators) {
-            observator.mapChanged(this, message);
-        }
-    }
+//    protected void mapChanged(String message) {
+//        for (MapChangeListener observator : observators) {
+//            observator.mapChanged(this, message);
+//        }
+//    }
 
     public UUID getID(){
         return id;

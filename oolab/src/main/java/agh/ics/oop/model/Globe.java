@@ -17,18 +17,23 @@ public class Globe implements ProjectWorldMap{
     private Vector2d lowerLeftEquatorCorner;
     private Map<Vector2d, Plant> plants = new HashMap<>();
     private final int everydayPlantsGrow;
+    private final int howManyEnergyFromPlants;
     private RandomPositionForPlantsGenerator positionForPlantsGenerator;
     private Random random = new Random();
     private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
     private Map<Vector2d, TreeSet<Animal>> animals = new HashMap<>();
     private Map<Vector2d, Integer> recentDeadAnimals = new HashMap<>();
+    protected List<MapChangeListener> observators = new ArrayList<>();
     private UUID id = UUID.randomUUID();
+
+
 
     public Globe(int height, int width, int howManyPlantsOnStart, int howManyEnergyFromPlants, int howManyPlantsEveryDay) {
         this.upperRightMapCorner = new Vector2d(width-1, height-1);
         this.lowerLeftEquatorCorner = new Vector2d(0, ((height/5)*2)+1);
         this.upperRightEquatorCorner = new Vector2d(width-1, ((height/5)*2)+((height+2)/5));
         this.everydayPlantsGrow = howManyPlantsEveryDay;
+        this.howManyEnergyFromPlants=howManyPlantsOnStart;
         this.positionForPlantsGenerator = new RandomPositionForPlantsGenerator(height,width, upperRightEquatorCorner, lowerLeftEquatorCorner);
 
 
@@ -43,7 +48,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void place(Animal animal) throws IncorrectPositionException {
+    public synchronized void place(Animal animal) throws IncorrectPositionException {
         Vector2d position = animal.getPosition();
         if (isOccupied(position)) {
             animals.get(position).add(animal);
@@ -52,11 +57,11 @@ public class Globe implements ProjectWorldMap{
             animals.computeIfAbsent(position, k -> new TreeSet<>(ANIMAL_COMPARATOR))
                     .add(animal);
         }
-
+        mapChanged("Zwierze zostało położone na "+position.toString());
     }
 
     @Override
-    public void move(Animal animal) {
+    public synchronized void move(Animal animal) {
 
         Vector2d positionBeforeMove = animal.getPosition();
         TreeSet<Animal> setOfAnimalsBeforeMove = animals.get(positionBeforeMove);
@@ -78,7 +83,8 @@ public class Globe implements ProjectWorldMap{
                     .add(animal);
             }
         }
-
+        mapChanged("Długość listy pozycji: %s\nLista pozycji zwierząt: %s".formatted(animals.size(),animals));
+        mapChanged("Zwierzę poruszyło się z %s na %s".formatted(positionBeforeMove, animal.getPosition()));
     }
 
 
@@ -88,7 +94,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public List<WorldElement> objectsAt(Vector2d position) {
+    public synchronized List<WorldElement> objectsAt(Vector2d position) {
         List<WorldElement> objects = List.of();
         if (isOccupied(position)) {
             objects = animals.get(position).stream().collect(Collectors.toList());
@@ -97,14 +103,14 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public List<WorldElement> getElements() {
+    public synchronized List<WorldElement> getElements() {
         return Stream.concat(
                         animals.values()
                                 .stream()
                                 .flatMap(TreeSet::stream)
-                                .collect(Collectors.toList())
-                                .stream(),
-                        plants.values().stream())
+                                .filter(Objects::nonNull),
+                        plants.values().stream()
+                                .filter(Objects::nonNull))
                 .collect(Collectors.toList());
     }
 
@@ -114,30 +120,33 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void killAnimal(Animal animal) {
+    public synchronized void killAnimal(Animal animal) {
         Vector2d position = animal.getPosition();
         TreeSet<Animal> onThisSpace = animals.get(position);
         onThisSpace.remove(animal);
+        mapChanged("Zwierzę umarło na %s".formatted(position));
     }
 
     @Override
-    public void animalsReproducing() {
-        for (Vector2d position: animals.keySet()){
+    public synchronized void animalsReproducing() {
+        for (Vector2d position: new ArrayList<>(animals.keySet())){
             animalsReproduceAt(position);
         }
     }
 
     @Override
-    public void growPlants() {
+    public synchronized void growPlants() {
         for (int i=0;i<everydayPlantsGrow;i++){
             Vector2d position = positionForPlantsGenerator.generatePosition();
-            plants.put(position, plants.get(position));
+            Plant plant = new Plant(howManyEnergyFromPlants, position);
+            plants.put(position, plant);
+            mapChanged("Roślinka wyrosła na %s".formatted(position));
         }
     }
 
     @Override
-    public void eatingPlants() {
-        for (Vector2d position: animals.keySet()){
+    public synchronized void eatingPlants() {
+        for (Vector2d position: new ArrayList<>(animals.keySet())){
             animalsEatAt(position);
         }
     }
@@ -147,17 +156,25 @@ public class Globe implements ProjectWorldMap{
         return position.follows(lowerLeftMapCorner) && position.precedes(upperRightMapCorner);
     }
 
-    private void animalsReproduceAt(Vector2d position)
+    private synchronized void animalsReproduceAt(Vector2d position)
     {
-        if (animals.containsKey(position) && !animals.get(position).isEmpty())
+        if (animals.containsKey(position) && !animals.get(position).isEmpty() && animals.get(position).size()>1)
         {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first());
+            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(),true);
             Animal parent1, parent2;
             if (winningAnimals.size() == 2) {
                 parent1 = winningAnimals.getFirst();
                 winningAnimals.removeFirst();
                 parent2 = winningAnimals.getFirst();
                 winningAnimals.add(parent1);
+                try{
+                    Animal child = parent1.reproduce(parent2);
+                    this.place(child);
+                    mapChanged("Urodziło się nowe zwierzę na %s".formatted(position));
+                }
+                catch (IncorrectPositionException e) {
+                    e.printStackTrace();
+                }
             } else if (winningAnimals.size() == 1) {
                 parent1 = winningAnimals.getFirst();
                 winningAnimals.removeFirst();
@@ -172,53 +189,83 @@ public class Globe implements ProjectWorldMap{
                     int indexOfWinner = random.nextInt(howManyWinningAnimals);
                     parent2=finalists.get(indexOfWinner);
                 }
+                try{
+                    Animal child = parent1.reproduce(parent2);
+                    this.place(child);
+                    mapChanged("Urodziło się nowe zwierzę na %s".formatted(position));
+                }
+                catch (IncorrectPositionException e) {
+                    e.printStackTrace();
+                }
             }
-            else{
-                List<Animal> finalists = winningAnimals.stream().toList();
+            else if(winningAnimals.size()>2){
+                List<Animal> finalists = winningAnimals.stream().collect(Collectors.toList());
                 int howManyWinningAnimals = finalists.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
                 parent1=finalists.get(indexOfWinner);
-                finalists.remove(indexOfWinner);
+                Collections.swap(finalists, indexOfWinner, finalists.size()-1);
                 howManyWinningAnimals--;
                 indexOfWinner = random.nextInt(howManyWinningAnimals);
                 parent2=finalists.get(indexOfWinner);
+                try{
+                    Animal child = parent1.reproduce(parent2);
+                    this.place(child);
+                    mapChanged("Urodziło się nowe zwierzę na %s".formatted(position));
+                }
+                catch (IncorrectPositionException e) {
+                    e.printStackTrace();
+                }
             }
-            Animal child = new Animal(parent1.getPosition(),new Animal[]{parent1,parent2});
-            try{
-                this.place(child);
-            }
-            catch (IncorrectPositionException e) {
-                e.printStackTrace();
-            }
+
+
 
         }
+
     }
 
-    private void animalsEatAt(Vector2d position)
+    private synchronized void animalsEatAt(Vector2d position)
     {
-        if (animals.containsKey(position) && !animals.get(position).isEmpty())
+        if (plants.containsKey(position))
         {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first());
+            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(), true);
             Animal winningAnimal;
             if( winningAnimals.size() == 1)
             {
                 winningAnimal=winningAnimals.first();
-            }
-            else
+                winningAnimal.eatPlant(plants.get(position));
+                plants.remove(position);
+                mapChanged("Zwierzę zjadło roślinkę na %s".formatted(position));
+            } else if (winningAnimals.size() > 1)
             {
                 List<Animal> finalists = winningAnimals.stream().toList();
                 int howManyWinningAnimals = finalists.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
                 winningAnimal=finalists.get(indexOfWinner);
+                winningAnimal.eatPlant(plants.get(position));
+                plants.remove(position);
+                mapChanged("Zwierzę zjadło roślinkę na %s".formatted(position));
             }
-            winningAnimal.eatPlant(plants.get(position));
-            plants.remove(position);
+
         }
     }
 
     @Override
     public Boundary getCurrentBounds() {
         return new Boundary(lowerLeftMapCorner,upperRightMapCorner);
+    }
+
+    private void mapChanged(String message) {
+        for (MapChangeListener observator : observators) {
+            observator.mapChanged(this, message);
+        }
+    }
+
+    public void addObservator(MapChangeListener observator){
+        observators.add(observator);
+    }
+
+    public void removeObservator(MapChangeListener observator){
+        observators.remove(observator);
     }
 
 }

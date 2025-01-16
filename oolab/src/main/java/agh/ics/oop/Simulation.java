@@ -12,6 +12,7 @@ public class Simulation implements Runnable{
 
     private final List<Animal> aliveAnimals = new ArrayList<>();
     private final List<Animal> deadAnimals = new ArrayList<>();
+    List<Animal> animalsToRemove = new ArrayList<>();
     private final ProjectWorldMap worldMap;
     private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
 
@@ -39,20 +40,50 @@ public class Simulation implements Runnable{
 
     public void run(){
         int howManyAnimalsAlive = aliveAnimals.size();
-        if (howManyAnimalsAlive > 0) {
+        while (howManyAnimalsAlive > 0) {
             for(Animal animal : aliveAnimals) {
                 if (!animal.isAlive()) {
                     worldMap.killAnimal(animal);
                     deadAnimals.add(animal);
-                    aliveAnimals.remove(animal);
+                    animalsToRemove.add(animal);
                 }
             }
-            for(Animal animal : aliveAnimals) {
+            if (animalsToRemove.size()>0){
+                aliveAnimals.removeAll(animalsToRemove);
+                animalsToRemove.clear();
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            for(Animal animal : new ArrayList<>(aliveAnimals)) {
                 worldMap.move(animal);
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
             worldMap.eatingPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             worldMap.animalsReproducing();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             worldMap.growPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            howManyAnimalsAlive = aliveAnimals.size();
         }
 
     }
