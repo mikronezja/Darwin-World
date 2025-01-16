@@ -8,15 +8,23 @@ public class Genome
 {
    private final int[] genome; // since not resizeable we can use a static array
 
-   public Genome()
+    private final int minNumberOfMutations;
+    private final int maxNumberOfMutations;
+
+
+   public Genome(int genomLength, int minNumberOfMutations, int maxNumberOfMutations)
    {
-        genome = new int[Simulation.getGenomLength()];
+       this.minNumberOfMutations = minNumberOfMutations;
+       this.maxNumberOfMutations = maxNumberOfMutations;
+        genome = new int[genomLength];
         createGenome();
    }
 
-    public Genome(int[] genome1, int energy1, int[] genome2, int energy2)
+    public Genome(int[] genome1, int energy1, int[] genome2, int energy2, int minNumberOfMutations, int maxNumberOfMutations)
     {
-        genome = new int[Simulation.getGenomLength()];
+        this.minNumberOfMutations = minNumberOfMutations;
+        this.maxNumberOfMutations = maxNumberOfMutations;
+        genome = new int[genome1.length];
         createGenome(genome1, energy1, genome2, energy2);
         mutate(mutationNumber());
     }
@@ -83,6 +91,7 @@ public class Genome
 
    private int mutationNumber()
    {
-       return (int)Math.floor(Math.random() * (Simulation.getMaxNumberOfmutations() - Simulation.getMinNumberOfmutations() + 1) + Simulation.getMinNumberOfmutations());
+       return (int)Math.floor(Math.random() * (maxNumberOfMutations - minNumberOfMutations + 1) + minNumberOfMutations);
    }
+
 }

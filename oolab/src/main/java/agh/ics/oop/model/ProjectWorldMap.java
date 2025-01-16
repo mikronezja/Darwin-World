@@ -55,5 +55,25 @@ public interface ProjectWorldMap extends MoveValidator{
 
     UUID getID();
 
+    /**
+     * Kill an animal - it means move it to delete it from animal map
+     * @param animal
+     */
 
+    void killAnimal(Animal animal);
+
+    /**
+     * Make animals love each other
+     */
+    void animalsReproducing();
+
+    /**
+     * Growing plants on our Globe is very important
+     */
+    void growPlants();
+
+    /**
+     * When out animals are hungry
+     */
+    void eatingPlants();
 }

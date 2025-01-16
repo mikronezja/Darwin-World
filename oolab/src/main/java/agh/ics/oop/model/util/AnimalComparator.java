@@ -11,6 +11,7 @@ public class AnimalComparator implements Comparator<Animal> {
                 .comparingInt(Animal::getEnergy).reversed()
                 .thenComparingInt(Animal::getHowManyDaysIsAlive).reversed()
                 .thenComparingInt(Animal::getKidsNumber).reversed()
+                .thenComparingInt(Animal::getIndex)
                 .compare(animal1, animal2);
     }
 }

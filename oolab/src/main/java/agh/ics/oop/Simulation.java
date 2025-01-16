@@ -1,6 +1,7 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,15 +10,12 @@ import java.util.List;
 
 public class Simulation implements Runnable{
 
-    private final List<MoveDirections> directions;
-    private final List<Animal> animals = new ArrayList<>();
-    private final WorldMap worldMap;
-    private static final int genomLength = 10; // cos sie tu zrobi
-    private static final int startingEnergy = 10;
-    private static final int minReproductionEnergy = 10; // to w globe ?
-    private static final int subtractingEnergyWhileReproducing = 10;
-    private static final int minNumberOfmutations = 10;
-    private static final int maxNumberOfmutations = 10;
+    private final List<Animal> aliveAnimals = new ArrayList<>();
+    private final List<Animal> deadAnimals = new ArrayList<>();
+    List<Animal> animalsToRemove = new ArrayList<>();
+    private final ProjectWorldMap worldMap;
+    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
+
     private final int dailyPlants = 0; // ile roslinek dziennie bedzie roslo
 
 
@@ -25,44 +23,67 @@ public class Simulation implements Runnable{
     // chcemy sprawnie iterować po kolejnych elementach naszej listy, a ArrayList
     // zapewnia nam szybszy dostęp gdy odwołujemy się do elementu po indeksie
 
-    public Simulation(List<Vector2d> positions, List<MoveDirections> directions, WorldMap worldMap) {
-        this.directions = directions;
+    public Simulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith, int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn, int genomeLength) {
         this.worldMap = worldMap;
-        for (Vector2d position : positions) {
-            Animal animal = new Animal(position);
+        randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX()+1, worldMap.getCurrentBounds().upperRightCorner().getY()+1);
+        for (int i=0;i<howManyAnimalsToStartWith;i++) {
+            Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn);
             try {
                 worldMap.place(animal);
-                animals.add(animal);
+                aliveAnimals.add(animal);
             } catch (IncorrectPositionException e) {
                 System.out.println(e.getMessage());
             }
-
         }
     }
 
-    public Simulation(WorldMap worldMap)
-    {
-
-
-    }
-
-
-
 
     public void run(){
-        int howManyAnimals = animals.size();
-        if (howManyAnimals > 0) {
-            for (int i=0; i<directions.size(); i++){
-                try{
-                    Thread.sleep(500);
-                    int ind = i%howManyAnimals;
-                    worldMap.move(animals.get(ind), directions.get(i));
+        int howManyAnimalsAlive = aliveAnimals.size();
+        while (howManyAnimalsAlive > 0) {
+            for(Animal animal : aliveAnimals) {
+                if (!animal.isAlive()) {
+                    worldMap.killAnimal(animal);
+                    deadAnimals.add(animal);
+                    animalsToRemove.add(animal);
                 }
-                catch(InterruptedException e){
-                    System.out.println("Poruszanie zwierzaka zostało przerwane");
-                }
-
             }
+            if (animalsToRemove.size()>0){
+                aliveAnimals.removeAll(animalsToRemove);
+                animalsToRemove.clear();
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            for(Animal animal : new ArrayList<>(aliveAnimals)) {
+                worldMap.move(animal);
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            worldMap.eatingPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            worldMap.animalsReproducing();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            worldMap.growPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            howManyAnimalsAlive = aliveAnimals.size();
         }
 
     }
@@ -70,11 +91,7 @@ public class Simulation implements Runnable{
 
 
     public List<Animal> getAnimals() {
-        return Collections.unmodifiableList(animals);
+        return Collections.unmodifiableList(aliveAnimals);
     }
-    public static int getGenomLength() { return genomLength; }
-    public static int getStartingEnergy() {return startingEnergy;}
-    public static int getSubtractingEnergyWhileReproducing() {return subtractingEnergyWhileReproducing;}
-    public static int getMinNumberOfmutations() {return minNumberOfmutations;}
-    public static int getMaxNumberOfmutations() {return maxNumberOfmutations;}
+
 }

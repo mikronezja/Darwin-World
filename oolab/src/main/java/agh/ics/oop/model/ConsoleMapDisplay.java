@@ -5,7 +5,7 @@ public class ConsoleMapDisplay implements MapChangeListener {
     private int howManyActualisations = 0;
 
     @Override
-    public void mapChanged(WorldMap worldMap, String message) {
+    public void mapChanged(ProjectWorldMap worldMap, String message) {
         synchronized (System.out) {
             System.out.println(message);
             System.out.println(worldMap.toString());
