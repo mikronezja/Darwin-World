@@ -67,10 +67,10 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
         for (int i = 0; i <= widthtOfMap;i++){
             for (int j = 0; j <= heightOfMap;j++){
-                Label coordinates = new Label();
-                coordinates.setText(".");
-                mapGrid.add(coordinates, i, j);
-                GridPane.setHalignment(coordinates, HPos.CENTER);
+                ImageView tileView = new ImageView(tile);
+                tileView.setFitHeight(cellHight);
+                tileView.setFitWidth(cellWidth);
+                mapGrid.add(tileView, i, j);
             }
         }
         for (int i = 0; i < widthtOfMap+1;i++){
@@ -83,8 +83,8 @@ public class SimulationWindowPresenter implements MapChangeListener {
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
             ImageView animal = new ImageView(element.getStateOfImage());
-            animal.maxHeight(cellHight);
-            animal.maxWidth(cellWidth);
+            animal.setFitHeight(cellHight);
+            animal.setFitWidth(cellWidth);
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
