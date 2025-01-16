@@ -30,7 +30,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
 
     private Image tile = new Image("tile.png");
-    private Image equator = new Image("equator.png");
+    private Image equator = new Image("equtor.png");
 
 
 
@@ -83,6 +83,8 @@ public class SimulationWindowPresenter implements MapChangeListener {
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
             ImageView animal = new ImageView(element.getStateOfImage());
+            animal.maxHeight(cellHight);
+            animal.maxWidth(cellWidth);
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
