@@ -76,4 +76,9 @@ public interface ProjectWorldMap extends MoveValidator{
      * When out animals are hungry
      */
     void eatingPlants();
+
+    /**
+     *
+     */
+    boolean isPositionMoreDesirableForPlants(Vector2d position);
 }

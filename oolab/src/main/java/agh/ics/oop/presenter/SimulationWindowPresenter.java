@@ -62,12 +62,18 @@ public class SimulationWindowPresenter implements MapChangeListener {
         double windowWidthToMapWidthRatio = stage.getWidth() / widthtOfMap;
         double windowHeightToMapWidthRatio = stage.getHeight() / heightOfMap;
 
-        int cellWidth = 50;
-        int cellHight = 50;
+        int cellWidth = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 10;
+        int cellHight = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 10;
+
 
         for (int i = 0; i <= widthtOfMap;i++){
             for (int j = 0; j <= heightOfMap;j++){
-                ImageView tileView = new ImageView(tile);
+
+                ImageView tileView;
+                if ( map.isPositionMoreDesirableForPlants(new Vector2d(widthtOfMap - i, heightOfMap - j)))
+                 tileView = new ImageView(equator);
+                else
+                    tileView = new ImageView(tile);
                 tileView.setFitHeight(cellHight);
                 tileView.setFitWidth(cellWidth);
                 mapGrid.add(tileView, i, j);

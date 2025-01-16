@@ -268,4 +268,11 @@ public class Globe implements ProjectWorldMap{
         observators.remove(observator);
     }
 
+    @Override
+    public boolean isPositionMoreDesirableForPlants(Vector2d position)
+    {
+        return position.follows(lowerLeftEquatorCorner) && position.precedes(upperRightEquatorCorner);
+    }
+
+
 }
