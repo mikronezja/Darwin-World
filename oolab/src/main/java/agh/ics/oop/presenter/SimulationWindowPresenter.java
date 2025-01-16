@@ -28,17 +28,9 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
     private Stage stage;
 
-    private Image northImage = new Image("NORTH.png");
-    private Image northEastImage = new Image("NORTH_EAST.png");
-    private Image eastImage = new Image("EAST.png");
-    private Image southEastImage = new Image("SOUTH_EAST.png");
-    private Image southImage = new Image("SOUTH.png");
-    private Image southWestImage = new Image("SOUTH_WEST.png");
-    private Image westImage = new Image("WEST.png");
-    private Image northWestImage = new Image("NORTH_WEST.png");
+
     private Image tile = new Image("tile.png");
     private Image equator = new Image("equator.png");
-    private Image plant = new Image("plant.png");
 
 
 
@@ -90,7 +82,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
         List<WorldElement> elements = map.getElements();
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
-            ImageView animal = new ImageView();
+            ImageView animal = new ImageView(element.getStateOfImage());
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
