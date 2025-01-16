@@ -71,6 +71,8 @@ public class SimulationMenuPresenter{
         configureStage(simulationStage, viewRoot);
         Globe map = new Globe(parseInt(heightInput.getText()), parseInt(widthInput.getText()), parseInt(howManyPlantsInput.getText()), parseInt(howManyEnergyFromPlantInput.getText()), parseInt(howManyPlantsGrowEverydayInput.getText()));
         map.addObservator(simulationPresenter);
+        FileMapDisplay fileMapDisplay = new FileMapDisplay();
+        map.addObservator(fileMapDisplay);
         simulationPresenter.setupSimulation(map, parseInt(howManyAnimalsOnStartInput.getText()), parseInt(howManyStartingEnergyAnimalHaveInput.getText()), parseInt(energeyNeededToReproduceInput.getText()), parseInt(energyUsedToReproduceInput.getText()), parseInt(minNumberOfMutationInput.getText()), parseInt(maxNumberOfMutationInput.getText()), parseInt(howLongGenomWillBeInput.getText()), simulationStage);
     }
 

@@ -48,7 +48,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void place(Animal animal) throws IncorrectPositionException {
+    public synchronized void place(Animal animal) throws IncorrectPositionException {
         Vector2d position = animal.getPosition();
         if (isOccupied(position)) {
             animals.get(position).add(animal);
@@ -61,7 +61,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void move(Animal animal) {
+    public synchronized void move(Animal animal) {
 
         Vector2d positionBeforeMove = animal.getPosition();
         TreeSet<Animal> setOfAnimalsBeforeMove = animals.get(positionBeforeMove);
@@ -83,6 +83,7 @@ public class Globe implements ProjectWorldMap{
                     .add(animal);
             }
         }
+        mapChanged("Długość listy pozycji: %s\nLista pozycji zwierząt: %s".formatted(animals.size(),animals));
         mapChanged("Zwierzę poruszyło się z %s na %s".formatted(positionBeforeMove, animal.getPosition()));
     }
 
@@ -93,7 +94,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public List<WorldElement> objectsAt(Vector2d position) {
+    public synchronized List<WorldElement> objectsAt(Vector2d position) {
         List<WorldElement> objects = List.of();
         if (isOccupied(position)) {
             objects = animals.get(position).stream().collect(Collectors.toList());
@@ -102,7 +103,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public List<WorldElement> getElements() {
+    public synchronized List<WorldElement> getElements() {
         return Stream.concat(
                         animals.values()
                                 .stream()
@@ -119,7 +120,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void killAnimal(Animal animal) {
+    public synchronized void killAnimal(Animal animal) {
         Vector2d position = animal.getPosition();
         TreeSet<Animal> onThisSpace = animals.get(position);
         onThisSpace.remove(animal);
@@ -127,14 +128,14 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void animalsReproducing() {
+    public synchronized void animalsReproducing() {
         for (Vector2d position: new ArrayList<>(animals.keySet())){
             animalsReproduceAt(position);
         }
     }
 
     @Override
-    public void growPlants() {
+    public synchronized void growPlants() {
         for (int i=0;i<everydayPlantsGrow;i++){
             Vector2d position = positionForPlantsGenerator.generatePosition();
             Plant plant = new Plant(howManyEnergyFromPlants, position);
@@ -144,7 +145,7 @@ public class Globe implements ProjectWorldMap{
     }
 
     @Override
-    public void eatingPlants() {
+    public synchronized void eatingPlants() {
         for (Vector2d position: new ArrayList<>(animals.keySet())){
             animalsEatAt(position);
         }
@@ -155,11 +156,11 @@ public class Globe implements ProjectWorldMap{
         return position.follows(lowerLeftMapCorner) && position.precedes(upperRightMapCorner);
     }
 
-    private void animalsReproduceAt(Vector2d position)
+    private synchronized void animalsReproduceAt(Vector2d position)
     {
-        if (animals.containsKey(position) && !animals.get(position).isEmpty())
+        if (animals.containsKey(position) && !animals.get(position).isEmpty() && animals.get(position).size()>1)
         {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first());
+            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(),true);
             Animal parent1, parent2;
             if (winningAnimals.size() == 2) {
                 parent1 = winningAnimals.getFirst();
@@ -198,11 +199,11 @@ public class Globe implements ProjectWorldMap{
                 }
             }
             else if(winningAnimals.size()>2){
-                List<Animal> finalists = winningAnimals.stream().toList();
+                List<Animal> finalists = winningAnimals.stream().collect(Collectors.toList());
                 int howManyWinningAnimals = finalists.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
                 parent1=finalists.get(indexOfWinner);
-                finalists.remove(indexOfWinner);
+                Collections.swap(finalists, indexOfWinner, finalists.size()-1);
                 howManyWinningAnimals--;
                 indexOfWinner = random.nextInt(howManyWinningAnimals);
                 parent2=finalists.get(indexOfWinner);
@@ -222,11 +223,11 @@ public class Globe implements ProjectWorldMap{
 
     }
 
-    private void animalsEatAt(Vector2d position)
+    private synchronized void animalsEatAt(Vector2d position)
     {
-        if (animals.containsKey(position) && !animals.get(position).isEmpty())
+        if (plants.containsKey(position))
         {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first());
+            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(), true);
             Animal winningAnimal;
             if( winningAnimals.size() == 1)
             {

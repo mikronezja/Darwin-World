@@ -52,12 +52,37 @@ public class Simulation implements Runnable{
                 aliveAnimals.removeAll(animalsToRemove);
                 animalsToRemove.clear();
             }
-            for(Animal animal : aliveAnimals) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            for(Animal animal : new ArrayList<>(aliveAnimals)) {
                 worldMap.move(animal);
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
             worldMap.eatingPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             worldMap.animalsReproducing();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             worldMap.growPlants();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             howManyAnimalsAlive = aliveAnimals.size();
         }
 

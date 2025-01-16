@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -86,9 +87,9 @@ public class SimulationWindowPresenter implements MapChangeListener {
         List<WorldElement> elements = map.getElements();
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
-            Label animal = new Label();
+            ImageView animal = new ImageView()
             animal.setText(element.toString());
-            mapGrid.add(animal, positionOfElement.getX() , boundary.upperRightCorner().getY() - positionOfElement.getY());
+            mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
     }

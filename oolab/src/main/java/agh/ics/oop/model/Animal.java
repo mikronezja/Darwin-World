@@ -18,6 +18,10 @@ public class Animal implements WorldElement
     private int howManyDaysIsAlive = 0;
     private int probabilityOfNotMoving = 0;
 
+    private static int howManyAnimals = 0;
+    private final int index;
+
+
     private Set<Animal> kids = new HashSet<>();
     private Set<Animal> descendants = new HashSet<>();
 
@@ -44,6 +48,8 @@ public class Animal implements WorldElement
         parents = null;
         generateStartingGenomeIndex();
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ]; // randomly generates how its turned
+        index=howManyAnimals;
+        howManyAnimals++;
     }
 
     // if Animal has been created by
@@ -59,6 +65,8 @@ public class Animal implements WorldElement
         this.genome = new Genome(parents[0].getGenomeAsIntList(),parents[0].getEnergy(),parents[1].getGenomeAsIntList(),parents[1].getEnergy(),minNumberOfmutations, maxNumberOfmutations);
         generateStartingGenomeIndex();
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ];
+        index=howManyAnimals;
+        howManyAnimals++;
     }
 
     public String toString(){
@@ -96,6 +104,7 @@ public class Animal implements WorldElement
                 }
         }
         this.position = possibleMove;
+        energy--;
     }
 
 
@@ -122,10 +131,13 @@ public class Animal implements WorldElement
     private void addDescendantsToAllParents(Animal descendant)
     {
         this.descendants.add(descendant);
-        for (Animal parent : parents)
-        {
-            parent.addDescendantsToAllParents(descendant);
+        if (parents!=null){
+            for (Animal parent : parents)
+            {
+                parent.addDescendantsToAllParents(descendant);
+            }
         }
+
     }
 
     public Animal reproduce(Animal parent1)
@@ -159,6 +171,7 @@ public class Animal implements WorldElement
     public MapDirections getDirection() {
         return direction;
     }
+    @Override
     public Vector2d getPosition() {
         return position;
     }
@@ -178,5 +191,8 @@ public class Animal implements WorldElement
     }
     public int getMinReproductionEnergy() {
         return minReproductionEnergy;
+    }
+    public int getIndex() {
+        return index;
     }
 }
