@@ -1,0 +1,1701 @@
+16 Jan 2025 22:38:46 GMT Zwierze zostało położone na (0, 6)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (9, 8)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (5, 3)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (7, 2)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (2, 8)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (7, 8)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (8, 4)
+16 Jan 2025 22:38:47 GMT Zwierze zostało położone na (8, 9)
+16 Jan 2025 22:38:47 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (5, 9)=[^], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 3)=[>]}
+16 Jan 2025 22:38:47 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:38:47 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (5, 9)=[^], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 3)=[>]}
+16 Jan 2025 22:38:47 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:38:47 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (5, 9)=[v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 3)=[>]}
+16 Jan 2025 22:38:47 GMT Zwierzę poruszyło się z (5, 9) na (5, 9)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (5, 9)=[v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (5, 9)=[v], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (5, 9)=[v], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (5, 8) na (6, 8)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (5, 9)=[v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (8, 9)=[^], (6, 8)=[>], (5, 9)=[v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (7, 8) na (8, 8)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (8, 9)=[^], (6, 8)=[>], (5, 9)=[v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:38:48 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (8, 9)=[v], (6, 8)=[>], (5, 9)=[v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:38:48 GMT Zwierzę poruszyło się z (8, 9) na (8, 9)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (6, 7)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (7, 6)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (3, 6)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (0, 6)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (9, 8)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (4, 2)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (6, 6)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (5, 5)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (0, 5)
+16 Jan 2025 22:38:49 GMT Roślinka wyrosła na (2, 5)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (8, 9)=[v], (6, 8)=[>], (1, 5)=[>], (5, 9)=[v], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (6, 8)=[>], (1, 5)=[>], (5, 9)=[v], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (6, 8)=[>], (5, 8)=[v], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (5, 9) na (5, 8)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (6, 8)=[>], (5, 8)=[v], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (6, 8)=[>], (5, 8)=[v], (1, 5)=[>], (3, 8)=[>], (6, 1)=[<], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (3, 8)=[>], (6, 1)=[<], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (6, 8) na (5, 9)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (8, 9)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:49 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:38:49 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (8, 8) na (9, 7)
+16 Jan 2025 22:38:50 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:38:50 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (8, 9) na (8, 8)
+16 Jan 2025 22:38:50 GMT Zwierzę zjadło roślinkę na (9, 8)
+16 Jan 2025 22:38:50 GMT Zwierzę zjadło roślinkę na (1, 5)
+16 Jan 2025 22:38:50 GMT Zwierzę zjadło roślinkę na (4, 2)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (4, 5)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (8, 9)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (5, 6)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (9, 6)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (8, 5)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (2, 6)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (0, 8)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (7, 1)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (8, 8)
+16 Jan 2025 22:38:50 GMT Roślinka wyrosła na (5, 1)
+16 Jan 2025 22:38:50 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:38:50 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 8)=[v], (5, 8)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:38:50 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:38:50 GMT Zwierzę poruszyło się z (5, 8) na (5, 7)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (9, 7)=[◢]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 8)=[v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (5, 9) na (5, 8)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (2, 9) na (2, 8)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (9, 7) na (9, 6)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (5, 7)=[v], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:38:51 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 7)=[v], (4, 3)=[^], (9, 9)=[^], (5, 7)=[v], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:51 GMT Zwierzę poruszyło się z (8, 8) na (8, 7)
+16 Jan 2025 22:38:51 GMT Zwierzę zjadło roślinkę na (1, 6)
+16 Jan 2025 22:38:51 GMT Zwierzę zjadło roślinkę na (9, 6)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (2, 9)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (3, 2)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (7, 3)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (4, 9)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (1, 8)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (9, 0)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (1, 4)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (1, 2)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (8, 0)
+16 Jan 2025 22:38:52 GMT Roślinka wyrosła na (2, 1)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 7)=[v], (4, 3)=[^], (9, 9)=[^], (5, 7)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (4, 3)=[^], (5, 7)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (4, 3)=[^], (5, 6)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (5, 7) na (5, 6)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (6, 9)=[◥], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (5, 8) na (6, 9)
+16 Jan 2025 22:38:52 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:52 GMT Zwierzę poruszyło się z (2, 8) na (3, 9)
+16 Jan 2025 22:38:53 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:38:53 GMT Zwierzę poruszyło się z (9, 6) na (8, 5)
+16 Jan 2025 22:38:53 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (5, 6)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:38:53 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:38:53 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 6)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:53 GMT Zwierzę poruszyło się z (8, 7) na (8, 6)
+16 Jan 2025 22:38:53 GMT Zwierzę zjadło roślinkę na (5, 6)
+16 Jan 2025 22:38:53 GMT Zwierzę zjadło roślinkę na (0, 6)
+16 Jan 2025 22:38:53 GMT Zwierzę zjadło roślinkę na (8, 5)
+16 Jan 2025 22:38:53 GMT Zwierzę zjadło roślinkę na (8, 6)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (6, 3)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (5, 0)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (3, 8)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (1, 3)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (9, 3)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (0, 2)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (5, 8)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (0, 7)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (6, 2)
+16 Jan 2025 22:38:53 GMT Roślinka wyrosła na (4, 7)
+16 Jan 2025 22:38:53 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 6)=[v], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:53 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:38:53 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[v], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:53 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (5, 6) na (5, 5)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (5, 2)=[v], (8, 5)=[◣], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v], (8, 5)=[◣], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v], (8, 5)=[◣], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (6, 9) na (5, 9)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v], (8, 5)=[◣], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (3, 9) na (2, 9)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (5, 2)=[v], (7, 5)=[<], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (8, 5) na (7, 5)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v], (7, 5)=[<], (8, 6)=[v]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:38:54 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[v], (7, 5)=[<]}
+16 Jan 2025 22:38:54 GMT Zwierzę poruszyło się z (8, 6) na (8, 5)
+16 Jan 2025 22:38:54 GMT Zwierzę zjadło roślinkę na (5, 5)
+16 Jan 2025 22:38:54 GMT Zwierzę zjadło roślinkę na (0, 5)
+16 Jan 2025 22:38:54 GMT Zwierzę zjadło roślinkę na (2, 9)
+16 Jan 2025 22:38:54 GMT Zwierzę zjadło roślinkę na (7, 1)
+16 Jan 2025 22:38:54 GMT Zwierzę zjadło roślinkę na (7, 5)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (3, 7)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (0, 0)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (2, 7)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (1, 7)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (5, 2)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (8, 1)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (6, 9)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (1, 1)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (6, 4)
+16 Jan 2025 22:38:55 GMT Roślinka wyrosła na (8, 4)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 5)=[v], (9, 9)=[^], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[v], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[v], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[v], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (5, 5) na (5, 4)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 8)=[◢], (1, 5)=[>], (2, 9)=[<], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (5, 9) na (6, 8)
+16 Jan 2025 22:38:55 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:38:55 GMT Zwierzę poruszyło się z (2, 9) na (3, 8)
+16 Jan 2025 22:38:56 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:56 GMT Zwierzę poruszyło się z (7, 5) na (6, 6)
+16 Jan 2025 22:38:56 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 5)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:56 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:38:56 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:56 GMT Zwierzę poruszyło się z (8, 5) na (8, 4)
+16 Jan 2025 22:38:56 GMT Zwierzę zjadło roślinkę na (6, 6)
+16 Jan 2025 22:38:56 GMT Zwierzę zjadło roślinkę na (3, 8)
+16 Jan 2025 22:38:56 GMT Zwierzę zjadło roślinkę na (9, 3)
+16 Jan 2025 22:38:56 GMT Zwierzę zjadło roślinkę na (8, 4)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (3, 9)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (4, 8)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (8, 2)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (9, 2)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (7, 2)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (6, 1)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (5, 3)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (6, 8)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (2, 8)
+16 Jan 2025 22:38:56 GMT Roślinka wyrosła na (0, 3)
+16 Jan 2025 22:38:56 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:56 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:38:56 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(5, 4)=[v], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:56 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (5, 4) na (5, 3)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 9)=[^], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (6, 8) na (6, 9)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (3, 8) na (3, 9)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (6, 6) na (6, 7)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (8, 4)=[v], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:38:57 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (5, 3)=[v]}
+16 Jan 2025 22:38:57 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:38:57 GMT Zwierzę zjadło roślinkę na (6, 7)
+16 Jan 2025 22:38:57 GMT Zwierzę zjadło roślinkę na (6, 9)
+16 Jan 2025 22:38:57 GMT Zwierzę zjadło roślinkę na (3, 9)
+16 Jan 2025 22:38:57 GMT Zwierzę zjadło roślinkę na (6, 2)
+16 Jan 2025 22:38:57 GMT Zwierzę zjadło roślinkę na (5, 3)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (2, 2)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (1, 0)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (3, 4)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (4, 1)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (7, 7)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (5, 7)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (3, 3)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (4, 3)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (0, 1)
+16 Jan 2025 22:38:58 GMT Roślinka wyrosła na (7, 4)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (5, 3)=[v]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (5, 3)=[v]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 7)=[^], (5, 8)=[◣], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (6, 9) na (5, 8)
+16 Jan 2025 22:38:58 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 7)=[^], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:58 GMT Zwierzę poruszyło się z (3, 9) na (2, 8)
+16 Jan 2025 22:38:59 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:59 GMT Zwierzę poruszyło się z (6, 7) na (7, 8)
+16 Jan 2025 22:38:59 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (8, 4)=[<], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:59 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:38:59 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:59 GMT Zwierzę poruszyło się z (8, 3) na (8, 2)
+16 Jan 2025 22:38:59 GMT Zwierzę zjadło roślinkę na (5, 8)
+16 Jan 2025 22:38:59 GMT Zwierzę zjadło roślinkę na (2, 8)
+16 Jan 2025 22:38:59 GMT Zwierzę zjadło roślinkę na (8, 2)
+16 Jan 2025 22:38:59 GMT Zwierzę zjadło roślinkę na (7, 2)
+16 Jan 2025 22:38:59 GMT Zwierzę zjadło roślinkę na (5, 2)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (9, 9)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (0, 4)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (5, 9)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (8, 7)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (3, 0)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (4, 4)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (7, 0)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (0, 9)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (3, 1)
+16 Jan 2025 22:38:59 GMT Roślinka wyrosła na (7, 8)
+16 Jan 2025 22:38:59 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:59 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:38:59 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:38:59 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (8, 2)=[v], (7, 2)=[>], (5, 1)=[v], (8, 4)=[<], (5, 3)=[>]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (5, 2) na (5, 1)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (8, 2)=[v], (7, 2)=[>], (5, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 2)=[v], (5, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 2)=[v], (5, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (5, 8) na (6, 8)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 2)=[v], (5, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 2)=[v], (5, 1)=[v], (8, 4)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (7, 8) na (8, 8)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 2)=[v], (8, 3)=[v], (5, 1)=[v], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:00 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 1)=[v], (5, 2)=[v]}
+16 Jan 2025 22:39:00 GMT Zwierzę poruszyło się z (8, 2) na (8, 1)
+16 Jan 2025 22:39:00 GMT Zwierzę zjadło roślinkę na (8, 8)
+16 Jan 2025 22:39:00 GMT Zwierzę zjadło roślinkę na (9, 9)
+16 Jan 2025 22:39:00 GMT Zwierzę zjadło roślinkę na (6, 8)
+16 Jan 2025 22:39:00 GMT Zwierzę zjadło roślinkę na (8, 1)
+16 Jan 2025 22:39:00 GMT Zwierzę zjadło roślinkę na (5, 1)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (9, 4)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (9, 1)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (1, 9)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (4, 0)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (7, 9)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (9, 7)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (8, 3)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (6, 0)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (2, 3)
+16 Jan 2025 22:39:01 GMT Roślinka wyrosła na (5, 4)
+16 Jan 2025 22:39:01 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 1)=[v], (5, 2)=[v]}
+16 Jan 2025 22:39:01 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:01 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 1)=[v], (5, 2)=[v]}
+16 Jan 2025 22:39:01 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:01 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (7, 1)=[v], (5, 0)=[v], (8, 3)=[v], (5, 2)=[v]}
+16 Jan 2025 22:39:01 GMT Zwierzę poruszyło się z (5, 1) na (5, 0)
+16 Jan 2025 22:39:01 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (7, 1)=[v], (5, 0)=[v], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:39:01 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:01 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (6, 1)=[<], (5, 0)=[v], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:39:01 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:02 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 9)=[◤], (1, 5)=[>], (3, 8)=[>], (8, 1)=[v], (6, 1)=[<], (5, 0)=[v], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:39:02 GMT Zwierzę poruszyło się z (6, 8) na (5, 9)
+16 Jan 2025 22:39:02 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (8, 1)=[v], (6, 1)=[<], (5, 0)=[v], (8, 3)=[v], (4, 2)=[<]}
+16 Jan 2025 22:39:02 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:39:02 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (8, 1)=[v], (6, 1)=[<], (5, 0)=[v], (8, 3)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:02 GMT Zwierzę poruszyło się z (8, 8) na (9, 7)
+16 Jan 2025 22:39:02 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (8, 1)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:02 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:02 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:02 GMT Zwierzę poruszyło się z (8, 1) na (8, 0)
+16 Jan 2025 22:39:02 GMT Zwierzę zjadło roślinkę na (5, 9)
+16 Jan 2025 22:39:02 GMT Zwierzę zjadło roślinkę na (8, 0)
+16 Jan 2025 22:39:02 GMT Zwierzę zjadło roślinkę na (6, 1)
+16 Jan 2025 22:39:02 GMT Zwierzę zjadło roślinkę na (5, 0)
+16 Jan 2025 22:39:02 GMT Zwierzę zjadło roślinkę na (9, 7)
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:02 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[v], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[^], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (5, 0) na (5, 0)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 0)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (5, 0)=[^], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (1, 6)=[^], (2, 9)=[◤], (8, 0)=[v], (9, 3)=[>], (5, 0)=[^], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (5, 9) na (5, 8)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (8, 0)=[v], (9, 3)=[>], (5, 0)=[^], (6, 2)=[^], (9, 7)=[◢]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (2, 9) na (2, 8)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (8, 0)=[v], (9, 3)=[>], (5, 0)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (9, 7) na (9, 6)
+16 Jan 2025 22:39:03 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (8, 0)=[v], (9, 4)=[^], (5, 0)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:03 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:04 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (1, 6)=[^], (2, 8)=[v], (8, 0)=[^], (9, 4)=[^], (5, 0)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:04 GMT Zwierzę poruszyło się z (8, 0) na (8, 0)
+16 Jan 2025 22:39:04 GMT Zwierzę zjadło roślinkę na (4, 3)
+16 Jan 2025 22:39:04 GMT Zwierzę zjadło roślinkę na (9, 4)
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:04 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (9, 4)=[^], (5, 0)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:04 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:04 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (9, 4)=[^], (5, 0)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:04 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:04 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (9, 4)=[^], (5, 1)=[^], (6, 2)=[^], (9, 6)=[v]}
+16 Jan 2025 22:39:04 GMT Zwierzę poruszyło się z (5, 0) na (5, 1)
+16 Jan 2025 22:39:04 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (9, 4)=[^], (5, 1)=[^], (6, 2)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:04 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 8)=[v], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 1)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (0, 6)=[<], (2, 8)=[v], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 1)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (5, 8) na (6, 9)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 1)=[^], (9, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (2, 8) na (3, 9)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 1)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (9, 6) na (8, 5)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (8, 4)=[<], (5, 1)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:05 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (3, 9)=[◥], (0, 6)=[<], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 1)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:05 GMT Zwierzę poruszyło się z (8, 0) na (8, 1)
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:05 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 1)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 1)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 2)=[^], (8, 5)=[◣], (5, 3)=[>]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (5, 1) na (5, 2)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 2)=[^, v], (8, 5)=[◣]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 9)=[◥], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, v], (8, 5)=[◣]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (3, 9)=[◥], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, v], (8, 5)=[◣]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (6, 9) na (5, 9)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, v], (8, 5)=[◣]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (3, 9) na (2, 9)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, v], (7, 5)=[<]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (8, 5) na (7, 5)
+16 Jan 2025 22:39:06 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (8, 1)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, v], (7, 5)=[<]}
+16 Jan 2025 22:39:06 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:07 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 9)=[<], (0, 5)=[v], (2, 9)=[<], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, v], (7, 5)=[<]}
+16 Jan 2025 22:39:07 GMT Zwierzę poruszyło się z (8, 1) na (8, 2)
+16 Jan 2025 22:39:07 GMT Zwierzę zjadło roślinkę na (8, 3)
+16 Jan 2025 22:39:07 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:07 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:07 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 9)=[^], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:07 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:07 GMT Długość listy pozycji: 9
+Lista pozycji zwierząt: {(9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:07 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:07 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v], (5, 3)=[^], (7, 5)=[<]}
+16 Jan 2025 22:39:07 GMT Zwierzę poruszyło się z (5, 2) na (5, 3)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^], (7, 5)=[<]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (1, 5)=[>], (5, 9)=[<], (2, 9)=[<], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^], (7, 5)=[<]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[◢], (1, 5)=[>], (2, 9)=[<], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^], (7, 5)=[<]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (5, 9) na (6, 8)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^], (7, 5)=[<]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (2, 9) na (3, 8)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (7, 5) na (6, 6)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (9, 3)=[>], (8, 2)=[^], (6, 1)=[<], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:08 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 5)=[>], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^]}
+16 Jan 2025 22:39:08 GMT Zwierzę poruszyło się z (8, 2) na (8, 3)
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:08 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:09 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[v], (4, 2)=[<], (5, 3)=[^]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(5, 4)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[v], (4, 2)=[<]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (5, 3) na (5, 4)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[v]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 8)=[◢], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 9)=[^], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (6, 8) na (6, 9)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 6)=[◤], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (3, 8) na (3, 9)
+16 Jan 2025 22:39:09 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:09 GMT Zwierzę poruszyło się z (6, 6) na (6, 7)
+16 Jan 2025 22:39:10 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (8, 3)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:10 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:10 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:10 GMT Zwierzę poruszyło się z (8, 3) na (8, 4)
+16 Jan 2025 22:39:10 GMT Zwierzę zjadło roślinkę na (5, 4)
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:10 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (5, 4)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:10 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:10 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (5, 4)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:10 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:10 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (5, 5)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (5, 2)=[v]}
+16 Jan 2025 22:39:10 GMT Zwierzę poruszyło się z (5, 4) na (5, 5)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (6, 7)=[^], (6, 9)=[^], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (6, 7)=[^], (5, 8)=[◣], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (6, 9) na (5, 8)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (6, 7)=[^], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (3, 9) na (2, 8)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (6, 7) na (7, 8)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[^, <], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:11 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (7, 8)=[◥], (5, 8)=[◣], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:11 GMT Zwierzę poruszyło się z (8, 4) na (8, 5)
+16 Jan 2025 22:39:11 GMT Zwierzę zjadło roślinkę na (7, 8)
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 5)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 5)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (5, 5) na (5, 6)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[^], (7, 8)=[◥], (5, 8)=[◣], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[^], (7, 8)=[◥], (6, 8)=[>], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (5, 8) na (6, 8)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (5, 6)=[^], (7, 8)=[◥], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:39:12 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (5, 6)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:12 GMT Zwierzę poruszyło się z (7, 8) na (8, 8)
+16 Jan 2025 22:39:13 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (5, 6)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (8, 5)=[^], (5, 2)=[v, v]}
+16 Jan 2025 22:39:13 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:13 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (5, 6)=[^], (6, 8)=[>], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v], (8, 6)=[^]}
+16 Jan 2025 22:39:13 GMT Zwierzę poruszyło się z (8, 5) na (8, 6)
+16 Jan 2025 22:39:13 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:13 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:13 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (5, 6)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, v, v], (8, 6)=[^]}
+16 Jan 2025 22:39:13 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:13 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 6)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, v, v], (8, 6)=[^]}
+16 Jan 2025 22:39:13 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 7)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, v, v], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (5, 6) na (5, 7)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 7)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, v, <], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 7)=[^], (6, 8)=[>], (1, 5)=[>], (3, 8)=[>], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, v, <], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 7)=[^], (5, 9)=[◤], (1, 5)=[>], (3, 8)=[>], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, v, <], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (6, 8) na (5, 9)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (5, 7)=[^], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, v, <], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 7)=[^], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, v, <], (9, 7)=[◢], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (8, 8) na (9, 7)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (5, 7)=[^], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, v, <], (9, 7)=[◢], (4, 2)=[<], (8, 6)=[^]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:14 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[v], (5, 7)=[^], (5, 9)=[◤], (1, 5)=[>], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:14 GMT Zwierzę poruszyło się z (8, 6) na (8, 7)
+16 Jan 2025 22:39:14 GMT Zwierzę zjadło roślinkę na (8, 7)
+16 Jan 2025 22:39:14 GMT Zwierzę zjadło roślinkę na (5, 7)
+16 Jan 2025 22:39:15 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:15 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[v], (5, 7)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[>, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 9)=[^], (5, 7)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[>, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 9)=[^], (5, 8)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[>, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (5, 7) na (5, 8)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (5, 2)=[>, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^], (5, 9)=[◤], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 2)=[^], (5, 2)=[>, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 2)=[^], (5, 2)=[>, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (5, 9) na (5, 8)
+16 Jan 2025 22:39:15 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (5, 2)=[>, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:15 GMT Zwierzę poruszyło się z (2, 9) na (2, 8)
+16 Jan 2025 22:39:16 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (9, 6)=[v], (5, 2)=[>, ◣, v, ^]}
+16 Jan 2025 22:39:16 GMT Zwierzę poruszyło się z (9, 7) na (9, 6)
+16 Jan 2025 22:39:16 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 7)=[^], (9, 9)=[^], (5, 8)=[^, v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[>, ◣, v, ^]}
+16 Jan 2025 22:39:16 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:16 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 8)=[^], (9, 9)=[^], (5, 8)=[^, v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[>, ◣, v, ^]}
+16 Jan 2025 22:39:16 GMT Zwierzę poruszyło się z (8, 7) na (8, 8)
+16 Jan 2025 22:39:16 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:16 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:16 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:16 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:16 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(4, 3)=[^], (8, 8)=[^], (9, 9)=[^], (5, 8)=[^, v, ◥], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, ^]}
+16 Jan 2025 22:39:16 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (8, 8)=[^], (5, 8)=[^, v, ◥], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, ^]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (8, 8)=[^], (5, 8)=[v, ◥], (5, 9)=[^], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, ^]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (5, 8) na (5, 9)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (5, 8)=[v, ◥], (5, 9)=[^], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (5, 8)=[v, ◥], (5, 9)=[^], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (5, 8) na (6, 9)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (9, 6)=[v], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (2, 8) na (3, 9)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 5)=[◣], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (9, 6) na (8, 5)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:17 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[<, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:17 GMT Zwierzę poruszyło się z (8, 8) na (8, 9)
+16 Jan 2025 22:39:18 GMT Zwierzę zjadło roślinkę na (8, 9)
+16 Jan 2025 22:39:18 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:18 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:18 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:18 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:18 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[^], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:18 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:18 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[v], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:18 GMT Zwierzę poruszyło się z (5, 9) na (5, 9)
+16 Jan 2025 22:39:18 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[v], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, v, <, >, ◣, v, v]}
+16 Jan 2025 22:39:18 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:18 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (6, 9)=[◥], (5, 8)=[◥], (5, 9)=[v], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, v, <, >, ◣, v, v]}
+16 Jan 2025 22:39:18 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:19 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (5, 8)=[◥], (5, 9)=[v, <], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, v, <, >, ◣, v, v]}
+16 Jan 2025 22:39:19 GMT Zwierzę poruszyło się z (6, 9) na (5, 9)
+16 Jan 2025 22:39:19 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (5, 8)=[◥], (5, 9)=[v, <], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[>, v, <, >, ◣, v, v]}
+16 Jan 2025 22:39:19 GMT Zwierzę poruszyło się z (3, 9) na (2, 9)
+16 Jan 2025 22:39:19 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (5, 8)=[◥], (5, 9)=[v, <], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (5, 2)=[>, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:19 GMT Zwierzę poruszyło się z (8, 5) na (7, 5)
+16 Jan 2025 22:39:19 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[^], (5, 8)=[◥], (5, 9)=[v, <], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[>, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:19 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:19 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[v], (5, 8)=[◥], (5, 9)=[v, <], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[>, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:19 GMT Zwierzę poruszyło się z (8, 9) na (8, 9)
+16 Jan 2025 22:39:19 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:19 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:19 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:19 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:19 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 9)=[v], (5, 8)=[◥], (1, 5)=[>], (5, 9)=[v, <, <], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, >, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[◥], (1, 5)=[>], (5, 9)=[v, <, <], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, >, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <, <], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, >, v, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (5, 9) na (5, 8)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <, <], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <, <], (2, 9)=[<], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (6, 8)=[◢], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <], (2, 9)=[<], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (5, 9) na (6, 8)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 9)=[v], (6, 8)=[◢], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (2, 9) na (3, 8)
+16 Jan 2025 22:39:20 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (8, 9)=[v], (6, 8)=[◢], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:20 GMT Zwierzę poruszyło się z (7, 5) na (6, 6)
+16 Jan 2025 22:39:21 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (8, 9)=[v], (6, 8)=[◢], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:21 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:21 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (5, 8)=[◥, v], (1, 5)=[>], (5, 9)=[v, <], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:21 GMT Zwierzę poruszyło się z (8, 9) na (8, 8)
+16 Jan 2025 22:39:21 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:21 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:21 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:21 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:21 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:21 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:21 GMT Zwierzę umarło na (5, 8)
+16 Jan 2025 22:39:21 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:21 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 9)=[^], (8, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 6)=[◤], (6, 8)=[◢], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 6)=[◤], (6, 9)=[^], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (6, 8) na (6, 9)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 6)=[◤], (6, 9)=[^], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (3, 8) na (3, 9)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (6, 6) na (6, 7)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (8, 8)=[v], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:22 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(8, 7)=[v], (4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◥], (5, 9)=[<, v], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:22 GMT Zwierzę poruszyło się z (8, 8) na (8, 7)
+16 Jan 2025 22:39:23 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:23 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:23 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:23 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:23 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:23 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:23 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(8, 7)=[v], (4, 3)=[^], (9, 9)=[^], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◣, ◥], (5, 9)=[◢, <, v], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:23 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:23 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (4, 3)=[^], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◣, ◥], (5, 9)=[◢, <, v], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:23 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:23 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◣, ◥], (5, 9)=[◢, <, v], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:23 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:39:23 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (6, 7)=[^], (6, 9)=[^], (5, 8)=[>, ^, ◣, ◥], (5, 9)=[◢, <, v], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (9, 4)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:23 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:23 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (6, 7)=[^], (5, 8)=[◣, >, ^, ◣, ◥], (5, 9)=[◢, <, v], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (9, 4)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:23 GMT Zwierzę poruszyło się z (6, 9) na (5, 8)
+16 Jan 2025 22:39:24 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (6, 7)=[^], (5, 8)=[◣, >, ^, ◣, ◥], (5, 9)=[◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:24 GMT Zwierzę poruszyło się z (3, 9) na (2, 8)
+16 Jan 2025 22:39:24 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, ◥], (5, 9)=[◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:24 GMT Zwierzę poruszyło się z (6, 7) na (7, 8)
+16 Jan 2025 22:39:24 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 7)=[v], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, ◥], (5, 9)=[◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:24 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:24 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, ◥], (5, 9)=[◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (5, 2)=[>, ◣, ◣, >, <, >, ◣, v, >], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:24 GMT Zwierzę poruszyło się z (8, 7) na (8, 6)
+16 Jan 2025 22:39:24 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:24 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:24 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:24 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:24 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:24 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:24 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 2)=[<, >, ◣, ◣, >, <, >, ◣, v, >], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 2)=[<, >, ◣, ◣, >, <, >, ◣, v, >], (8, 6)=[v], (5, 3)=[>]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[<], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 10
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (5, 8)=[◣, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (5, 8)=[>, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[<], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (5, 8) na (6, 8)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (7, 8)=[◥], (6, 8)=[>], (5, 8)=[>, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (5, 8)=[>, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[<], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (7, 8) na (8, 8)
+16 Jan 2025 22:39:25 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (5, 8)=[>, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v], (8, 6)=[v]}
+16 Jan 2025 22:39:25 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:26 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[>], (5, 8)=[>, >, ^, ◣, v, ◥], (5, 9)=[◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[<, v, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:26 GMT Zwierzę poruszyło się z (8, 6) na (8, 5)
+16 Jan 2025 22:39:26 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:26 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:26 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:26 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:26 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:26 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:26 GMT Zwierzę umarło na (6, 8)
+16 Jan 2025 22:39:26 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(8, 8)=[>], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, v, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:26 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:26 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, v, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:26 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (3, 8)=[>], (7, 1)=[v], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (3, 8)=[>], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (2, 9)=[◤], (6, 1)=[<], (8, 3)=[v], (8, 5)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (8, 8) na (9, 7)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (8, 5)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:27 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◣, ◣, ◢, <, v], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 2)=[◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:27 GMT Zwierzę poruszyło się z (8, 5) na (8, 4)
+16 Jan 2025 22:39:27 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:27 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:27 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:27 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:28 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:28 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[<]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 1)=[<], (8, 4)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (4, 2) na (4, 3)
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^], (9, 7)=[◢]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (2, 9) na (2, 8)
+16 Jan 2025 22:39:28 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (6, 2)=[^], (8, 4)=[v], (9, 6)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:28 GMT Zwierzę poruszyło się z (9, 7) na (9, 6)
+16 Jan 2025 22:39:29 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (6, 2)=[^], (8, 4)=[v], (9, 6)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:29 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:29 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, >, v, ◥], (5, 9)=[^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:29 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:29 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:29 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:29 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:29 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:29 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:29 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:29 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(4, 3)=[^], (9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:29 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (4, 3)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, ^]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (8, 3)=[v], (9, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (4, 3) na (5, 3)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (9, 6)=[v], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (9, 6)=[v], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (2, 8) na (3, 9)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (9, 4)=[^], (8, 5)=[◣], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (9, 6) na (8, 5)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 3)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:30 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, >, v, ◥], (5, 9)=[◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:30 GMT Zwierzę poruszyło się z (8, 3) na (8, 2)
+16 Jan 2025 22:39:31 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:31 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:31 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:31 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:31 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:31 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:31 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:31 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:31 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, >], (5, 3)=[>]}
+16 Jan 2025 22:39:31 GMT Zwierzę poruszyło się z (9, 8) na (9, 9)
+16 Jan 2025 22:39:31 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (8, 2)=[v], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:31 GMT Zwierzę poruszyło się z (5, 3) na (5, 2)
+16 Jan 2025 22:39:31 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 2)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:31 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:31 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 2)=[v], (8, 4)=[<], (8, 5)=[◣], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v]}
+16 Jan 2025 22:39:31 GMT Zwierzę poruszyło się z (3, 9) na (2, 9)
+16 Jan 2025 22:39:32 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 2)=[v], (8, 4)=[<], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:32 GMT Zwierzę poruszyło się z (8, 5) na (7, 5)
+16 Jan 2025 22:39:32 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 2)=[v], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:32 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:32 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:32 GMT Zwierzę poruszyło się z (8, 2) na (8, 1)
+16 Jan 2025 22:39:32 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:32 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:32 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:32 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:32 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:32 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:32 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 9)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, v], (7, 5)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (9, 9) na (9, 8)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (8, 1)=[v], (7, 1)=[v], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (5, 2) na (4, 2)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (8, 1)=[v], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (8, 1)=[v], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<], (7, 5)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (2, 9) na (3, 8)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (8, 1)=[v], (6, 1)=[<], (8, 3)=[v], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (7, 5) na (6, 6)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (8, 1)=[v], (9, 3)=[>], (6, 1)=[<], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:33 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[v], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 2)=[v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[<]}
+16 Jan 2025 22:39:33 GMT Zwierzę poruszyło się z (8, 1) na (8, 0)
+16 Jan 2025 22:39:34 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:34 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:34 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:34 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:34 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:34 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:34 GMT Zwierzę umarło na (9, 8)
+16 Jan 2025 22:39:34 GMT Zwierzę umarło na (4, 2)
+16 Jan 2025 22:39:34 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 8)=[◢], (8, 0)=[v], (9, 3)=[>], (6, 1)=[<], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:34 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:34 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 8)=[◢], (8, 0)=[v], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:34 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:34 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (8, 0)=[v], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:34 GMT Zwierzę poruszyło się z (3, 8) na (3, 9)
+16 Jan 2025 22:39:34 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (8, 0)=[v], (9, 3)=[>], (6, 2)=[^], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:34 GMT Zwierzę poruszyło się z (6, 6) na (6, 7)
+16 Jan 2025 22:39:35 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (8, 0)=[v], (9, 4)=[^], (6, 2)=[^], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:35 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:35 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (8, 0)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:35 GMT Zwierzę poruszyło się z (8, 0) na (8, 0)
+16 Jan 2025 22:39:35 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:35 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:35 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:35 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:35 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:35 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:35 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (3, 9)=[^], (8, 0)=[^], (9, 4)=[^], (6, 2)=[^], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (3, 9)=[^], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 7)=[^], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (3, 9) na (2, 8)
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (9, 4)=[^], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (6, 7) na (7, 8)
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (8, 0)=[^], (7, 2)=[>], (8, 4)=[<], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:36 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[<, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 2)=[◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:36 GMT Zwierzę poruszyło się z (8, 0) na (8, 1)
+16 Jan 2025 22:39:36 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:36 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:36 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:36 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:37 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:37 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (8, 1)=[^], (7, 2)=[>], (8, 4)=[<], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (7, 8)=[◥], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (8, 1)=[^], (7, 1)=[v], (8, 4)=[<], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (7, 8) na (8, 8)
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (8, 1)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:37 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:37 GMT Zwierzę poruszyło się z (8, 1) na (8, 2)
+16 Jan 2025 22:39:38 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:38 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:38 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:38 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:38 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:38 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:38 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (8, 2)=[^], (7, 1)=[v], (8, 3)=[v], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:38 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:38 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:38 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:38 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[>], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:38 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:39:39 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (8, 2)=[^], (6, 1)=[<], (8, 3)=[v], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:39 GMT Zwierzę poruszyło się z (8, 8) na (9, 7)
+16 Jan 2025 22:39:39 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (9, 3)=[>], (8, 2)=[^], (6, 1)=[<], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:39 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:39 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:39 GMT Zwierzę poruszyło się z (8, 2) na (8, 3)
+16 Jan 2025 22:39:39 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:39 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:39 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:39 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:39 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:39 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:39 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (8, 3)=[^], (6, 1)=[<], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 9)=[◤], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (9, 7)=[◢], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (2, 9) na (2, 8)
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 3)=[>], (8, 3)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (9, 7) na (9, 6)
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (8, 3)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:40 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (2, 8)=[v], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:40 GMT Zwierzę poruszyło się z (8, 3) na (8, 4)
+16 Jan 2025 22:39:40 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:40 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:41 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:41 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:41 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:41 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:41 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (9, 4)=[^], (8, 4)=[^], (6, 2)=[^], (9, 6)=[v], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:41 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:41 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (2, 8)=[v], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (9, 6)=[v], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:41 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:41 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (9, 6)=[v], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:41 GMT Zwierzę poruszyło się z (2, 8) na (3, 9)
+16 Jan 2025 22:39:41 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 4)=[^], (8, 5)=[◣], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:41 GMT Zwierzę poruszyło się z (9, 6) na (8, 5)
+16 Jan 2025 22:39:41 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[^, <], (8, 5)=[◣], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:41 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:42 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 9)=[◥], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣, ^], (5, 2)=[>, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:42 GMT Zwierzę poruszyło się z (8, 4) na (8, 5)
+16 Jan 2025 22:39:42 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:42 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:42 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:42 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:42 GMT Zwierze zostało położone na (8, 5)
+16 Jan 2025 22:39:42 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:42 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:42 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:42 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (7, 2)=[>], (8, 4)=[<], (8, 5)=[◣, ^, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:42 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:43 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (3, 9)=[◥], (7, 1)=[v], (8, 4)=[<], (8, 5)=[◣, ^, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:43 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:43 GMT Długość listy pozycji: 11
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (8, 5)=[◣, ^, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (4, 2)=[]}
+16 Jan 2025 22:39:43 GMT Zwierzę poruszyło się z (3, 9) na (2, 9)
+16 Jan 2025 22:39:43 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 4)=[<], (8, 5)=[<, ^, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[<], (4, 2)=[]}
+16 Jan 2025 22:39:43 GMT Zwierzę poruszyło się z (8, 5) na (7, 5)
+16 Jan 2025 22:39:43 GMT Długość listy pozycji: 12
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[<, ^, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[<], (4, 2)=[]}
+16 Jan 2025 22:39:43 GMT Zwierzę poruszyło się z (8, 4) na (8, 3)
+16 Jan 2025 22:39:43 GMT Długość listy pozycji: 13
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[>, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[<, ◥], (5, 2)=[◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<], (4, 2)=[]}
+16 Jan 2025 22:39:43 GMT Zwierzę poruszyło się z (8, 5) na (8, 6)
+16 Jan 2025 22:39:43 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:43 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:43 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:43 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:43 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:43 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:44 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:44 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:44 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:44 GMT Urodziło się nowe zwierzę na (7, 5)
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:44 GMT Długość listy pozycji: 13
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (7, 1)=[v], (8, 3)=[v], (8, 5)=[<, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<, ◥, <], (4, 2)=[]}
+16 Jan 2025 22:39:44 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:44 GMT Długość listy pozycji: 13
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[<], (6, 1)=[<], (8, 3)=[v], (8, 5)=[<, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<, ◥, <], (4, 2)=[]}
+16 Jan 2025 22:39:44 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:44 GMT Długość listy pozycji: 13
+Lista pozycji zwierząt: {(9, 8)=[], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (8, 5)=[<, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<, ◥, <], (4, 2)=[]}
+16 Jan 2025 22:39:44 GMT Zwierzę poruszyło się z (2, 9) na (3, 8)
+16 Jan 2025 22:39:44 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (6, 1)=[<], (8, 3)=[v], (8, 5)=[◤, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:44 GMT Zwierzę poruszyło się z (7, 5) na (6, 6)
+16 Jan 2025 22:39:44 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 5)=[◤, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (8, 6)=[^], (7, 5)=[<, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:44 GMT Zwierzę poruszyło się z (8, 3) na (9, 3)
+16 Jan 2025 22:39:45 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◤], (6, 8)=[], (5, 8)=[>, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[>, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 5)=[◤, ◥], (5, 2)=[<, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[<, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:45 GMT Zwierzę poruszyło się z (8, 6) na (8, 7)
+16 Jan 2025 22:39:45 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:45 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:45 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:45 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:45 GMT Zwierze zostało położone na (6, 6)
+16 Jan 2025 22:39:45 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:45 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:45 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:45 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:45 GMT Urodziło się nowe zwierzę na (7, 5)
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:45 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◣, ◤], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 1)=[<], (8, 5)=[◥, ◤], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (1, 5) na (1, 6)
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◣, ◤], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 8)=[◢], (9, 3)=[>], (6, 2)=[^], (8, 5)=[◥, ◤], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (6, 1) na (6, 2)
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 14
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◣, ◤], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (8, 5)=[◥, ◤], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ◤], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (3, 8) na (3, 9)
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (9, 3)=[>], (6, 2)=[^], (8, 5)=[◥, ^], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (6, 6) na (6, 7)
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(8, 7)=[^], (9, 8)=[], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (8, 5)=[◥, ^], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (9, 3) na (9, 4)
+16 Jan 2025 22:39:46 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (1, 6)=[^], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (8, 5)=[◥, ^], (5, 2)=[◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:46 GMT Zwierzę poruszyło się z (8, 7) na (8, 8)
+16 Jan 2025 22:39:46 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:46 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:47 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:47 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:47 GMT Zwierze zostało położone na (8, 5)
+16 Jan 2025 22:39:47 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:47 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:47 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:47 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:47 GMT Urodziło się nowe zwierzę na (7, 5)
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:47 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (3, 9)=[^], (9, 4)=[^], (6, 2)=[^], (8, 5)=[^, ◥, ^], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:47 GMT Zwierzę poruszyło się z (1, 6) na (0, 6)
+16 Jan 2025 22:39:47 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 6)=[<], (3, 9)=[^], (7, 2)=[>], (9, 4)=[^], (8, 5)=[^, ◥, ^], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:47 GMT Zwierzę poruszyło się z (6, 2) na (7, 2)
+16 Jan 2025 22:39:48 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (6, 7)=[^], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 5)=[^, ◥, ^], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ^], (4, 2)=[]}
+16 Jan 2025 22:39:48 GMT Zwierzę poruszyło się z (3, 9) na (2, 8)
+16 Jan 2025 22:39:48 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (7, 8)=[◥], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (9, 4)=[^], (8, 5)=[^, ◥, ◥], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:48 GMT Zwierzę poruszyło się z (6, 7) na (7, 8)
+16 Jan 2025 22:39:48 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[^], (6, 6)=[◣], (7, 8)=[◥], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^, ◥, ◥], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:48 GMT Zwierzę poruszyło się z (9, 4) na (8, 4)
+16 Jan 2025 22:39:48 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[^], (7, 8)=[◥], (6, 8)=[], (5, 8)=[v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 8)=[◣], (0, 6)=[<], (7, 2)=[>], (8, 4)=[<], (8, 5)=[^, ◥, ◥], (5, 2)=[◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:48 GMT Zwierzę poruszyło się z (8, 8) na (8, 9)
+16 Jan 2025 22:39:48 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:48 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:48 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:48 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:48 GMT Zwierze zostało położone na (8, 5)
+16 Jan 2025 22:39:48 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:49 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:49 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:49 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:49 GMT Urodziło się nowe zwierzę na (7, 5)
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:49 GMT Zwierzę umarło na (7, 8)
+16 Jan 2025 22:39:49 GMT Zwierzę umarło na (8, 4)
+16 Jan 2025 22:39:49 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[^], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 2)=[>], (8, 4)=[], (8, 5)=[◣, ^, ◥, ◥], (5, 2)=[<, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:49 GMT Zwierzę poruszyło się z (0, 6) na (0, 5)
+16 Jan 2025 22:39:50 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[^], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (0, 5)=[v], (2, 8)=[◣], (7, 1)=[v], (8, 4)=[], (8, 5)=[◣, ^, ◥, ◥], (5, 2)=[<, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:50 GMT Zwierzę poruszyło się z (7, 2) na (7, 1)
+16 Jan 2025 22:39:50 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[^], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[], (8, 5)=[◣, ^, ◥, ◥], (5, 2)=[<, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:50 GMT Zwierzę poruszyło się z (2, 8) na (3, 8)
+16 Jan 2025 22:39:50 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[v], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (5, 9)=[v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (0, 5)=[v], (7, 1)=[v], (8, 4)=[], (8, 5)=[◣, ^, ◥, ◥], (5, 2)=[<, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:50 GMT Zwierzę poruszyło się z (8, 9) na (8, 9)
+16 Jan 2025 22:39:50 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:50 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:50 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:50 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:50 GMT Zwierze zostało położone na (8, 5)
+16 Jan 2025 22:39:50 GMT Urodziło się nowe zwierzę na (8, 5)
+16 Jan 2025 22:39:52 GMT Zwierze zostało położone na (5, 2)
+16 Jan 2025 22:39:52 GMT Urodziło się nowe zwierzę na (5, 2)
+16 Jan 2025 22:39:52 GMT Zwierze zostało położone na (7, 5)
+16 Jan 2025 22:39:52 GMT Urodziło się nowe zwierzę na (7, 5)
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:52 GMT Roślinka wyrosła na null
+16 Jan 2025 22:39:53 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[v], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, ◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◢, v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (7, 1)=[v], (8, 4)=[], (8, 5)=[◣, ◣, ^, ◥, ◥], (5, 2)=[◣, <, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◣, ◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:53 GMT Zwierzę poruszyło się z (0, 5) na (1, 5)
+16 Jan 2025 22:39:53 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[v], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, ◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◢, v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (3, 8)=[>], (6, 1)=[<], (8, 4)=[], (8, 5)=[◣, ◣, ^, ◥, ◥], (5, 2)=[◣, <, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◣, ◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:53 GMT Zwierzę poruszyło się z (7, 1) na (6, 1)
+16 Jan 2025 22:39:53 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (6, 6)=[◣], (8, 9)=[v], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, ◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◢, v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (6, 1)=[<], (8, 4)=[], (8, 5)=[◣, ◣, ^, ◥, ◥], (5, 2)=[◣, <, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◣, ◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:53 GMT Zwierzę poruszyło się z (3, 8) na (2, 9)
+16 Jan 2025 22:39:53 GMT Długość listy pozycji: 15
+Lista pozycji zwierząt: {(9, 8)=[], (8, 8)=[v], (6, 6)=[◣], (7, 8)=[], (6, 8)=[], (5, 8)=[◣, ◣, v, ◣, >, >, ^, ◥, ◢, ◣, v, <, ◥, ◥, >, <, ◥, ◣, ◣, ◣, >, v, ◥], (1, 5)=[>], (5, 9)=[◢, v, ◢, ◢, >, >, ◥, ◣, ◥, ◢, <, <, >, ◥, ◥, ^, ◣, ◣, ◢, <, v], (2, 9)=[◤], (6, 1)=[<], (8, 4)=[], (8, 5)=[◣, ◣, ^, ◥, ◥], (5, 2)=[◣, <, ◤, ◢, <, ◣, >, ◥, ◤, ^, ◤, ◥, v, v, ◣, ◢, ◣, <, >, ◣, ◣, >, <, >, ◣, v, <], (7, 5)=[◣, ◥, ◥, ◥, <, ◥, ◥], (4, 2)=[]}
+16 Jan 2025 22:39:53 GMT Zwierzę poruszyło się z (8, 9) na (8, 8)
+16 Jan 2025 22:39:53 GMT Zwierze zostało położone na (5, 8)
+16 Jan 2025 22:39:53 GMT Urodziło się nowe zwierzę na (5, 8)
+16 Jan 2025 22:39:54 GMT Zwierze zostało położone na (5, 9)
+16 Jan 2025 22:39:54 GMT Urodziło się nowe zwierzę na (5, 9)
+16 Jan 2025 22:39:54 GMT Zwierze zostało położone na (8, 5)
+16 Jan 2025 22:39:54 GMT Urodziło się nowe zwierzę na (8, 5)
