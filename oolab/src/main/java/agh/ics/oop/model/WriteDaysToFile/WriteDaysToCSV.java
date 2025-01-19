@@ -17,18 +17,14 @@ public class WriteDaysToCSV {
     }
 
     private static List<String> dataLines(int day, int numberOfAnimals,
-                                          int numberOfPlants,
-                                          int freeTiles,
-                                          Set<List<Integer>> mostPopularGenotype,
+                                          int numberOfPlants, Set<List<Integer>> mostPopularGenotype,
                                           int averageEnergyLevel,
                                           Optional<Integer> averageDaysAlive,
                                           int averageKidsNumber
     ) {
         return List.of(
                 new String[]{String.valueOf(day),
-                        String.valueOf(numberOfAnimals),
-                        String.valueOf(numberOfPlants),
-                        String.valueOf(freeTiles),
+                        String.valueOf(numberOfAnimals), String.valueOf(numberOfPlants),
 
                         mostPopularGenotype.stream()
                         .map(String::valueOf)
@@ -49,7 +45,6 @@ public class WriteDaysToCSV {
                         "Day",
                         "Number of animals",
                         "Number of plants",
-                        "Number of free tiles",
                         "Most popular genotypes",
                         "Average energy level",
                         "Average days alive for dead animals",
@@ -75,13 +70,12 @@ public class WriteDaysToCSV {
                     dailyDataCollector.getCurrentSimulationDay(),
                     dailyDataCollector.numberOfAliveAnimals(),
                     dailyDataCollector.numberOfPlants(),
-                    dailyDataCollector.numberOfFreeTiles(),
                     dailyDataCollector.mostPopularGenotype(),
                     dailyDataCollector.averageEnergyLevel(),
                     dailyDataCollector.averageLifeSpan(),
                     dailyDataCollector.averageKidsNumber()
             ));
-
+            
             pw.println(csvLine);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

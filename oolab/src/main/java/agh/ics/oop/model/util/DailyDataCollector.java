@@ -46,12 +46,12 @@ public class DailyDataCollector
     // DOKONCZYC!!
     public Set<List<Integer>> mostPopularGenotype()
     {
-        int maxGenomeCount = 1;
+        int maxGenomeCount = 0;
         Map<Genome, Integer> hashMap = new HashMap<>();
         Set<List<Integer>> resultSet = new HashSet<>();
 
 
-        int currentMaxGenomeCount = 1;
+        int currentMaxGenomeCount = 0;
         for (Animal animal : map.getAnimalsList())
         {
             currentMaxGenomeCount = 1;
@@ -76,10 +76,6 @@ public class DailyDataCollector
                         .toList();
                 resultSet.add(genomeList);
             }
-        }
-        if(maxGenomeCount == 2)
-        {
-            System.out.println("hi");
         }
 
         return resultSet;

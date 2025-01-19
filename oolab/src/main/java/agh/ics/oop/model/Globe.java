@@ -103,11 +103,21 @@ public class Globe implements ProjectWorldMap{
     public synchronized List<WorldElement> getElements() {
         return Stream.concat(
                 plants.values().stream()
-                        .filter(Objects::nonNull),
+                        .filter(Objects::nonNull), // Filter out null values from plants
                 animals.values().stream()
-                        .flatMap(TreeSet::stream)
-                        .filter(Objects::nonNull)
+                        .flatMap(TreeSet::stream) // Flatten TreeSet<String> streams
+                        .filter(Objects::nonNull) // Filter out null values from animals
         ).collect(Collectors.toList());
+
+
+//        return Stream.concat(
+//                        animals.values()
+//                                .stream()
+//                                .flatMap(TreeSet::stream)
+//                                .filter(Objects::nonNull),
+//                        plants.values().stream()
+//                                .filter(Objects::nonNull))
+//                .collect(Collectors.toList());
     }
 
     @Override
@@ -129,28 +139,8 @@ public class Globe implements ProjectWorldMap{
 
     @Override
     public synchronized void animalsReproducing() {
-        for (Vector2d position: new ArrayList<>(animals.keySet()))
-        {
-            TreeSet<Animal> copySet = new TreeSet<>(animals.get(position));
-            while (animals.get(position).size() >= 2)
-            {
-                int count = 0;
-                for ( Animal animal : animals.get(position))
-                {
-                    if (animal.getEnergy() >= animal.getMinReproductionEnergy())
-                        count++;
-                }
-                if (count >= 2)
-                {
-                    animalsReproduceAt(position);
-                }
-                else
-                {
-                    animals.get(position).clear();
-                    animals.put(position, copySet);
-                    break;
-                }
-            }
+        for (Vector2d position: new ArrayList<>(animals.keySet())){
+            animalsReproduceAt(position);
         }
     }
 
@@ -188,15 +178,13 @@ public class Globe implements ProjectWorldMap{
                 parent1 = winningAnimals.getFirst();
                 winningAnimals.removeFirst();
                 parent2 = winningAnimals.getFirst();
-
-                animals.get(position).remove(parent2);
-//                winningAnimals.add(parent1);
+                winningAnimals.add(parent1);
             }
             else if (winningAnimals.size() == 1) {
                 parent1 = winningAnimals.getFirst();
                 winningAnimals.removeFirst();
                 SortedSet<Animal> secondTurnWinningAnimals = animals.get(position).headSet(animals.get(position).first(), true);
-//                winningAnimals.add(parent1);
+                winningAnimals.add(parent1);
                 if (secondTurnWinningAnimals.size() == 1) {
                     parent2 = secondTurnWinningAnimals.getFirst();
                 }
@@ -206,11 +194,8 @@ public class Globe implements ProjectWorldMap{
                     int indexOfWinner = random.nextInt(howManyWinningAnimals);
                     parent2=finalists.get(indexOfWinner);
                 }
-
-                animals.get(position).remove(parent2);
             }
-            else
-            {
+            else{
                 List<Animal> finalists = winningAnimals.stream().collect(Collectors.toList());
                 int howManyWinningAnimals = finalists.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
@@ -219,9 +204,6 @@ public class Globe implements ProjectWorldMap{
                 howManyWinningAnimals--;
                 indexOfWinner = random.nextInt(howManyWinningAnimals);
                 parent2=finalists.get(indexOfWinner);
-
-                animals.get(position).remove(parent1);
-                animals.get(position).remove(parent2);
             }
             try{
                 if (parent1.getEnergy() >= parent1.getMinReproductionEnergy() && parent2.getEnergy() >= parent2.getMinReproductionEnergy()){

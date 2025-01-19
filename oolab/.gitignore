@@ -1,8 +1,5 @@
 .log
 
-### DARWIN SIMULATION CSV OUTPUT ###
-.csv
-
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
