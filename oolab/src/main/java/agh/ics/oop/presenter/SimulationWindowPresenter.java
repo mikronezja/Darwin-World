@@ -3,6 +3,7 @@ package agh.ics.oop.presenter;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.DailyDataCollector;
 import agh.ics.oop.model.util.WorldElementVisualizer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -14,11 +15,16 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.scene.text.Text;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.Map;
 import java.util.UUID;
+
 
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.max;
@@ -27,7 +33,7 @@ import static java.lang.Math.min;
 public class SimulationWindowPresenter implements MapChangeListener {
 
     private ProjectWorldMap worldMap;
-
+    private Simulation simulation;
     private Stage stage;
 
     private WorldElementVisualizer worldElementVisualizer = new WorldElementVisualizer();
@@ -46,6 +52,22 @@ public class SimulationWindowPresenter implements MapChangeListener {
     @FXML
     private GridPane mapGrid;
     @FXML
+    private Text numberOfDays;
+    @FXML
+    private Text numberOfAnimals;
+    @FXML
+    private Text numberOfPlants;
+    @FXML
+    private Text numberOfFreeTiles;
+    @FXML
+    private Text mostPopularGenotype;
+    @FXML
+    private Text averageEnergyLevel;
+    @FXML
+    private Text averageDaysAlive;
+    @FXML
+    private Text averageNumberOfKids;
+    @FXML
     private Button pauseAndResumeButton;
 
 
@@ -57,7 +79,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
         this.worldMap = worldMap;
         stage = simulationStage;
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
-        Simulation simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith,
+        this.simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith,
                 energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn, maxMutationInNewborn,
                 genomeLength, ifAnimalsMoveSlowerWhenOlder, writeIntoACSVFile);
         Map<UUID, Simulation> simulationsMap = new HashMap<>();
@@ -94,8 +116,10 @@ public class SimulationWindowPresenter implements MapChangeListener {
         for (int i = 0; i < heightOfMap+1;i++){
             mapGrid.getRowConstraints().add(new RowConstraints(cellSideLength));
         }
+
         List<WorldElement> elements = map.getElements();
-        for (WorldElement element : elements ){
+        for (WorldElement element : elements)
+        {
             Vector2d positionOfElement = element.getPosition();
             ImageView animal = worldElementVisualizer.getImageView(element);
             animal.setFitHeight(cellSideLength);
@@ -111,12 +135,46 @@ public class SimulationWindowPresenter implements MapChangeListener {
         mapGrid.getRowConstraints().clear();
     }
 
+    public void drawCurrentDayInfo(ProjectWorldMap worldMap)
+    {
+        DailyDataCollector collectData = new DailyDataCollector(worldMap, simulation.getDeadAnimals(),simulation.getSimulationDays());
+
+        numberOfDays.setText(String.valueOf(collectData.getCurrentSimulationDay()));
+        numberOfAnimals.setText(String.valueOf(collectData.numberOfAliveAnimals()));
+        numberOfPlants.setText(String.valueOf(collectData.numberOfPlants()));
+        numberOfFreeTiles.setText(String.valueOf(collectData.numberOfFreeTiles()));
+
+        displayMostPopularGenotype(collectData.mostPopularGenotype());
+
+        averageEnergyLevel.setText(String.valueOf(collectData.averageEnergyLevel()));
+
+        Optional<Integer> returnedAverageLifeSpan = collectData.averageLifeSpan();
+        String displayText = returnedAverageLifeSpan
+                .map(String::valueOf)
+                .orElse("No data available");
+        averageDaysAlive.setText(displayText);
+
+        averageNumberOfKids.setText(String.valueOf(collectData.averageKidsNumber()));
+    }
+
+    private void displayMostPopularGenotype(Set<List<Integer>> popularGenotypes) {
+        // Convert each List<Integer> in the Set to a string and join with a newline
+        String genotypesText = popularGenotypes.stream()
+                .map(list -> list.stream()
+                        .map(String::valueOf) // Convert each Integer to String
+                        .collect(Collectors.joining(" "))) // Join integers with a space
+                .collect(Collectors.joining("\n")); // Join lists with a newline
+
+        // Set the text to the generated string
+        mostPopularGenotype.setText(genotypesText);
+    }
+
     @Override
     public void mapChanged(ProjectWorldMap worldMap, String message) {
         Platform.runLater(() -> {
             drawMap(worldMap);
+            drawCurrentDayInfo(worldMap);
         });
-
     }
 
     @FXML

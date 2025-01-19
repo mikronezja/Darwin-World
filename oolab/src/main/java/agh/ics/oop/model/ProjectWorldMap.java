@@ -1,6 +1,7 @@
 package agh.ics.oop.model;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public interface ProjectWorldMap extends MoveValidator{
@@ -88,6 +89,18 @@ public interface ProjectWorldMap extends MoveValidator{
      */
 
     List<Animal> getAnimalsList();
+
+    /**
+     *
+     * @return List of plants
+     */
+    List<Plant> getPlantsList();
+  
+    /**
+     *
+     * @return Set of occupied positions on map
+     */
+    Set<Vector2d> occupiedPositions();
 
     /**
      * Add AnimalBornListener to list of animalBornListeners
