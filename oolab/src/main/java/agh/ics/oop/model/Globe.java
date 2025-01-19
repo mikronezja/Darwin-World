@@ -105,21 +105,11 @@ public class Globe implements ProjectWorldMap{
     public synchronized List<WorldElement> getElements() {
         return Stream.concat(
                 plants.values().stream()
-                        .filter(Objects::nonNull), // Filter out null values from plants
+                        .filter(Objects::nonNull),
                 animals.values().stream()
-                        .flatMap(TreeSet::stream) // Flatten TreeSet<String> streams
-                        .filter(Objects::nonNull) // Filter out null values from animals
+                        .flatMap(TreeSet::stream)
+                        .filter(Objects::nonNull)
         ).collect(Collectors.toList());
-
-
-//        return Stream.concat(
-//                        animals.values()
-//                                .stream()
-//                                .flatMap(TreeSet::stream)
-//                                .filter(Objects::nonNull),
-//                        plants.values().stream()
-//                                .filter(Objects::nonNull))
-//                .collect(Collectors.toList());
     }
 
     @Override
