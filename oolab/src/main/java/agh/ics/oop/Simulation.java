@@ -34,9 +34,7 @@ public class Simulation implements Runnable, AnimalBornListener{
         this.worldMap = worldMap;
         worldMap.addAnimalBornListener(this);
         RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
-
         shouldWriteIntoCSVFile = writeIntoACSVFile;
-
 
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
             Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
@@ -71,7 +69,6 @@ public class Simulation implements Runnable, AnimalBornListener{
             }
                 for(Animal animal : new ArrayList<>(aliveAnimals)) {
                     checkPause();
-
                     worldMap.move(animal);
                     try {
                         Thread.sleep(10);
@@ -102,16 +99,19 @@ public class Simulation implements Runnable, AnimalBornListener{
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }
+
             for (Animal animal : new ArrayList<>(aliveAnimals))
             {
                 checkPause();
-                animal.decreaseEnergyWithEndOfDay();
                 animal.increaseDaysAlive();
             }
-            if (shouldWriteIntoCSVFile)
-            {
-
+            if (shouldWriteIntoCSVFile) {
+                WriteDaysToCSV writeIntoCSVFile = new WriteDaysToCSV(worldMap,deadAnimals,simulationDays);
+                try {
+                    writeIntoCSVFile.givenDataArray_whenConvertToCSV_thenOutputCreated();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
 
             simulationDays++;
@@ -142,6 +142,41 @@ public class Simulation implements Runnable, AnimalBornListener{
                 }
             }
         }
+    }
+   
+
+     public void pause() {
+        paused = true;
+    }
+
+    public void resume() {
+        synchronized (pauseLock) {
+            paused = false;
+            pauseLock.notifyAll();
+        }
+    }
+
+    private void checkPause() {
+        if (paused) {
+            synchronized (pauseLock) {
+                while (paused) {
+                    try {
+                        pauseLock.wait();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    @Override
+    public void onAnimalBorn(Animal newAnimal) {
+        aliveAnimals.add(newAnimal);
+    }
+    public int getSimulationDays() {
+        return simulationDays;
     }
 
     public List<Animal> getAnimals() {
