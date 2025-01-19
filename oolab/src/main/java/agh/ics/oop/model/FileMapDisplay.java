@@ -10,6 +10,7 @@ public class FileMapDisplay implements MapChangeListener{
     public void mapChanged(ProjectWorldMap worldMap, String message) {
         File file = new File("map_%s.log".formatted(worldMap.getID()));
         try (FileWriter fileWriter = new FileWriter(file, true)) {
+            System.out.println("%s %s\n".formatted(new java.util.Date().toGMTString(),message));
             fileWriter.write("%s %s\n".formatted(new java.util.Date().toGMTString(),message));
         }
         catch (IOException e) {

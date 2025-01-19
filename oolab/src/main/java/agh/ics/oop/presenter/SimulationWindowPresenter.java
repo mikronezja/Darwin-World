@@ -4,6 +4,7 @@ import agh.ics.oop.OptionsParser;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.WorldElementVisualizer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +29,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
     private Stage stage;
 
+    private WorldElementVisualizer worldElementVisualizer = new WorldElementVisualizer();
 
     private Image tile = new Image("tile.png");
     private Image equator = new Image("equtor.png");
@@ -70,7 +72,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
             for (int j = 0; j <= heightOfMap;j++){
 
                 ImageView tileView;
-                if ( map.isPositionMoreDesirableForPlants(new Vector2d(widthtOfMap - i, heightOfMap - j)))
+                if ( map.isPositionMoreDesirableForPlants(new Vector2d(i, heightOfMap - j)))
                  tileView = new ImageView(equator);
                 else
                     tileView = new ImageView(tile);
@@ -88,7 +90,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
         List<WorldElement> elements = map.getElements();
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
-            ImageView animal = new ImageView(element.getStateOfImage());
+            ImageView animal = worldElementVisualizer.getImageView(element);
             animal.setFitHeight(cellHight);
             animal.setFitWidth(cellWidth);
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());

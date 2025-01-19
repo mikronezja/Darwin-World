@@ -6,7 +6,7 @@ public class Plant implements WorldElement {
 
     private int energy;
     private Vector2d position;
-    private Image image = new Image("plant.png");
+
 
     public Plant(int energy, Vector2d position) {
         this.energy = energy;
@@ -25,10 +25,5 @@ public class Plant implements WorldElement {
     @Override
     public String toString() {
         return "#";
-    }
-
-    @Override
-    public Image getStateOfImage() {
-        return image;
     }
 }
