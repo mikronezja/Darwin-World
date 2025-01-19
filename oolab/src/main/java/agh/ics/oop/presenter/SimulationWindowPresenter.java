@@ -3,6 +3,7 @@ package agh.ics.oop.presenter;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.WorldElementVisualizer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
@@ -24,6 +25,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
     private Stage stage;
 
+    private WorldElementVisualizer worldElementVisualizer = new WorldElementVisualizer();
 
     private Image tile = new Image("tile.png");
     private Image equator = new Image("equtor.png");
@@ -89,7 +91,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
         List<WorldElement> elements = map.getElements();
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
-            ImageView animal = new ImageView(element.getStateOfImage());
+            ImageView animal = worldElementVisualizer.getImageView(element);
             animal.setFitHeight(cellHight);
             animal.setFitWidth(cellWidth);
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());

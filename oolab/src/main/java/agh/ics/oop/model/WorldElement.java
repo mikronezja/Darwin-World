@@ -9,5 +9,5 @@ public interface WorldElement {
     @Override
     String toString();
 
-    Image getStateOfImage();
+
 }

@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Simulation implements Runnable{
 
+
     private final List<Animal> aliveAnimals = new ArrayList<>();
     private final List<Animal> deadAnimals = new ArrayList<>();
     List<Animal> animalsToRemove = new ArrayList<>();
@@ -18,15 +19,9 @@ public class Simulation implements Runnable{
     private final ProjectWorldMap worldMap;
     private final WriteDaysToCSV writeDaysToCSV = new WriteDaysToCSV();
     boolean shouldWriteIntoCSVFile = false;
-    private RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator;
-
-    private final int dailyPlants = 0; // ile roslinek dziennie bedzie roslo
 
     // jak najpopularniejszy genotyp wydobyc
 
-    // Moim zdaniem w tym wypadku będzie lepszym wyborem ArrayList, gdyż
-    // chcemy sprawnie iterować po kolejnych elementach naszej listy, a ArrayList
-    // zapewnia nam szybszy dostęp gdy odwołujemy się do elementu po indeksie
 
     public Simulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith,
                       int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn,
@@ -35,8 +30,9 @@ public class Simulation implements Runnable{
 
     ) {
         this.worldMap = worldMap;
+        RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
         shouldWriteIntoCSVFile = true;
-        randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX()+1, worldMap.getCurrentBounds().upperRightCorner().getY()+1);
+
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
             Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
             try {
@@ -54,48 +50,56 @@ public class Simulation implements Runnable{
 
 
         while (howManyAnimalsAlive > 0) {
-            for(Animal animal : aliveAnimals) {
-                if (!animal.isAlive()) {
-                    worldMap.killAnimal(animal);
-                    deadAnimals.add(animal);
-                    animalsToRemove.add(animal);
+            synchronized (aliveAnimals) {
+                for (Animal animal : aliveAnimals) {
+                    if (!animal.isAlive()) {
+                        worldMap.killAnimal(animal);
+                        deadAnimals.add(animal);
+                        animalsToRemove.add(animal);
+                    }
                 }
-            }
-            if (animalsToRemove.size()>0){
                 aliveAnimals.removeAll(animalsToRemove);
                 animalsToRemove.clear();
             }
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            for(Animal animal : new ArrayList<>(aliveAnimals)) {
-                worldMap.move(animal);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
+                synchronized (aliveAnimals){
+                for(Animal animal : new ArrayList<>(aliveAnimals)) {
+                    worldMap.move(animal);
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
             }
+
+
             worldMap.eatingPlants();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
             worldMap.animalsReproducing();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
+
             worldMap.growPlants();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            aliveAnimals=worldMap.getAnimalsList();
             howManyAnimalsAlive = aliveAnimals.size();
             for (Animal animal : new ArrayList<>(aliveAnimals))
             {
