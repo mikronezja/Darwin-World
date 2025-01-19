@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class Simulation implements Runnable{
+public class Simulation implements Runnable, AnimalBornListener{
 
 
     private List<Animal> aliveAnimals = new ArrayList<>();
@@ -19,6 +19,8 @@ public class Simulation implements Runnable{
     private int simulationDays = 0; // jak dlugo trwa symulacja
     private final ProjectWorldMap worldMap;
     boolean shouldWriteIntoCSVFile = false;
+    private volatile boolean paused = false;
+    private final Object pauseLock = new Object();
 
     // jak najpopularniejszy genotyp wydobyc
 
@@ -30,9 +32,10 @@ public class Simulation implements Runnable{
 
     ) {
         this.worldMap = worldMap;
+        worldMap.addAnimalBornListener(this);
         RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
+        shouldWriteIntoCSVFile = writeIntoACSVFile;
 
-        this.shouldWriteIntoCSVFile = writeIntoACSVFile;
 
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
             Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
@@ -47,13 +50,12 @@ public class Simulation implements Runnable{
 
 
     public void run(){
-        int howManyAnimalsAlive = aliveAnimals.size();
 
-
-        while (howManyAnimalsAlive > 0) {
+        while (!Thread.interrupted()) {
             synchronized (aliveAnimals) {
                 for (Animal animal : aliveAnimals) {
                     if (!animal.isAlive()) {
+                        checkPause();
                         worldMap.killAnimal(animal);
                         deadAnimals.add(animal);
                         animalsToRemove.add(animal);
@@ -61,47 +63,44 @@ public class Simulation implements Runnable{
                 }
                 aliveAnimals.removeAll(animalsToRemove);
                 animalsToRemove.clear();
-            }
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-            synchronized (aliveAnimals) {
-                for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                for(Animal animal : new ArrayList<>(aliveAnimals)) {
+                    checkPause();
                     worldMap.move(animal);
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(10);
                     } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
+                        e.printStackTrace();
                     }
                 }
             }
 
-
+            checkPause();
             worldMap.eatingPlants();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-
+            checkPause();
             worldMap.animalsReproducing();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
 
-
+            checkPause();
             worldMap.growPlants();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-            aliveAnimals = worldMap.getAnimalsList();
-            howManyAnimalsAlive = aliveAnimals.size();
 
             for (Animal animal : new ArrayList<>(aliveAnimals)) {
                 animal.increaseDaysAlive(); // zwieksza tylko dla zywych zwierzakow
@@ -121,7 +120,45 @@ public class Simulation implements Runnable{
         }
     }
 
-    public int getSimulationDays() {return simulationDays;}
+    
+
+     public void pause() {
+        paused = true;
+    }
+
+    public void resume() {
+        synchronized (pauseLock) {
+            paused = false;
+            pauseLock.notifyAll();
+        }
+    }
+
+    private void checkPause() {
+        if (paused) {
+            synchronized (pauseLock) {
+                while (paused) {
+                    try {
+                        pauseLock.wait();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    public List<Animal> getAnimals() {
+        return Collections.unmodifiableList(aliveAnimals);
+    }
+
+    @Override
+    public void onAnimalBorn(Animal newAnimal) {
+        aliveAnimals.add(newAnimal);
+    }
+    public int getSimulationDays() {
+        return simulationDays;
+    }
     public List<Animal> getAnimals() {
         return Collections.unmodifiableList(aliveAnimals);
     }

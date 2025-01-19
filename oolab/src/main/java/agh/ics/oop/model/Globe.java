@@ -4,6 +4,7 @@ import agh.ics.oop.model.util.AnimalComparator;
 import agh.ics.oop.model.util.RandomPositionForPlantsGenerator;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,9 +21,10 @@ public class Globe implements ProjectWorldMap{
     private final RandomPositionForPlantsGenerator positionForPlantsGenerator;
     private final Random random = new Random();
     private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
-    private final Map<Vector2d, TreeSet<Animal>> animals = new HashMap<>();
+    private Map<Vector2d, TreeSet<Animal>> animals = new ConcurrentHashMap<>();
     private Map<Vector2d, Integer> recentDeadAnimals = new HashMap<>();
-    protected List<MapChangeListener> observators = new ArrayList<>();
+    private List<MapChangeListener> observators = new ArrayList<>();
+    private List<AnimalBornListener> animalBornListeners = new ArrayList<>();
     private UUID id = UUID.randomUUID();
     private final boolean ifAnimalsMoveSlowerWhenOlder;
 
@@ -207,9 +209,10 @@ public class Globe implements ProjectWorldMap{
             }
             try{
                 if (parent1.getEnergy() >= parent1.getMinReproductionEnergy() && parent2.getEnergy() >= parent2.getMinReproductionEnergy()){
-                Animal child = parent1.reproduce(parent2);
-                this.place(child);
-                mapChanged("Urodziło się nowe zwierzę na %s".formatted(position));
+                    Animal child = parent1.reproduce(parent2);
+                    this.place(child);
+                    animalBorn(child);
+                    mapChanged("Urodziło się nowe zwierzę na %s".formatted(position));
                 }
             }
             catch (IncorrectPositionException e) {
@@ -253,12 +256,26 @@ public class Globe implements ProjectWorldMap{
         }
     }
 
+    private void animalBorn(Animal animal){
+        for (AnimalBornListener listener : animalBornListeners){
+            listener.onAnimalBorn(animal);
+        }
+    }
+
     public void addObservator(MapChangeListener observator){
         observators.add(observator);
     }
 
     public void removeObservator(MapChangeListener observator){
         observators.remove(observator);
+    }
+
+    public void addAnimalBornListener(AnimalBornListener listener){
+        animalBornListeners.add(listener);
+    }
+
+    public void removeAnimalBornListener(AnimalBornListener listener){
+        animalBornListeners.remove(listener);
     }
 
     @Override

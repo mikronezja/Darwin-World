@@ -61,11 +61,11 @@
     </left>
 
     <center>
-        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="TOP_CENTER"></GridPane>
+        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="BASELINE_CENTER"></GridPane>
     </center>
 
     <bottom>
-        <Button fx:id="stopingButton" BorderPane.alignment="BOTTOM_CENTER">STOP SIMULATION</Button>
+        <Button fx:id="pauseAndResumeButton" text="Pause Simulation" onAction="#onPauseAndResumeButtonClicked" BorderPane.alignment="TOP_CENTER" alignment="TOP_CENTER"></Button>
     </bottom>
 
 </BorderPane>
