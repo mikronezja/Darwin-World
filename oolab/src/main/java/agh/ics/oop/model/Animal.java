@@ -25,7 +25,10 @@ public class Animal implements WorldElement
     private Vector2d position;
     private int energy;
     private int consumedPlants = 0;
-    private int howManyDaysIsAlive = 0;
+
+    private int daysAlive = 0;
+
+    private boolean ifAnimalsMoveSlowerWhenOlder = false;
     private int probabilityOfNotMoving = 0;
 
     private static int howManyAnimals = 0;
@@ -46,7 +49,7 @@ public class Animal implements WorldElement
     private final int maxNumberOfmutations;
 
     // starting position of Animal
-    public Animal(Vector2d position, int genomLength, int startingEnergy, int minReproductionEnergy, int subtractingEnergyWhileReproducing, int minNumberOfmutations, int maxNumberOfmutations)
+    public Animal(Vector2d position, int genomLength, int startingEnergy, int minReproductionEnergy, int subtractingEnergyWhileReproducing, int minNumberOfmutations, int maxNumberOfmutations, boolean ifAnimalsMoveSlowerWhenOlder)
     {
         this.position = position;
         this.minReproductionEnergy = minReproductionEnergy;
@@ -93,30 +96,30 @@ public class Animal implements WorldElement
     public void move(MoveValidator moveValidator)
     {
         // corrected position based on map coordinates
-        this.direction = direction.nextByN(this.getGenomeAsIntList()[ this.currentGenomeIndex ]); // obrot zwierzaka w danym kierunku
-        Vector2d possibleMove = this.position.add(this.direction.toUnitVector()); // pozycja do ktorej chce sie poruszyc
+        if (!ifAnimalsMoveSlowerWhenOlder || Math.min(daysAlive / 100, 0.8) < Math.random()) {
+                this.direction = direction.nextByN(this.getGenomeAsIntList()[this.currentGenomeIndex]); // obrot zwierzaka w danym kierunku
+                Vector2d possibleMove = this.position.add(this.direction.toUnitVector()); // pozycja do ktorej chce sie poruszyc
 
-        if (!moveValidator.canMoveTo(possibleMove))
-        {
-                Boundary boundary = moveValidator.getCurrentBounds();
-                if (possibleMove.getX() < boundary.lowerLeftCorner().getX()) // lewo
-                {
-                    possibleMove = new Vector2d(boundary.upperRightCorner().getX(), possibleMove.getY());
-                }
-                if (possibleMove.getY() > boundary.upperRightCorner().getY() ||
-                    possibleMove.getY() < boundary.lowerLeftCorner().getY()
-                ) /// gora lub dol
-                {
-                    possibleMove = this.position;
-                    this.direction = direction.nextByN(4); // obrot o 180 stopni
-                }
-                if (possibleMove.getX() > boundary.upperRightCorner().getX())
-                {
-                    possibleMove = new Vector2d(boundary.lowerLeftCorner().getX(), possibleMove.getY());
+                if (!moveValidator.canMoveTo(possibleMove)) {
+                    Boundary boundary = moveValidator.getCurrentBounds();
+                    if (possibleMove.getX() < boundary.lowerLeftCorner().getX()) // lewo
+                    {
+                        possibleMove = new Vector2d(boundary.upperRightCorner().getX(), possibleMove.getY());
+                    }
+                    if (possibleMove.getY() > boundary.upperRightCorner().getY() ||
+                            possibleMove.getY() < boundary.lowerLeftCorner().getY()
+                    ) /// gora lub dol
+                    {
+                        possibleMove = this.position;
+                        this.direction = direction.nextByN(4); // obrot o 180 stopni
+                    }
+                    if (possibleMove.getX() > boundary.upperRightCorner().getX()) {
+                        possibleMove = new Vector2d(boundary.lowerLeftCorner().getX(), possibleMove.getY());
+                    }
+                    this.position = possibleMove;
                 }
         }
-        this.position = possibleMove;
-        energy--;
+        increaseGenomeIndex();
     }
 
 
@@ -168,6 +171,16 @@ public class Animal implements WorldElement
         return kid;
     }
 
+    public void decreaseEnergyWithEndOfDay()
+    {
+        --energy;
+    }
+
+    public void increaseDaysAlive()
+    {
+        ++daysAlive;
+    }
+
     public void eatPlant(Plant plant)
     {
         this.energy += plant.getEnergy();
@@ -190,7 +203,7 @@ public class Animal implements WorldElement
     public int[] getGenomeAsIntList() { return genome.getGenome(); }
     public int getKidsNumber() { return kids.size(); }
     public int getDescendantsNumber() { return descendants.size(); }
-    public int getHowManyDaysIsAlive() { return howManyDaysIsAlive; }
+    public int getDaysAlive() { return daysAlive; }
 
     public int getSubtractingEnergyWhileReproducing() {
         return subtractingEnergyWhileReproducing;
@@ -207,6 +220,7 @@ public class Animal implements WorldElement
     public int getIndex() {
         return index;
     }
+
 
     @Override
     public Image getStateOfImage() {

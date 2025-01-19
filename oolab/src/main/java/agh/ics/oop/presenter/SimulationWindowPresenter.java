@@ -1,17 +1,13 @@
 package agh.ics.oop.presenter;
 
-import agh.ics.oop.OptionsParser;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -41,11 +37,16 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
 
 
-    public void setupSimulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith, int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn, int genomeLength, Stage simulationStage) {
+    public void setupSimulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith,
+                                int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn, int maxMutationInNewborn,
+                                int genomeLength, boolean ifAnimalsMoveSlowerWhenOlder, boolean writeIntoACSVFile,
+                                Stage simulationStage) {
         this.worldMap = worldMap;
         stage = simulationStage;
         mainBorderPane.setMargin(mapGrid, new Insets(12,12,12,12));
-        Simulation simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn, maxMutationInNewborn, genomeLength);
+        Simulation simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith,
+                energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn, maxMutationInNewborn,
+                genomeLength, ifAnimalsMoveSlowerWhenOlder, writeIntoACSVFile);
         List<Simulation> simulationsList = List.of(simulation);
         SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
         simulationEngine.runAsync();
@@ -62,15 +63,15 @@ public class SimulationWindowPresenter implements MapChangeListener {
         double windowWidthToMapWidthRatio = stage.getWidth() / widthtOfMap;
         double windowHeightToMapWidthRatio = stage.getHeight() / heightOfMap;
 
-        int cellWidth = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 10;
-        int cellHight = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 10;
+        int cellWidth = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 20;
+        int cellHight = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 20;
 
 
         for (int i = 0; i <= widthtOfMap;i++){
             for (int j = 0; j <= heightOfMap;j++){
 
                 ImageView tileView;
-                if ( map.isPositionMoreDesirableForPlants(new Vector2d(widthtOfMap - i, heightOfMap - j)))
+                if ( map.isPositionMoreDesirableForPlants(new Vector2d(i, heightOfMap - j)))
                  tileView = new ImageView(equator);
                 else
                     tileView = new ImageView(tile);

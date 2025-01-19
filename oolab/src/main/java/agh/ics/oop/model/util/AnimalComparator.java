@@ -9,7 +9,7 @@ public class AnimalComparator implements Comparator<Animal> {
     public int compare(Animal animal1, Animal animal2) {
         return Comparator
                 .comparingInt(Animal::getEnergy).reversed()
-                .thenComparingInt(Animal::getHowManyDaysIsAlive).reversed()
+                .thenComparingInt(Animal::getDaysAlive).reversed()
                 .thenComparingInt(Animal::getKidsNumber).reversed()
                 .thenComparingInt(Animal::getIndex)
                 .compare(animal1, animal2);
