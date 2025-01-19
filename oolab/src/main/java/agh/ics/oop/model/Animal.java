@@ -109,8 +109,8 @@ public class Animal implements WorldElement
                     if (possibleMove.getX() > boundary.upperRightCorner().getX()) {
                         possibleMove = new Vector2d(boundary.lowerLeftCorner().getX(), possibleMove.getY());
                     }
-                    this.position = possibleMove;
                 }
+            this.position = possibleMove;
         }
         increaseGenomeIndex();
     }
