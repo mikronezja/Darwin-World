@@ -114,7 +114,7 @@ public class Animal implements WorldElement
 
     private void generateStartingGenomeIndex()
     {
-        this.currentGenomeIndex = (int)Math.round(Math.random() * (genome.getGenome().length - 1) );
+        this.currentGenomeIndex = Math.min(Math.max(0,(int)Math.round(Math.random() * (genome.getGenome().length - 1))),genome.getGenome().length);
     }
 
     private void increaseGenomeIndex()

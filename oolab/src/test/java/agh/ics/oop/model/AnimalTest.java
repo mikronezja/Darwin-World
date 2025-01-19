@@ -8,7 +8,7 @@ public class AnimalTest {
     @Test
     public void reproducingTest()
     {
-//        Animal animal1 = new Animal(new Vector2d(2,2), 5, 5, 5, 2, 2, 3);
+//        Animal animal1 = new Animal(new Vector2d(2,2), 5, 5, 5, 2, 2, 5,5);
 //        Animal animal2 = new Animal(new Vector2d(2,2), 5, 5, 5, 2, 2, 3);
 //
 //        animal1.reproduce(animal2);
