@@ -21,4 +21,9 @@ class GlobeTest {
     @Test
     void killAnimal() {
     }
+
+    @Test
+    void canMoveTo() {
+
+    }
 }

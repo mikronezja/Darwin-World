@@ -49,6 +49,19 @@ class GenomeTest
     }
 
     @Test
+    void areTheValuesInGenomesBetweenGivenValuesByTheTask()
+    {
+        Animal animal1 = new Animal(new Vector2d(2,2), 10, 3, 2, 2,0,0, false );
+
+        int[] genomeList = animal1.getGenomeAsIntList();
+
+        for (int i = 0 ; i < genomeList.length; ++i)
+        {
+            assertTrue( 0 <= genomeList[i] && genomeList[i] <= 7 );
+        }
+    }
+
+    @Test
     void createDefaultGenomeTest()
     {
         // without mutations
@@ -56,7 +69,6 @@ class GenomeTest
         Animal animal2 = new Animal(new Vector2d(2,2), 3, 3, 2, 2,0,0, false );
 
         Genome genome = new Genome(animal1.getGenomeAsIntList(),3, animal2.getGenomeAsIntList(),3, 0,0);
-
 
         assertTrue(checkCreatedGenome(animal1, animal2, genome.getGenome()));
     }
