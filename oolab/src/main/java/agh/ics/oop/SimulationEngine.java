@@ -1,48 +1,62 @@
 package agh.ics.oop;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class SimulationEngine {
 
-    private List<Simulation> simulations;
-    private List<Thread> simulationsThreads;
+    private Map<UUID, Simulation> simulations;
+    private Map<UUID, Thread> simulationsThreads;
     private ExecutorService executorService;
 
-    public SimulationEngine(List<Simulation> simulations){
+    public SimulationEngine(Map<UUID, Simulation> simulations){
         this.simulations=simulations;
     }
 
     public void runSync(){
-        for(Simulation simulation: simulations){
+        for(Simulation simulation: simulations.values()){
             simulation.run();
         }
     }
 
     public void runAsync(){
-        simulationsThreads=new ArrayList<>();
-        for(Simulation simulation: simulations){
-            simulationsThreads.add(new Thread(simulation));
+        simulationsThreads=new HashMap<>();
+        for(UUID keyId: simulations.keySet()){
+            simulationsThreads.put(keyId, new Thread(simulations.get(keyId)));
         }
-        for (Thread simulationThread: simulationsThreads){
+        for (Thread simulationThread: simulationsThreads.values()){
             simulationThread.start();
+        }
+    }
+
+    public void pauseSpecificSimulation(UUID keyId){
+        Simulation simulation = simulations.get(keyId);
+        if (simulation != null) {
+            simulation.pause();
+        }
+    }
+
+
+    public void resumeSpecificSimulation(UUID keyId) {
+        Simulation simulation = simulations.get(keyId);
+        if (simulation != null) {
+            simulation.resume();
         }
     }
 
     public void runAsyncInThreadPool(){
         executorService = Executors.newFixedThreadPool(4);
-        for(Simulation simulation: simulations){
-            executorService.submit(simulation);
+        for(UUID keyId: simulations.keySet()){
+            executorService.submit(simulations.get(keyId));
         }
         executorService.shutdown();
     }
 
     public void awaitSimulationsEnd() throws InterruptedException{
         if (simulationsThreads!=null && !simulationsThreads.isEmpty()){
-            for (Thread simulationThread: simulationsThreads){
+            for (Thread simulationThread: simulationsThreads.values()){
                 simulationThread.join();
             }
         }

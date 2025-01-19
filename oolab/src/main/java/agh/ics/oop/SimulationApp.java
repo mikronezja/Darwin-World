@@ -2,6 +2,7 @@ package agh.ics.oop;
 
 import agh.ics.oop.model.*;
 import agh.ics.oop.presenter.SimulationMenuPresenter;
+import agh.ics.oop.presenter.SimulationWindowPresenter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,6 +18,9 @@ public class SimulationApp extends Application {
         loader.setLocation(getClass().getClassLoader().getResource("simulationMenu.fxml"));
         BorderPane viewRoot = loader.load();
         configureStage(primaryStage, viewRoot);
+        SimulationMenuPresenter simulationMenuPresenter = loader.getController();
+        simulationMenuPresenter.loadConfigurations();
+
     }
 
     private void configureStage(Stage primaryStage, BorderPane viewRoot) {

@@ -89,6 +89,28 @@ public interface ProjectWorldMap extends MoveValidator{
      */
 
     List<Animal> getAnimalsList();
+
+    /**
+     *
+     * @return List of plants
+     */
     List<Plant> getPlantsList();
+  
+    /**
+     *
+     * @return Set of occupied positions on map
+     */
     Set<Vector2d> occupiedPositions();
+
+    /**
+     * Add AnimalBornListener to list of animalBornListeners
+     * @param listener
+     */
+    void addAnimalBornListener(AnimalBornListener listener);
+
+    /**
+     * Remove AnimalBornListener from list of animalBornListeners
+     * @param listener
+     */
+    void removeAnimalBornListener(AnimalBornListener listener);
 }
