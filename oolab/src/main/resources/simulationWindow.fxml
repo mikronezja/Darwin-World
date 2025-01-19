@@ -38,10 +38,10 @@
              <Text fx:id="numberOfFreeTiles"></Text>
         </HBox>
 
-        <HBox>
-            <Label>Most popular genotype </Label>
-            <Text fx:id="mostPopularGenotype"></Text>
-        </HBox>
+            <HBox alignment="BASELINE_LEFT" spacing="10">
+                <Label text="Most popular genotype: " />
+                <Text fx:id="mostPopularGenotype" />
+            </HBox>
 
         <HBox>
             <Label>Average energy level: </Label>

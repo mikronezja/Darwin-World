@@ -85,11 +85,11 @@
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">Minimum number of mutation in descendant:</Label>
-                        <TextField fx:id="minNumberOfMutationInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100">10</TextField>
+                        <TextField fx:id="minNumberOfMutationInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100">2</TextField>
                     </VBox>
                     <VBox alignment="CENTER">
                         <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">Maximum number of mutation in descendant:</Label>
-                        <TextField fx:id="maxNumberOfMutationInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100">10</TextField>
+                        <TextField fx:id="maxNumberOfMutationInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100">5</TextField>
                     </VBox>
                 </HBox>
             </VBox>

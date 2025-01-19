@@ -188,7 +188,7 @@ public class Animal implements WorldElement
     public int getKidsNumber() { return kids.size(); }
     public int getDescendantsNumber() { return descendants.size(); }
     public int getDaysAlive() { return daysAlive; }
-
+    public Genome getGenome() {return genome;}
     public int getSubtractingEnergyWhileReproducing() {
         return subtractingEnergyWhileReproducing;
     }

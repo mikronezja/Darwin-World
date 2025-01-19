@@ -2,7 +2,6 @@ package agh.ics.oop.model.util;
 
 import agh.ics.oop.model.*;
 
-import java.net.Inet4Address;
 import java.util.*;
 
 public class DailyDataCollector
@@ -45,27 +44,41 @@ public class DailyDataCollector
 
     // najpopularniejszy genotyp ?
     // DOKONCZYC!!
-    public List<Integer> mostPopularGenotype()
+    public Set<List<Integer>> mostPopularGenotype()
     {
-//        int maxGenomeCount = 0;
-//        Map<List<Integer>, Integer> hashMap = new HashMap<>();
-//
-//        int currentMaxGenomeCount = 0;
-//        for (Animal animal : map.getAnimalsList())
-//        {
-//           currentMaxGenomeCount = 1;
-//            if (!hashMap.containsKey(animal.getGenomeAsIntList()))
-//           {
-//               hashMap.put(animal.getGenomeAsIntList(),1);
-//           }
-//           else
-//           {
-//
-//           }
-//
-//        }
+        int maxGenomeCount = 0;
+        Map<Genome, Integer> hashMap = new HashMap<>();
+        Set<List<Integer>> resultSet = new HashSet<>();
 
-        return new ArrayList<>();
+
+        int currentMaxGenomeCount = 0;
+        for (Animal animal : map.getAnimalsList())
+        {
+            currentMaxGenomeCount = 1;
+            if (!hashMap.containsKey(animal.getGenome())) {
+                hashMap.put(animal.getGenome(), 1);
+            } else {
+                hashMap.put(animal.getGenome(), hashMap.get(animal.getGenome()) + 1);
+                currentMaxGenomeCount = hashMap.get(animal.getGenome());
+            }
+
+            if (maxGenomeCount < currentMaxGenomeCount)
+                maxGenomeCount = currentMaxGenomeCount;
+        }
+
+        for(Map.Entry<Genome, Integer> entry : hashMap.entrySet())
+        {
+            if (entry.getValue() == maxGenomeCount)
+            {
+                int[] genomeArray = entry.getKey().getGenome();
+                List<Integer> genomeList = Arrays.stream(genomeArray)
+                        .boxed()
+                        .toList();
+                resultSet.add(genomeList);
+            }
+        }
+
+        return resultSet;
     }
 
     public int averageEnergyLevel()
@@ -94,6 +107,11 @@ public class DailyDataCollector
     private int totalNumberOfKids()
     {
         return map.getAnimalsList().stream().map(Animal::getKidsNumber).reduce(0, Integer::sum);
+    }
+
+    public UUID getCurrentMapID()
+    {
+        return map.getID();
     }
 
 

@@ -1,0 +1,210 @@
+Day;0
+Number of animals;10
+Number of plants;19
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;10
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;1
+Number of animals;10
+Number of plants;27
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;11
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;2
+Number of animals;10
+Number of plants;33
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;14
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;3
+Number of animals;10
+Number of plants;40
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;16
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;4
+Number of animals;10
+Number of plants;49
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;16
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;5
+Number of animals;10
+Number of plants;54
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;20
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;6
+Number of animals;10
+Number of plants;58
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;25
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;7
+Number of animals;11
+Number of plants;62
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;27
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;8
+Number of animals;12
+Number of plants;67
+Most popular genotypes;"[2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;28
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;9
+Number of animals;13
+Number of plants;69
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;31
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;10
+Number of animals;14
+Number of plants;71
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;33
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;11
+Number of animals;15
+Number of plants;70
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;38
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;12
+Number of animals;15
+Number of plants;73
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;41
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;13
+Number of animals;17
+Number of plants;74
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [7, 4, 7, 1, 4, 3, 4, 6, 5, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [4, 2, 2, 1, 1, 7, 6, 4, 7, 5] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;41
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;14
+Number of animals;19
+Number of plants;73
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [4, 6, 1, 0, 2, 4, 1, 6, 7, 5] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [2, 2, 2, 4, 7, 4, 7, 1, 4, 3] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [7, 4, 7, 1, 4, 3, 4, 6, 5, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [4, 2, 2, 1, 1, 7, 6, 4, 7, 5] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;41
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;15
+Number of animals;22
+Number of plants;70
+Most popular genotypes;"[2, 6, 2, 6, 1, 7, 2, 1, 0, 5] [2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [2, 2, 2, 1, 7, 4, 7, 1, 4, 2] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [4, 6, 1, 0, 2, 4, 1, 6, 7, 5] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [2, 2, 2, 4, 7, 4, 7, 1, 4, 3] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [7, 4, 7, 1, 4, 3, 4, 6, 5, 1] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [4, 2, 2, 1, 1, 7, 6, 4, 7, 5] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [5, 6, 5, 1, 4, 2, 4, 6, 4, 1] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7]"
+Average energy level;41
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;16
+Number of animals;27
+Number of plants;71
+Most popular genotypes;"[2, 4, 1, 3, 6, 3, 0, 7, 3, 1] [3, 2, 5, 0, 1, 4, 3, 0, 7, 6] [4, 6, 1, 0, 0, 4, 6, 3, 1, 4] [4, 4, 1, 5, 1, 1, 3, 5, 3, 7] [4, 6, 1, 0, 2, 4, 1, 6, 7, 5] [2, 7, 4, 2, 1, 6, 4, 1, 4, 1] [3, 7, 4, 1, 7, 6, 4, 6, 4, 1] [1, 1, 5, 4, 3, 5, 1, 4, 6, 6] [3, 6, 2, 6, 1, 7, 6, 1, 0, 5] [7, 4, 7, 1, 4, 3, 4, 6, 5, 1] [4, 2, 2, 1, 1, 7, 6, 4, 7, 5] [0, 2, 5, 1, 1, 4, 7, 1, 3, 3] [7, 5, 6, 1, 4, 3, 1, 6, 0, 1] [5, 6, 5, 1, 4, 2, 4, 6, 4, 1] [7, 4, 4, 1, 4, 3, 4, 6, 5, 1] [2, 6, 2, 6, 1, 7, 2, 1, 0, 5] [2, 2, 2, 1, 7, 4, 7, 1, 4, 2] [4, 7, 4, 3, 2, 6, 3, 6, 7, 1] [0, 7, 4, 1, 1, 3, 4, 6, 4, 1] [2, 4, 0, 4, 4, 3, 1, 3, 5, 7] [1, 3, 5, 2, 4, 5, 1, 4, 6, 6] [2, 2, 2, 4, 7, 4, 7, 1, 4, 3] [4, 7, 4, 1, 2, 6, 2, 6, 7, 5] [2, 5, 4, 2, 1, 6, 7, 1, 3, 0] [5, 6, 7, 1, 4, 1, 4, 5, 5, 1] [2, 5, 2, 0, 1, 1, 3, 5, 3, 7] [1, 7, 4, 4, 1, 6, 4, 3, 4, 1]"
+Average energy level;36
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;0
+Number of animals;10
+Number of plants;19
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;10
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;1
+Number of animals;10
+Number of plants;28
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;10
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;2
+Number of animals;10
+Number of plants;35
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;12
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;3
+Number of animals;11
+Number of plants;43
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;11
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;4
+Number of animals;12
+Number of plants;51
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;11
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;5
+Number of animals;12
+Number of plants;57
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;13
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;6
+Number of animals;12
+Number of plants;61
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;17
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;7
+Number of animals;12
+Number of plants;64
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;22
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;8
+Number of animals;12
+Number of plants;69
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;25
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;9
+Number of animals;12
+Number of plants;72
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;30
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;10
+Number of animals;12
+Number of plants;75
+Most popular genotypes;"[7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1]"
+Average energy level;35
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;11
+Number of animals;13
+Number of plants;78
+Most popular genotypes;"[2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [2, 4, 2, 3, 0, 5, 4, 2, 6, 2] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1] [7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1]"
+Average energy level;37
+Average days alive for dead animals;No data available
+Average kids number;0
+Day;12
+Number of animals;13
+Number of plants;79
+Most popular genotypes;"[2, 1, 2, 4, 2, 2, 3, 0, 4, 2] [2, 4, 2, 3, 0, 5, 4, 2, 6, 2] [5, 2, 5, 6, 5, 0, 4, 2, 4, 6] [4, 4, 5, 0, 5, 3, 2, 6, 0, 1] [1, 4, 0, 5, 2, 0, 3, 4, 4, 3] [4, 6, 5, 0, 0, 5, 2, 2, 6, 2] [4, 4, 7, 1, 6, 1, 0, 4, 3, 1] [7, 2, 6, 3, 3, 7, 5, 1, 4, 7] [2, 4, 1, 0, 5, 2, 4, 7, 3, 2] [3, 7, 1, 4, 3, 0, 1, 5, 1, 2] [0, 4, 2, 1, 4, 0, 0, 4, 3, 3] [2, 1, 2, 4, 1, 2, 1, 0, 4, 1] [2, 1, 0, 4, 1, 2, 3, 0, 4, 1]"
+Average energy level;43
+Average days alive for dead animals;No data available
+Average kids number;0

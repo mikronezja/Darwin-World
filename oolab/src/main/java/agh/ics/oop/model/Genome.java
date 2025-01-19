@@ -2,6 +2,7 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Genome
@@ -93,4 +94,24 @@ public class Genome
    {
        return (int)Math.floor(Math.random() * (maxNumberOfMutations - minNumberOfMutations + 1) + minNumberOfMutations);
    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Genome genome2 = (Genome) o;
+        if (genome.length != genome2.genome.length) return false;
+
+        for (int i = 0; i < genome.length; i++)
+        {
+            if(genome[i] != genome2.genome[i])
+                return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(genome);
+    }
 }

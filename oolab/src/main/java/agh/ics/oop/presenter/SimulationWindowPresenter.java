@@ -18,6 +18,8 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.min;
@@ -133,7 +135,9 @@ public class SimulationWindowPresenter implements MapChangeListener {
         numberOfAnimals.setText(String.valueOf(collectData.numberOfAliveAnimals()));
         numberOfPlants.setText(String.valueOf(collectData.numberOfPlants()));
         numberOfFreeTiles.setText(String.valueOf(collectData.numberOfFreeTiles()));
-//        mostPopularGenotype.setText(String.valueOf(collectData.mostPopularGenotype()));
+
+        displayMostPopularGenotype(collectData.mostPopularGenotype());
+
         averageEnergyLevel.setText(String.valueOf(collectData.averageEnergyLevel()));
 
         Optional<Integer> returnedAverageLifeSpan = collectData.averageLifeSpan();
@@ -143,6 +147,18 @@ public class SimulationWindowPresenter implements MapChangeListener {
         averageDaysAlive.setText(displayText);
 
         averageNumberOfKids.setText(String.valueOf(collectData.averageKidsNumber()));
+    }
+
+    private void displayMostPopularGenotype(Set<List<Integer>> popularGenotypes) {
+        // Convert each List<Integer> in the Set to a string and join with a newline
+        String genotypesText = popularGenotypes.stream()
+                .map(list -> list.stream()
+                        .map(String::valueOf) // Convert each Integer to String
+                        .collect(Collectors.joining(" "))) // Join integers with a space
+                .collect(Collectors.joining("\n")); // Join lists with a newline
+
+        // Set the text to the generated string
+        mostPopularGenotype.setText(genotypesText);
     }
 
     @Override
