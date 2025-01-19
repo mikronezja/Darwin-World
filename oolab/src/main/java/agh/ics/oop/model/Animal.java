@@ -1,12 +1,7 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.Simulation;
-import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
-import javafx.scene.image.Image;
-
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Animal implements WorldElement
@@ -112,6 +107,7 @@ public class Animal implements WorldElement
                 }
             this.position = possibleMove;
         }
+        --energy;
         increaseGenomeIndex();
     }
 
@@ -162,11 +158,6 @@ public class Animal implements WorldElement
         parent1.addDescendantsToAllParents(kid);
 
         return kid;
-    }
-
-    public void decreaseEnergyWithEndOfDay()
-    {
-        --energy;
     }
 
     public void increaseDaysAlive()

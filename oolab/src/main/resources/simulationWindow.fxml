@@ -34,8 +34,13 @@
         </HBox>
 
         <HBox>
-            <Label>Most popular genome </Label>
-            <Text fx:id="mostPopularGenome"></Text>
+             <Label>Number of free tiles: </Label>
+             <Text fx:id="numberOfFreeTiles"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Most popular genotype </Label>
+            <Text fx:id="mostPopularGenotype"></Text>
         </HBox>
 
         <HBox>
@@ -49,8 +54,8 @@
         </HBox>
 
         <HBox>
-            <Label>Number of kids: </Label>
-            <Text fx:id="numberOfKids"></Text>
+            <Label>Average number of kids: </Label>
+            <Text fx:id="averageNumberOfKids"></Text>
         </HBox>
         </VBox>
     </left>

@@ -93,5 +93,4 @@ public class Genome
    {
        return (int)Math.floor(Math.random() * (maxNumberOfMutations - minNumberOfMutations + 1) + minNumberOfMutations);
    }
-
 }

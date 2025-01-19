@@ -2,7 +2,6 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.model.util.AnimalComparator;
 import agh.ics.oop.model.util.RandomPositionForPlantsGenerator;
-import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -11,21 +10,21 @@ import java.util.stream.Stream;
 public class Globe implements ProjectWorldMap{
 
 
-    private Vector2d upperRightMapCorner;
-    private Vector2d lowerLeftMapCorner = new Vector2d(0, 0);
-    private Vector2d upperRightEquatorCorner;
-    private Vector2d lowerLeftEquatorCorner;
-    private Map<Vector2d, Plant> plants = new HashMap<>();
+    private final Vector2d upperRightMapCorner;
+    private final Vector2d lowerLeftMapCorner = new Vector2d(0, 0);
+    private final Vector2d upperRightEquatorCorner;
+    private final Vector2d lowerLeftEquatorCorner;
+    private final Map<Vector2d, Plant> plants = new HashMap<>();
     private final int everydayPlantsGrow;
     private final int howManyEnergyFromPlants;
-    private RandomPositionForPlantsGenerator positionForPlantsGenerator;
-    private Random random = new Random();
+    private final RandomPositionForPlantsGenerator positionForPlantsGenerator;
+    private final Random random = new Random();
     private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
-    private Map<Vector2d, TreeSet<Animal>> animals = new HashMap<>();
+    private final Map<Vector2d, TreeSet<Animal>> animals = new HashMap<>();
     private Map<Vector2d, Integer> recentDeadAnimals = new HashMap<>();
     protected List<MapChangeListener> observators = new ArrayList<>();
     private UUID id = UUID.randomUUID();
-    private boolean ifAnimalsMoveSlowerWhenOlder;
+    private final boolean ifAnimalsMoveSlowerWhenOlder;
 
 
 
@@ -103,13 +102,22 @@ public class Globe implements ProjectWorldMap{
     @Override
     public synchronized List<WorldElement> getElements() {
         return Stream.concat(
-                        animals.values()
-                                .stream()
-                                .flatMap(TreeSet::stream)
-                                .filter(Objects::nonNull),
-                        plants.values().stream()
-                                .filter(Objects::nonNull))
-                .collect(Collectors.toList());
+                plants.values().stream()
+                        .filter(Objects::nonNull), // Filter out null values from plants
+                animals.values().stream()
+                        .flatMap(TreeSet::stream) // Flatten TreeSet<String> streams
+                        .filter(Objects::nonNull) // Filter out null values from animals
+        ).collect(Collectors.toList());
+
+
+//        return Stream.concat(
+//                        animals.values()
+//                                .stream()
+//                                .flatMap(TreeSet::stream)
+//                                .filter(Objects::nonNull),
+//                        plants.values().stream()
+//                                .filter(Objects::nonNull))
+//                .collect(Collectors.toList());
     }
 
     @Override
@@ -265,5 +273,18 @@ public class Globe implements ProjectWorldMap{
                 .stream()
                 .flatMap(TreeSet::stream)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public synchronized List<Plant> getPlantsList()
+    {
+        return new ArrayList<>(plants.values());
+    }
+
+    @Override
+    public synchronized Set<Vector2d> occupiedPositions()
+    {
+        return Stream.concat(animals.keySet().stream(), plants.keySet().stream())
+                .collect(Collectors.toSet());
     }
 }
