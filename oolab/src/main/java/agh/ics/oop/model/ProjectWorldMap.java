@@ -88,4 +88,16 @@ public interface ProjectWorldMap extends MoveValidator{
      */
 
     List<Animal> getAnimalsList();
+
+    /**
+     * Add AnimalBornListener to list of animalBornListeners
+     * @param listener
+     */
+    void addAnimalBornListener(AnimalBornListener listener);
+
+    /**
+     * Remove AnimalBornListener from list of animalBornListeners
+     * @param listener
+     */
+    void removeAnimalBornListener(AnimalBornListener listener);
 }

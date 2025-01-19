@@ -8,15 +8,20 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 public class SimulationWindowPresenter implements MapChangeListener {
@@ -30,12 +35,18 @@ public class SimulationWindowPresenter implements MapChangeListener {
     private Image tile = new Image("tile.png");
     private Image equator = new Image("equtor.png");
 
+    private SimulationEngine simulationEngine;
+
+    private boolean isPaused = false;
+
 
 
     @FXML
     private BorderPane mainBorderPane;
     @FXML
     private GridPane mapGrid;
+    @FXML
+    private Button pauseAndResumeButton;
 
 
 
@@ -49,8 +60,9 @@ public class SimulationWindowPresenter implements MapChangeListener {
         Simulation simulation = new Simulation(worldMap, howManyAnimalsToStartWith, howManyEnergyAnimalsStartWith,
                 energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn, maxMutationInNewborn,
                 genomeLength, ifAnimalsMoveSlowerWhenOlder, writeIntoACSVFile);
-        List<Simulation> simulationsList = List.of(simulation);
-        SimulationEngine simulationEngine = new SimulationEngine(simulationsList);
+        Map<UUID, Simulation> simulationsMap = new HashMap<>();
+        simulationsMap.put(worldMap.getID(), simulation);
+        simulationEngine = new SimulationEngine(simulationsMap);
         simulationEngine.runAsync();
     }
 
@@ -62,38 +74,32 @@ public class SimulationWindowPresenter implements MapChangeListener {
         int widthtOfMap = boundary.upperRightCorner().getX();
         int heightOfMap = boundary.upperRightCorner().getY();
 
-        double windowWidthToMapWidthRatio = stage.getWidth() / widthtOfMap;
-        double windowHeightToMapWidthRatio = stage.getHeight() / heightOfMap;
+        double windowWidthToMapWidthRatio = (stage.getWidth()-100.0) / (widthtOfMap+1);
+        double windowHeightToMapWidthRatio = (stage.getHeight()-100.0) / (heightOfMap+1);
 
-        int cellWidth = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 20;
-        int cellHight = min((int)windowHeightToMapWidthRatio,(int)windowWidthToMapWidthRatio) - 20;
-
+        int cellSideLength = (int)(min(windowHeightToMapWidthRatio,windowWidthToMapWidthRatio));
 
         for (int i = 0; i <= widthtOfMap;i++){
             for (int j = 0; j <= heightOfMap;j++){
 
-                ImageView tileView;
-                if ( map.isPositionMoreDesirableForPlants(new Vector2d(i, heightOfMap - j)))
-                 tileView = new ImageView(equator);
-                else
-                    tileView = new ImageView(tile);
-                tileView.setFitHeight(cellHight);
-                tileView.setFitWidth(cellWidth);
+                ImageView tileView = new ImageView(tile);
+                tileView.setFitHeight(cellSideLength);
+                tileView.setFitWidth(cellSideLength);
                 mapGrid.add(tileView, i, j);
             }
         }
         for (int i = 0; i < widthtOfMap+1;i++){
-            mapGrid.getColumnConstraints().add(new ColumnConstraints(cellWidth));
+            mapGrid.getColumnConstraints().add(new ColumnConstraints(cellSideLength));
         }
         for (int i = 0; i < heightOfMap+1;i++){
-            mapGrid.getRowConstraints().add(new RowConstraints(cellHight));
+            mapGrid.getRowConstraints().add(new RowConstraints(cellSideLength));
         }
         List<WorldElement> elements = map.getElements();
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
             ImageView animal = worldElementVisualizer.getImageView(element);
-            animal.setFitHeight(cellHight);
-            animal.setFitWidth(cellWidth);
+            animal.setFitHeight(cellSideLength);
+            animal.setFitWidth(cellSideLength);
             mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(animal, HPos.CENTER);
         }
@@ -111,5 +117,66 @@ public class SimulationWindowPresenter implements MapChangeListener {
             drawMap(worldMap);
         });
 
+    }
+
+    @FXML
+    private void onPauseAndResumeButtonClicked(){
+        if (!isPaused){
+            simulationEngine.pauseSpecificSimulation(worldMap.getID());
+            pauseAndResumeButton.setText("Resume Button");
+            Platform.runLater(() -> {
+                drawMapOnPause(worldMap);
+            });
+        }
+        else{
+            simulationEngine.resumeSpecificSimulation(worldMap.getID());
+            pauseAndResumeButton.setText("Pause Button");
+        }
+        isPaused = !isPaused;
+    }
+
+
+    public void drawMapOnPause(ProjectWorldMap map) {
+        clearGrid();
+        Boundary boundary = map.getCurrentBounds();
+        Label label = new Label();
+        GridPane.setHalignment(label, HPos.CENTER);
+        int widthtOfMap = boundary.upperRightCorner().getX();
+        int heightOfMap = boundary.upperRightCorner().getY();
+
+        double windowWidthToMapWidthRatio = (stage.getWidth()-100.0) / (widthtOfMap+1);
+        double windowHeightToMapWidthRatio = (stage.getHeight()-100.0) / (heightOfMap+1);
+
+        int cellSideLength = windowHeightToMapWidthRatio<windowWidthToMapWidthRatio ? (int)windowHeightToMapWidthRatio : (int)windowWidthToMapWidthRatio;
+
+
+        for (int i = 0; i <= widthtOfMap;i++){
+            for (int j = 0; j <= heightOfMap;j++){
+
+                ImageView tileView;
+                if ( map.isPositionMoreDesirableForPlants(new Vector2d(i, heightOfMap - j)))
+                    tileView = new ImageView(equator);
+                else
+                    tileView = new ImageView(tile);
+                tileView.setFitHeight(cellSideLength);
+                tileView.setFitWidth(cellSideLength);
+                mapGrid.add(tileView, i, j);
+            }
+        }
+        for (int i = 0; i < widthtOfMap+1;i++){
+            mapGrid.getColumnConstraints().add(new ColumnConstraints(cellSideLength));
+        }
+        for (int i = 0; i < heightOfMap+1;i++){
+            mapGrid.getRowConstraints().add(new RowConstraints(cellSideLength));
+        }
+        List<WorldElement> elements = map.getElements();
+        for (WorldElement element : elements ){
+            Vector2d positionOfElement = element.getPosition();
+            ImageView animal = worldElementVisualizer.getImageView(element);
+            animal.setFitHeight(cellSideLength);
+            animal.setFitWidth(cellSideLength);
+            mapGrid.add(animal, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
+            GridPane.setHalignment(animal, HPos.CENTER);
+        }
     }
 }
