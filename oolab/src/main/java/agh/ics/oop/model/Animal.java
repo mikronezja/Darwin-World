@@ -12,14 +12,7 @@ import java.util.Set;
 public class Animal implements WorldElement
 {
 
-    private Image northImage = new Image("NORTH.png");
-    private Image northEastImage = new Image("NORTH_EAST.png");
-    private Image eastImage = new Image("EAST.png");
-    private Image southEastImage = new Image("SOUTH_EAST.png");
-    private Image southImage = new Image("SOUTH.png");
-    private Image southWestImage = new Image("SOUTH_WEST.png");
-    private Image westImage = new Image("WEST.png");
-    private Image northWestImage = new Image("NORTH_WEST.png");
+
 
     private MapDirections direction;
     private Vector2d position;
@@ -68,7 +61,7 @@ public class Animal implements WorldElement
     // if Animal has been created by
     public Animal(Vector2d position, Animal[] parents)
     {
-        this.position = parents[0].getPosition(); // generates a position determined by its parents
+        this.position = position;
         this.energy = parents[0].getSubtractingEnergyWhileReproducing() * 2;
         this.minReproductionEnergy = parents[0].getMinReproductionEnergy();
         this.subtractingEnergyWhileReproducing = parents[0].getSubtractingEnergyWhileReproducing();
@@ -219,20 +212,5 @@ public class Animal implements WorldElement
     }
     public int getIndex() {
         return index;
-    }
-
-
-    @Override
-    public Image getStateOfImage() {
-        return switch (direction){
-            case NORTH -> northImage;
-            case NORTH_EAST -> northEastImage;
-            case EAST -> eastImage;
-            case SOUTH_EAST -> southEastImage;
-            case SOUTH -> southImage;
-            case SOUTH_WEST -> southWestImage;
-            case WEST -> westImage;
-            case NORTH_WEST -> northWestImage;
-        };
     }
 }

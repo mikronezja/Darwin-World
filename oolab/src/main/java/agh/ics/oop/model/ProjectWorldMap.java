@@ -81,4 +81,11 @@ public interface ProjectWorldMap extends MoveValidator{
      *
      */
     boolean isPositionMoreDesirableForPlants(Vector2d position);
+
+    /**
+     *
+     * @return List of animals
+     */
+
+    List<Animal> getAnimalsList();
 }
