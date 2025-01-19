@@ -36,7 +36,6 @@ public class Simulation implements Runnable, AnimalBornListener{
         RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
         shouldWriteIntoCSVFile = writeIntoACSVFile;
 
-
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
             Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
             try {
@@ -100,13 +99,12 @@ public class Simulation implements Runnable, AnimalBornListener{
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+
+            for (Animal animal : new ArrayList<>(aliveAnimals))
+            {
+                checkPause();
+                animal.increaseDaysAlive();
             }
-
-            for (Animal animal : new ArrayList<>(aliveAnimals)) {
-                animal.increaseDaysAlive(); // zwieksza tylko dla zywych zwierzakow
-            }
-
-
             if (shouldWriteIntoCSVFile) {
                 WriteDaysToCSV writeIntoCSVFile = new WriteDaysToCSV(worldMap,deadAnimals,simulationDays);
                 try {
@@ -120,7 +118,32 @@ public class Simulation implements Runnable, AnimalBornListener{
         }
     }
 
-    
+    public void pause() {
+        paused = true;
+    }
+
+    public void resume() {
+        synchronized (pauseLock) {
+            paused = false;
+            pauseLock.notifyAll();
+        }
+    }
+
+    private void checkPause() {
+        if (paused) {
+            synchronized (pauseLock) {
+                while (paused) {
+                    try {
+                        pauseLock.wait();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    }
+                }
+            }
+        }
+    }
+   
 
      public void pause() {
         paused = true;
@@ -148,10 +171,6 @@ public class Simulation implements Runnable, AnimalBornListener{
         }
     }
 
-    public List<Animal> getAnimals() {
-        return Collections.unmodifiableList(aliveAnimals);
-    }
-
     @Override
     public void onAnimalBorn(Animal newAnimal) {
         aliveAnimals.add(newAnimal);
@@ -159,10 +178,14 @@ public class Simulation implements Runnable, AnimalBornListener{
     public int getSimulationDays() {
         return simulationDays;
     }
+
     public List<Animal> getAnimals() {
         return Collections.unmodifiableList(aliveAnimals);
     }
-    public List<Animal> getDeadAnimals() {
-        return Collections.unmodifiableList(deadAnimals);
+
+    @Override
+    public void onAnimalBorn(Animal newAnimal) {
+        aliveAnimals.add(newAnimal);
+
     }
 }
