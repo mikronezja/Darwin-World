@@ -12,7 +12,7 @@ import java.util.List;
 public class Simulation implements Runnable{
 
 
-    private final List<Animal> aliveAnimals = new ArrayList<>();
+    private List<Animal> aliveAnimals = new ArrayList<>();
     private final List<Animal> deadAnimals = new ArrayList<>();
     List<Animal> animalsToRemove = new ArrayList<>();
     private int simulationDays = 0; // jak dlugo trwa symulacja
