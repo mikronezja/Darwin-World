@@ -4,6 +4,7 @@ import agh.ics.oop.model.*;
 import agh.ics.oop.model.WriteDaysToFile.WriteDaysToCSV;
 import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -17,7 +18,6 @@ public class Simulation implements Runnable, AnimalBornListener{
     List<Animal> animalsToRemove = new ArrayList<>();
     private int simulationDays = 0; // jak dlugo trwa symulacja
     private final ProjectWorldMap worldMap;
-    private final WriteDaysToCSV writeDaysToCSV = new WriteDaysToCSV();
     boolean shouldWriteIntoCSVFile = false;
     private volatile boolean paused = false;
     private final Object pauseLock = new Object();
@@ -35,6 +35,7 @@ public class Simulation implements Runnable, AnimalBornListener{
         worldMap.addAnimalBornListener(this);
         RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
         shouldWriteIntoCSVFile = writeIntoACSVFile;
+
 
         for (int i=0;i<howManyAnimalsToStartWith;i++) {
             Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant,minMutationInNewborn,maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
@@ -100,22 +101,28 @@ public class Simulation implements Runnable, AnimalBornListener{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            for (Animal animal : new ArrayList<>(aliveAnimals))
-            {
-                checkPause();
-                animal.decreaseEnergyWithEndOfDay();
-                animal.increaseDaysAlive();
-            }
-            if (shouldWriteIntoCSVFile)
-            {
 
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                animal.increaseDaysAlive(); // zwieksza tylko dla zywych zwierzakow
+            }
+
+
+            if (shouldWriteIntoCSVFile) {
+                WriteDaysToCSV writeIntoCSVFile = new WriteDaysToCSV(worldMap,deadAnimals,simulationDays);
+                try {
+                    writeIntoCSVFile.givenDataArray_whenConvertToCSV_thenOutputCreated();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
 
             simulationDays++;
         }
     }
 
-    public void pause() {
+    
+
+     public void pause() {
         paused = true;
     }
 
@@ -148,5 +155,14 @@ public class Simulation implements Runnable, AnimalBornListener{
     @Override
     public void onAnimalBorn(Animal newAnimal) {
         aliveAnimals.add(newAnimal);
+    }
+    public int getSimulationDays() {
+        return simulationDays;
+    }
+    public List<Animal> getAnimals() {
+        return Collections.unmodifiableList(aliveAnimals);
+    }
+    public List<Animal> getDeadAnimals() {
+        return Collections.unmodifiableList(deadAnimals);
     }
 }
