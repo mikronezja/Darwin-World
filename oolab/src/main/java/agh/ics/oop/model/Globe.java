@@ -25,16 +25,18 @@ public class Globe implements ProjectWorldMap{
     private Map<Vector2d, Integer> recentDeadAnimals = new HashMap<>();
     protected List<MapChangeListener> observators = new ArrayList<>();
     private UUID id = UUID.randomUUID();
+    private boolean ifAnimalsMoveSlowerWhenOlder;
 
 
 
-    public Globe(int height, int width, int howManyPlantsOnStart, int howManyEnergyFromPlants, int howManyPlantsEveryDay) {
+    public Globe(int height, int width, int howManyPlantsOnStart, int howManyEnergyFromPlants, int howManyPlantsEveryDay, boolean ifAnimalsMoveSlowerWhenOlder) {
         this.upperRightMapCorner = new Vector2d(width-1, height-1);
         this.lowerLeftEquatorCorner = new Vector2d(0, ((height/5)*2)+1);
         this.upperRightEquatorCorner = new Vector2d(width-1, ((height/5)*2)+((height+2)/5));
         this.everydayPlantsGrow = howManyPlantsEveryDay;
         this.howManyEnergyFromPlants=howManyPlantsOnStart;
         this.positionForPlantsGenerator = new RandomPositionForPlantsGenerator(height,width, upperRightEquatorCorner, lowerLeftEquatorCorner);
+        this.ifAnimalsMoveSlowerWhenOlder = ifAnimalsMoveSlowerWhenOlder;
 
 
         for (int i=0; i<howManyPlantsOnStart; i++) {

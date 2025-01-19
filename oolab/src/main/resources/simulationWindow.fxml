@@ -6,12 +6,61 @@
 <?import javafx.scene.layout.GridPane?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             minHeight="550.0" minWidth="850.0"
             fx:controller="agh.ics.oop.presenter.SimulationWindowPresenter"
-            fx:id="mainBorderPane">
+            fx:id="mainBorderPane"
+>
+
+
+    <left>
+        <VBox>
+        <HBox>
+            <Label>Current day: </Label>
+            <Text fx:id="numberOfDays"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Number of animals: </Label>
+            <Text fx:id="numberOfAnimals"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Number of plants: </Label>
+            <Text fx:id="numberOfPlants"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Most popular genome </Label>
+            <Text fx:id="mostPopularGenome"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Average energy level: </Label>
+            <Text fx:id="averageEnergyLevel"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Average days alive: </Label>
+            <Text fx:id="averageDaysAlive"></Text>
+        </HBox>
+
+        <HBox>
+            <Label>Number of kids: </Label>
+            <Text fx:id="numberOfKids"></Text>
+        </HBox>
+        </VBox>
+    </left>
+
     <center>
-        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="BASELINE_CENTER"></GridPane>
+        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="TOP_CENTER"></GridPane>
     </center>
+
+    <bottom>
+        <Button fx:id="stopingButton" BorderPane.alignment="BOTTOM_CENTER">STOP SIMULATION</Button>
+    </bottom>
+
 </BorderPane>

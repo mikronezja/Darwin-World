@@ -14,6 +14,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -55,7 +56,8 @@ public class SimulationMenuPresenter{
     private TextField minNumberOfMutationInput;
     @FXML
     private TextField maxNumberOfMutationInput;
-
+    @FXML
+    private CheckBox shouldWriteToCSV;
 
 
 
@@ -64,16 +66,20 @@ public class SimulationMenuPresenter{
     private void onSimulationStartClicked() throws Exception {
         Stage simulationStage = new Stage();
         simulationStage.show();
+
         FXMLLoader simulationLoader = new FXMLLoader();
+
         simulationLoader.setLocation(getClass().getClassLoader().getResource("simulationWindow.fxml"));
         BorderPane viewRoot = simulationLoader.load();
         SimulationWindowPresenter simulationPresenter = simulationLoader.getController();
         configureStage(simulationStage, viewRoot);
-        Globe map = new Globe(parseInt(heightInput.getText()), parseInt(widthInput.getText()), parseInt(howManyPlantsInput.getText()), parseInt(howManyEnergyFromPlantInput.getText()), parseInt(howManyPlantsGrowEverydayInput.getText()));
+        Globe map = new Globe(parseInt(heightInput.getText()), parseInt(widthInput.getText()), parseInt(howManyPlantsInput.getText()), parseInt(howManyEnergyFromPlantInput.getText()), parseInt(howManyPlantsGrowEverydayInput.getText()),ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected());
         map.addObservator(simulationPresenter);
         FileMapDisplay fileMapDisplay = new FileMapDisplay();
         map.addObservator(fileMapDisplay);
-        simulationPresenter.setupSimulation(map, parseInt(howManyAnimalsOnStartInput.getText()), parseInt(howManyStartingEnergyAnimalHaveInput.getText()), parseInt(energeyNeededToReproduceInput.getText()), parseInt(energyUsedToReproduceInput.getText()), parseInt(minNumberOfMutationInput.getText()), parseInt(maxNumberOfMutationInput.getText()), parseInt(howLongGenomWillBeInput.getText()), simulationStage);
+        simulationPresenter.setupSimulation(map, parseInt(howManyAnimalsOnStartInput.getText()), parseInt(howManyStartingEnergyAnimalHaveInput.getText()), parseInt(energeyNeededToReproduceInput.getText()), parseInt(energyUsedToReproduceInput.getText()), parseInt(minNumberOfMutationInput.getText()), parseInt(maxNumberOfMutationInput.getText()),
+                parseInt(howLongGenomWillBeInput.getText()), ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected(), shouldWriteToCSV.isSelected(),
+                simulationStage);
     }
 
     private void configureStage(Stage primaryStage, BorderPane viewRoot) {

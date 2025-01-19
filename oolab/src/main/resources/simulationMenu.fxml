@@ -66,8 +66,12 @@
                         <TextField fx:id="howLongGenomWillBeInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100">10</TextField>
                     </VBox>
                     <VBox alignment="CENTER">
-                        <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">Are animals will be walking slower if they're older?</Label>
+                        <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">Should animals be walking slower if they're older?</Label>
                         <CheckBox alignment="CENTER" fx:id="ifAnimalsMoveSlowerWhenOlderCheckbox" BorderPane.alignment="BASELINE_CENTER" maxWidth="100"/>
+                    </VBox>
+                    <VBox alignment="CENTER">
+                        <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">Do you want to generate CSV files of days?</Label>
+                        <CheckBox alignment="CENTER" fx:id="shouldWriteToCSV" BorderPane.alignment="BASELINE_CENTER" maxWidth="100"/>
                     </VBox>
                 </HBox>
                 <HBox spacing="10" alignment="CENTER">
@@ -89,8 +93,8 @@
                     </VBox>
                 </HBox>
             </VBox>
-
             <Button fx:id="startingSimulation" text="Start" onAction="#onSimulationStartClicked" prefWidth="100" prefHeight="50"/>
+                <Button id="saveSimulation"  alignment="CENTER" text="Save Configuration"/>
         </VBox>
     </center>
 </BorderPane>
