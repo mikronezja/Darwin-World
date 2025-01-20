@@ -10,9 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GlobeTest {
 
-    Globe globe = new Globe(5,5, 25, 10, 10, false);
-    Globe globe1 = new Globe(5,5, 4, 10, 5, false);
-    Globe globe2 = new Globe(5,5, 0, 10, 5, false);
+    Globe globe = new Globe(5,5, 25, 10, 10, false, false);
+    Globe globe1 = new Globe(5,5, 4, 10, 5, false, false);
+    Globe globe2 = new Globe(5,5, 0, 10, 5, false, false);
 
 
     @Test
