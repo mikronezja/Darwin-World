@@ -17,7 +17,7 @@
 
 
     <left>
-        <VBox spacing="5">
+        <VBox fx:id="descriptionOfSimulation" spacing="5">
         <HBox>
             <Label>Current day: </Label>
             <Text fx:id="numberOfDays"></Text>
