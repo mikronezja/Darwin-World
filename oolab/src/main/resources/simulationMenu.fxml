@@ -9,6 +9,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.shape.SVGPath?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             minHeight="550.0" minWidth="850.0"
@@ -19,6 +20,10 @@
     <top>
         <Text BorderPane.alignment="CENTER" style="-fx-font-size: 50; -fx-font-family: 'Copperplate Gothic Bold'" text='${"SIMPLE DARWIN SIMULATION\n"}'/>
     </top>
+
+    <left>
+        <SVGPath content=''></SVGPath>
+    </left>
 
     <center>
         <VBox BorderPane.alignment="TOP_CENTER" alignment="BASELINE_CENTER" fx:id="menuElements" spacing="30">
