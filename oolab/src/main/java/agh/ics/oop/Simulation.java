@@ -49,7 +49,7 @@ public class Simulation implements Runnable, AnimalBornListener {
     public void run() {
         while (!Thread.interrupted()) {
             for (Animal animal : new ArrayList<>(aliveAnimals)) {
-                if (!animal.isAlive()) {
+                if (!animal.isAlive(this)) {
                     checkPause();
                     worldMap.killAnimal(animal);
                     deadAnimals.add(animal);
@@ -67,7 +67,7 @@ public class Simulation implements Runnable, AnimalBornListener {
                 checkPause();
                 worldMap.move(animal);
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

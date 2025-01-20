@@ -164,4 +164,18 @@ class GenomeTest
         assertEquals(genome1.hashCode(), genome2.hashCode());
     }
 
+    @Test
+    void nMutationsShouldChangeExactlyNElements()
+    {
+        // lets say n = 2
+        Animal animal1 = new Animal(new Vector2d(2,2), 6, 3, 2, 0,0,2, false );
+        Animal animal2 = new Animal(new Vector2d(2,2), 6, 3, 2, 0,0,2, false );
+
+        Genome genome = new Genome(animal1.getGenomeAsIntList(),3, animal2.getGenomeAsIntList(),3, 2,2);
+
+
+    }
+
+
+
 }

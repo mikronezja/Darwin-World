@@ -23,7 +23,7 @@ public class Globe implements ProjectWorldMap{
     private final RandomPositionForPlantsGenerator positionForPlantsGenerator;
     private final Random random = new Random();
     private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
-    private Map<Vector2d, TreeSet<Animal>> animals = new ConcurrentHashMap<>();
+    private Map<Vector2d, HashSet<Animal>> animals = new ConcurrentHashMap<>();
     private Map<Vector2d, Integer> recentDeadAnimals = new HashMap<>();
     private List<MapChangeListener> observators = new ArrayList<>();
     private List<AnimalBornListener> animalBornListeners = new ArrayList<>();
@@ -55,7 +55,7 @@ public class Globe implements ProjectWorldMap{
     @Override
     public synchronized void place(Animal animal) throws IncorrectPositionException {
         Vector2d position = animal.getPosition();
-        animals.computeIfAbsent(position, k -> new TreeSet<>(ANIMAL_COMPARATOR))
+        animals.computeIfAbsent(position, k -> new HashSet<>())
                 .add(animal);
         mapChanged("Zwierze zostało położone na "+position.toString());
     }
@@ -63,7 +63,7 @@ public class Globe implements ProjectWorldMap{
     @Override
     public synchronized void move(Animal animal) {
         Vector2d positionBeforeMove = animal.getPosition();
-        TreeSet<Animal> setOfAnimalsBeforeMove = animals.get(positionBeforeMove);
+        HashSet<Animal> setOfAnimalsBeforeMove = animals.get(positionBeforeMove);
 
         // Safeguard against null
         if (setOfAnimalsBeforeMove == null) {
@@ -81,7 +81,7 @@ public class Globe implements ProjectWorldMap{
         animal.move(this);
 
         // Add the animal to the new position
-        animals.computeIfAbsent(animal.getPosition(), k -> new TreeSet<>(ANIMAL_COMPARATOR))
+        animals.computeIfAbsent(animal.getPosition(), k -> new HashSet<>())
                 .add(animal);
 
         // Notify observers
@@ -109,7 +109,7 @@ public class Globe implements ProjectWorldMap{
                 plants.values().stream()
                         .filter(Objects::nonNull),
                 animals.values().stream()
-                        .flatMap(TreeSet::stream)
+                        .flatMap(HashSet::stream)
                         .filter(Objects::nonNull)
         ).collect(Collectors.toList());
     }
@@ -122,7 +122,7 @@ public class Globe implements ProjectWorldMap{
     @Override
     public synchronized void killAnimal(Animal animal) {
         Vector2d position = animal.getPosition();
-        TreeSet<Animal> onThisSpace = animals.get(position);
+        HashSet<Animal> onThisSpace = animals.get(position);
         animals.get(position).remove(animal);
         if (onThisSpace.isEmpty()){
             animals.remove(position);
@@ -163,21 +163,28 @@ public class Globe implements ProjectWorldMap{
 
     private synchronized void animalsReproduceAt(Vector2d position)
     {
+        // create a priority queue with an animal comparator
+        // has all the animals inside
+
+
         if (animals.containsKey(position) && animals.get(position).size()>1)
         {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(),true);
+            PriorityQueue<Animal> compareAnimals = createPQwithAnimalComparatorAtPosition(position);
+//            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(),true);
+
+            // build a sortedSet
+            List<Animal> winningAnimals = getWinningList(compareAnimals);
+
+
             Animal parent1, parent2;
             if (winningAnimals.size() == 2) {
-                parent1 = winningAnimals.getFirst();
-                winningAnimals.removeFirst();
-                parent2 = winningAnimals.getFirst();
-                winningAnimals.add(parent1);
+                parent1 = winningAnimals.get(0);
+                parent2 = winningAnimals.get(1);
             }
             else if (winningAnimals.size() == 1) {
                 parent1 = winningAnimals.getFirst();
-                winningAnimals.removeFirst();
-                SortedSet<Animal> secondTurnWinningAnimals = animals.get(position).headSet(animals.get(position).first(), true);
-                winningAnimals.add(parent1);
+                List<Animal> secondTurnWinningAnimals = getWinningList(compareAnimals); // powinno juz nie byc tych oryginalnych
+
                 if (secondTurnWinningAnimals.size() == 1) {
                     parent2 = secondTurnWinningAnimals.getFirst();
                 }
@@ -188,15 +195,15 @@ public class Globe implements ProjectWorldMap{
                     parent2=finalists.get(indexOfWinner);
                 }
             }
-            else{
-                List<Animal> finalists = winningAnimals.stream().collect(Collectors.toList());
-                int howManyWinningAnimals = finalists.size();
+            else
+            {
+                int howManyWinningAnimals = winningAnimals.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
-                parent1=finalists.get(indexOfWinner);
-                Collections.swap(finalists, indexOfWinner, finalists.size()-1);
+                parent1=winningAnimals.get(indexOfWinner);
+                Collections.swap(winningAnimals, indexOfWinner, winningAnimals.size()-1);
                 howManyWinningAnimals--;
                 indexOfWinner = random.nextInt(howManyWinningAnimals);
-                parent2=finalists.get(indexOfWinner);
+                parent2=winningAnimals.get(indexOfWinner);
             }
             try{
                 if (parent1.getEnergy() >= parent1.getMinReproductionEnergy() && parent2.getEnergy() >= parent2.getMinReproductionEnergy()){
@@ -215,24 +222,27 @@ public class Globe implements ProjectWorldMap{
     }
 
     private synchronized void animalsEatAt(Vector2d position) {
-        if (plants.containsKey(position) && !animals.get(position).isEmpty()) {
-            SortedSet<Animal> winningAnimals = animals.get(position).headSet(animals.get(position).first(), true);
-            Animal winningAnimal;
-            if( winningAnimals.size() == 1) {
-                winningAnimal=winningAnimals.first();
+        if (plants.containsKey(position) && !animals.get(position).isEmpty())
+        {
+            PriorityQueue<Animal> compareAnimals = createPQwithAnimalComparatorAtPosition(position);
 
+            // build a sortedSet
+            List<Animal> winningAnimals = getWinningList(compareAnimals);
+
+            Animal winningAnimal;
+            if( winningAnimals.size() == 1)
+            {
+                winningAnimal=winningAnimals.get(0);
             }
             else {
-                List<Animal> finalists = winningAnimals.stream().toList();
-                int howManyWinningAnimals = finalists.size();
+                int howManyWinningAnimals = winningAnimals.size();
                 int indexOfWinner = random.nextInt(howManyWinningAnimals);
-                winningAnimal=finalists.get(indexOfWinner);
+                winningAnimal=winningAnimals.get(indexOfWinner);
             }
             winningAnimal.eatPlant(plants.get(position));
             plants.remove(position);
             positionForPlantsGenerator.addPositionToGenerator(position);
             mapChanged("Zwierzę zjadło roślinkę na %s".formatted(position));
-
         }
     }
 
@@ -279,7 +289,7 @@ public class Globe implements ProjectWorldMap{
     public synchronized List<Animal> getAnimalsList() {
         return animals.values()
                 .stream()
-                .flatMap(TreeSet::stream)
+                .flatMap(HashSet::stream)
                 .collect(Collectors.toList());
     }
 
@@ -294,5 +304,32 @@ public class Globe implements ProjectWorldMap{
     {
         return Stream.concat(animals.keySet().stream(), plants.keySet().stream())
                 .collect(Collectors.toSet());
+    }
+
+    private PriorityQueue<Animal> createPQwithAnimalComparatorAtPosition(Vector2d position)
+    {
+        PriorityQueue<Animal> pq = new PriorityQueue<>(ANIMAL_COMPARATOR);
+        pq.addAll(animals.get(position));
+        return pq;
+    }
+
+    private List<Animal> getWinningList(PriorityQueue<Animal> pq)
+    {
+        List<Animal> winningAnimals = new ArrayList<>();
+        winningAnimals.add(pq.poll());
+
+        int indexOfLastElement = 0;
+        while (!pq.isEmpty())
+        {
+            Animal next = pq.peek();
+            if ( ANIMAL_COMPARATOR.compare(next, winningAnimals.get(indexOfLastElement)) != 0)
+            {
+                break;
+            }
+            winningAnimals.add(next);
+            pq.poll();
+            indexOfLastElement++;
+        }
+        return winningAnimals;
     }
 }
