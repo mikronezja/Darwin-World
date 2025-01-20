@@ -158,14 +158,12 @@ public class SimulationWindowPresenter implements MapChangeListener {
     }
 
     private void displayMostPopularGenotype(Set<List<Integer>> popularGenotypes) {
-        // Convert each List<Integer> in the Set to a string and join with a newline
         String genotypesText = popularGenotypes.stream()
                 .map(list -> list.stream()
-                        .map(String::valueOf) // Convert each Integer to String
-                        .collect(Collectors.joining(" "))) // Join integers with a space
-                .collect(Collectors.joining("\n")); // Join lists with a newline
+                        .map(String::valueOf)
+                        .collect(Collectors.joining(" ")))
+                .collect(Collectors.joining("\n"));
 
-        // Set the text to the generated string
         mostPopularGenotype.setText(genotypesText);
     }
 
