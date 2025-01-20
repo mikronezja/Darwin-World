@@ -20,6 +20,7 @@ public class Globe implements ProjectWorldMap{
     private final Map<Vector2d, Plant> plants = new HashMap<>();
     private final int everydayPlantsGrow;
     private final int howManyEnergyFromPlants;
+    private final boolean ifPlantsPreferDeadAnimals;
     private final RandomPositionForPlantsGenerator positionForPlantsGenerator;
     private final Random random = new Random();
     private static final Comparator<Animal> ANIMAL_COMPARATOR = new AnimalComparator();
@@ -32,14 +33,15 @@ public class Globe implements ProjectWorldMap{
 
 
 
-    public Globe(int height, int width, int howManyPlantsOnStart, int howManyEnergyFromPlants, int howManyPlantsEveryDay, boolean ifAnimalsMoveSlowerWhenOlder) {
+    public Globe(int height, int width, int howManyPlantsOnStart, int howManyEnergyFromPlants, int howManyPlantsEveryDay, boolean ifAnimalsMoveSlowerWhenOlder, boolean ifPlantsPreferDeadAnimals) {
         this.upperRightMapCorner = new Vector2d(width-1, height-1);
         this.lowerLeftEquatorCorner = new Vector2d(0, ((height/5)*2)+1);
         this.upperRightEquatorCorner = new Vector2d(width-1, ((height/5)*2)+((height+2)/5));
         this.everydayPlantsGrow = howManyPlantsEveryDay;
         this.howManyEnergyFromPlants=howManyPlantsOnStart;
-        this.positionForPlantsGenerator = new RandomPositionForPlantsGenerator(height,width, upperRightEquatorCorner, lowerLeftEquatorCorner);
+        this.positionForPlantsGenerator = new RandomPositionForPlantsGenerator(height,width, upperRightEquatorCorner, lowerLeftEquatorCorner, ifPlantsPreferDeadAnimals);
         this.ifAnimalsMoveSlowerWhenOlder = ifAnimalsMoveSlowerWhenOlder;
+        this.ifPlantsPreferDeadAnimals = ifPlantsPreferDeadAnimals;
 
 
         for (int i=0; i<howManyPlantsOnStart; i++) {
@@ -124,6 +126,7 @@ public class Globe implements ProjectWorldMap{
         Vector2d position = animal.getPosition();
         HashSet<Animal> onThisSpace = animals.get(position);
         animals.get(position).remove(animal);
+        positionForPlantsGenerator.addPositionOfDeadAnimal(position);
         if (onThisSpace.isEmpty()){
             animals.remove(position);
         }

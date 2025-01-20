@@ -94,7 +94,7 @@ public class DailyDataCollector
     }
 
     // średnia długość życia dla martwych zwierzaków
-    public Optional<Integer> averageLifeSpan()
+    public synchronized Optional<Integer> averageLifeSpan()
     {
         if (deadAnimals.size() > 0) {
             return Optional.of((int) (deadAnimals.stream().map(Animal::getDaysAlive).reduce(0, Integer::sum) / deadAnimals.size()));
