@@ -7,7 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class GlobeTest {
 
     @Test
-    void place() {
+    void place()
+    {
+
+
     }
 
     @Test
