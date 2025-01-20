@@ -76,7 +76,9 @@ public class Genome
    private void mutate( int mutations )
    {
         int[] indexes = new int[genome.length];
-        for (int i = 0; i < genome.length; i++) { indexes[i] = i; } //losuje indeksy od 0 ... genome.length - 1
+        for (int i = 0; i < genome.length; i++) { indexes[i] = i; } //wpisuje indeksy od 0 ... genome.length - 1
+
+       
 
         for (int i = 0; i < Math.min(mutations,genome.length); i++ )
         {
