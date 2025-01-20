@@ -90,22 +90,23 @@ public class SimulationMenuPresenter{
 
     @FXML
     private void onSimulationStartClicked() throws Exception {
-        Stage simulationStage = new Stage();
-        simulationStage.show();
+        if(allConditionsAreGood()){
+            Stage simulationStage = new Stage();
+            simulationStage.show();
+            FXMLLoader simulationLoader = new FXMLLoader();
+            simulationLoader.setLocation(getClass().getClassLoader().getResource("simulationWindow.fxml"));
+            BorderPane viewRoot = simulationLoader.load();
+            SimulationWindowPresenter simulationPresenter = simulationLoader.getController();
+            configureStage(simulationStage, viewRoot);
+            Globe map = new Globe(parseInt(heightInput.getText()), parseInt(widthInput.getText()), parseInt(howManyPlantsInput.getText()), parseInt(howManyEnergyFromPlantInput.getText()), parseInt(howManyPlantsGrowEverydayInput.getText()),ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected());
+            map.addObservator(simulationPresenter);
+            FileMapDisplay fileMapDisplay = new FileMapDisplay();
+            map.addObservator(fileMapDisplay);
+            simulationPresenter.setupSimulation(map, parseInt(howManyAnimalsOnStartInput.getText()), parseInt(howManyStartingEnergyAnimalHaveInput.getText()), parseInt(energeyNeededToReproduceInput.getText()), parseInt(energyUsedToReproduceInput.getText()), parseInt(minNumberOfMutationInput.getText()), parseInt(maxNumberOfMutationInput.getText()),
+                    parseInt(howLongGenomWillBeInput.getText()), ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected(), shouldWriteToCSV.isSelected(),
+                    simulationStage);
+        }
 
-        FXMLLoader simulationLoader = new FXMLLoader();
-
-        simulationLoader.setLocation(getClass().getClassLoader().getResource("simulationWindow.fxml"));
-        BorderPane viewRoot = simulationLoader.load();
-        SimulationWindowPresenter simulationPresenter = simulationLoader.getController();
-        configureStage(simulationStage, viewRoot);
-        Globe map = new Globe(parseInt(heightInput.getText()), parseInt(widthInput.getText()), parseInt(howManyPlantsInput.getText()), parseInt(howManyEnergyFromPlantInput.getText()), parseInt(howManyPlantsGrowEverydayInput.getText()),ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected());
-        map.addObservator(simulationPresenter);
-        FileMapDisplay fileMapDisplay = new FileMapDisplay();
-        map.addObservator(fileMapDisplay);
-        simulationPresenter.setupSimulation(map, parseInt(howManyAnimalsOnStartInput.getText()), parseInt(howManyStartingEnergyAnimalHaveInput.getText()), parseInt(energeyNeededToReproduceInput.getText()), parseInt(energyUsedToReproduceInput.getText()), parseInt(minNumberOfMutationInput.getText()), parseInt(maxNumberOfMutationInput.getText()),
-                parseInt(howLongGenomWillBeInput.getText()), ifAnimalsMoveSlowerWhenOlderCheckbox.isSelected(), shouldWriteToCSV.isSelected(),
-                simulationStage);
     }
 
     private void configureStage(Stage primaryStage, BorderPane viewRoot) {
@@ -114,6 +115,10 @@ public class SimulationMenuPresenter{
         primaryStage.setTitle("Simulation app");
         primaryStage.minWidthProperty().bind(viewRoot.minWidthProperty());
         primaryStage.minHeightProperty().bind(viewRoot.minHeightProperty());
+    }
+
+    private boolean allConditionsAreGood() {
+        return true;
     }
 
     private void onConfigurationChoiseChange(){

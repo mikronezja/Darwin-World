@@ -61,7 +61,7 @@
     </left>
 
     <center>
-        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="BASELINE_CENTER"></GridPane>
+        <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="CENTER"></GridPane>
     </center>
 
     <bottom>

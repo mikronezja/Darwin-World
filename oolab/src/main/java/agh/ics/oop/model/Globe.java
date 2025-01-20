@@ -129,10 +129,9 @@ public class Globe implements ProjectWorldMap{
 
     @Override
     public synchronized void killAnimal(Animal animal) {
-        mapChanged("Lista zwierzat przed usunieciem: %s".formatted(getAnimalsList()));
         Vector2d position = animal.getPosition();
         TreeSet<Animal> onThisSpace = animals.get(position);
-        onThisSpace.remove(animal);
+        animals.get(position).remove(animal);
         if (onThisSpace.isEmpty()){
             animals.remove(position);
         }
