@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static agh.ics.oop.model.MapDirections.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AnimalTest
 {
@@ -13,6 +13,7 @@ public class AnimalTest
     // addDescendantsToAllParents <- to reproduce function
 
     Globe globe = new Globe(20,20, 10, 10, 10, false);
+    Globe globe2 = new Globe(2,2, 0, 0, 0, false);
 
 
     // we generate randomly the starting index so I cannot check that
@@ -45,11 +46,108 @@ public class AnimalTest
     }
 
     @Test
-    public void testIfMoveGivesCorrectOutputOutsideOfGlobesBoundaries()
-    {
+    public void testIfMoveGivesCorrectOutputOutsideOfGlobesBoundaries() {
+        Animal animal1 = new Animal(new Vector2d(1, 1), 10, 3, 2, 2, 0, 0, false);
 
+        int[] moves = animal1.getGenomeAsIntList();
+
+        Vector2d previousPos;
+        MapDirections previousDirection = animal1.getDirection();
+        int initialIndex = animal1.getInitialStartingGenomeIndex();
+        int currentIndex;
+        for (int i = 0; i < 7; ++i) {
+
+            currentIndex = (i + initialIndex) % moves.length;
+
+            previousPos = animal1.getPosition();
+            previousDirection = animal1.getDirection().nextByN(moves[currentIndex]);
+            animal1.move(globe2);
+            if (previousPos.equals(new Vector2d(0, 0))) {
+                switch (previousDirection) {
+                    case WEST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getDirection(), WEST);
+                    }
+                    case SOUTH_WEST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getDirection(), NORTH_EAST);
+                    }
+                    case SOUTH -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
+                        assertEquals(animal1.getDirection(), NORTH);
+                    }
+                    case SOUTH_EAST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
+                        assertEquals(animal1.getDirection(), SOUTH_WEST);
+                    }
+                }
+
+            } else if (previousPos.equals(new Vector2d(0, 1))) {
+                switch (previousDirection) {
+                    case WEST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
+                        assertEquals(animal1.getDirection(), WEST);
+                    }
+                    case NORTH_WEST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
+                        assertEquals(animal1.getDirection(), SOUTH_EAST);
+                    }
+                    case NORTH -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getDirection(), SOUTH);
+                    }
+                    case NORTH_EAST ->
+                    {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getDirection(), SOUTH_WEST);
+                    }
+                }
+
+            } else if (previousPos.equals(new Vector2d(1, 0))) {
+                switch (previousDirection) {
+                    case EAST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
+                        assertEquals(animal1.getDirection(), EAST);
+                    }
+                    case SOUTH_EAST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
+                        assertEquals(animal1.getDirection(), NORTH_WEST);
+                    }
+                    case SOUTH -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getDirection(), NORTH);
+                    }
+                    case SOUTH_WEST ->
+                    {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getDirection(), NORTH_EAST);
+                    }
+                }
+            } else if (previousPos.equals(new Vector2d(1, 1))) {
+                switch (previousDirection) {
+                    case NORTH -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
+                        assertEquals(animal1.getDirection(), SOUTH);
+                    }
+                    case NORTH_EAST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getDirection(), NORTH_WEST);
+                    }
+                    case EAST -> {
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getDirection(), EAST);
+                    }
+                    case NORTH_WEST ->
+                    {
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
+                        assertEquals(animal1.getDirection(), NORTH_EAST);
+                    }
+                }
+            } else {
+                fail();
+            }
+        }
     }
-
 
     @Test
     public void testingIfAddDescendantsToAllParentsWorksAsExpected()

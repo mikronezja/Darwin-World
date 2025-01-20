@@ -100,16 +100,23 @@ public class Animal implements WorldElement
                     {
                         possibleMove = new Vector2d(boundary.upperRightCorner().getX(), possibleMove.getY());
                     }
-                    if (possibleMove.getY() > boundary.upperRightCorner().getY() ||
-                            possibleMove.getY() < boundary.lowerLeftCorner().getY()
-                    ) /// gora lub dol
+                    else if (possibleMove.getX() > boundary.upperRightCorner().getX()) // prawo
                     {
-                        possibleMove = this.position;
-                        this.direction = direction.nextByN(4); // obrot o 180 stopni
-                    }
-                    if (possibleMove.getX() > boundary.upperRightCorner().getX()) {
                         possibleMove = new Vector2d(boundary.lowerLeftCorner().getX(), possibleMove.getY());
                     }
+
+                    if (possibleMove.getY() > boundary.upperRightCorner().getY()
+                    ) /// gora lub dol
+                    {
+                        possibleMove = new Vector2d(possibleMove.getX(), boundary.upperRightCorner().getY());
+                        this.direction = direction.nextByN(4); // obrot o 180 stopni
+                    }
+                    else if (possibleMove.getY() < boundary.lowerLeftCorner().getY())
+                    {
+                        possibleMove = new Vector2d(possibleMove.getX(), boundary.lowerLeftCorner().getY());
+                        this.direction = direction.nextByN(4);
+                    }
+
                 }
             this.position = possibleMove;
         }
