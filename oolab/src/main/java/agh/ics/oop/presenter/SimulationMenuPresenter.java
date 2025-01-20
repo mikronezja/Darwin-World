@@ -10,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -118,7 +115,100 @@ public class SimulationMenuPresenter{
     }
 
     private boolean allConditionsAreGood() {
-        return true;
+
+        String alertMessage = buildALertMessage();
+        if (!alertMessage.equals("Too big values:\n\nToo small values:\n")) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(alertMessage);
+            alert.showAndWait();
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    private String buildALertMessage(){
+
+        String tooBigValues="Too big values:\n";
+        String tooSmallValues="Too small values:\n";
+
+        if (parseInt(heightInput.getText())>50){
+            tooBigValues+="- Height of Map\n";
+        } else if (parseInt(heightInput.getText())<3){
+            tooSmallValues+="- Height of Map\n";
+        }
+
+        if (parseInt(widthInput.getText())>50){
+            tooBigValues+="- Width of Map\n";
+        } else if (parseInt(widthInput.getText())<3){
+            tooSmallValues+="- Width of Map\n";
+        }
+
+        int surfaceOfMap = parseInt(heightInput.getText())*parseInt(heightInput.getText());
+
+        if (parseInt(howManyPlantsInput.getText())>surfaceOfMap){
+            tooBigValues+="- How many starting plants\n";
+        } else if (parseInt(howManyPlantsInput.getText())<0){
+            tooSmallValues+="- How many starting plants\n";
+        }
+        
+        if (parseInt(howManyEnergyFromPlantInput.getText())>1000){
+            tooBigValues+="- Energy from eating one plant\n";
+        } else if (parseInt(howManyEnergyFromPlantInput.getText())<0){
+            tooSmallValues+="- Energy from eating one plant\n";
+        }
+        
+        if (parseInt(howManyPlantsGrowEverydayInput.getText())>surfaceOfMap){
+            tooBigValues+="- How many plants can grow every day\n";
+        } else if (parseInt(howManyPlantsGrowEverydayInput.getText())<0){
+            tooSmallValues+="- How many plants can grow every day\n";
+        }
+        
+        if (parseInt(howManyAnimalsOnStartInput.getText())>surfaceOfMap){
+            tooBigValues+="- How many animals will be on start\n";
+        } else if (parseInt(howManyAnimalsOnStartInput.getText())<0){
+            tooSmallValues+="- How many animals will be on start\n";
+        }
+        
+        if (parseInt(howManyStartingEnergyAnimalHaveInput.getText())>parseInt(energeyNeededToReproduceInput.getText())*5){
+            tooBigValues+="- With how many energy animals will be starting\n";
+        } else if (parseInt(howManyStartingEnergyAnimalHaveInput.getText())<1){
+            tooSmallValues+="- With how many energy animals will be starting\n";
+        }
+        
+        if (parseInt(howLongGenomWillBeInput.getText())>50){
+            tooBigValues+="- How long genom of one animal will be\n";
+        } else if (parseInt(howLongGenomWillBeInput.getText())<1){
+            tooSmallValues+="- How long genom of one animal will be\n";
+        }
+
+        if (parseInt(energeyNeededToReproduceInput.getText())>100){
+            tooBigValues+="- Energy that animal will be full and ready to reproduce\n";
+        } else if (parseInt(energeyNeededToReproduceInput.getText())<1){
+            tooSmallValues+="- Energy that animal will be full and ready to reproduce\n";
+        }
+        
+        if (parseInt(energyUsedToReproduceInput.getText())>parseInt(energeyNeededToReproduceInput.getText())){
+            tooBigValues+="- Energy that will be used to reproduce\n";
+        } else if (parseInt(energyUsedToReproduceInput.getText())<1){
+            tooSmallValues+="- Energy that will be used to reproduce\n";
+        }
+        
+        if (parseInt(minNumberOfMutationInput.getText())>parseInt(maxNumberOfMutationInput.getText())){
+            tooBigValues+="- Minimum number of mutation in descendant\n";
+        } else if (parseInt(minNumberOfMutationInput.getText())<0){
+            tooSmallValues+="- Minimum number of mutation in descendant\n";
+        }
+        
+        if (parseInt(maxNumberOfMutationInput.getText())>parseInt(howLongGenomWillBeInput.getText())){
+            tooBigValues+="- Maximum number of mutation in descendant\n";
+        } else if (parseInt(maxNumberOfMutationInput.getText())<parseInt(minNumberOfMutationInput.getText())){
+            tooSmallValues+="- Maximum number of mutation in descendant\n";
+        }
+
+
+        return "%s\n%s".formatted(tooBigValues, tooSmallValues);
     }
 
     private void onConfigurationChoiseChange(){
