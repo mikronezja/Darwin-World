@@ -64,7 +64,7 @@
                         <TextField fx:id="howManyAnimalsOnStartInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100"></TextField>
                     </VBox>
                     <VBox alignment="CENTER">
-                        <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">How many energy each animal will have on start:</Label>
+                        <Label maxWidth="150" wrapText="true" textAlignment="CENTER" style="-fx-text-fill: black;">With how many energy animals will be starting:</Label>
                         <TextField fx:id="howManyStartingEnergyAnimalHaveInput" BorderPane.alignment="BASELINE_CENTER" maxWidth="100"></TextField>
                     </VBox>
                     <VBox alignment="CENTER">
