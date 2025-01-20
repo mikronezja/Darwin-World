@@ -14,6 +14,7 @@ public class Animal implements WorldElement
     private MapDirections direction;
     private Vector2d position;
     private int energy;
+    private int initialStartingGenomeIndex;
     private int consumedPlants = 0;
 
     private int daysAlive = 0;
@@ -119,7 +120,8 @@ public class Animal implements WorldElement
 
     private void generateStartingGenomeIndex()
     {
-        this.currentGenomeIndex = (int)Math.round(Math.random() * (genome.getGenome().length - 1) );
+        this.currentGenomeIndex = Math.min(Math.max(0,(int)Math.round(Math.random() * (genome.getGenome().length - 1))),genome.getGenome().length);
+        initialStartingGenomeIndex = currentGenomeIndex;
     }
 
     private void increaseGenomeIndex()
@@ -215,6 +217,7 @@ public class Animal implements WorldElement
     public int getMinReproductionEnergy() {
         return minReproductionEnergy;
     }
+    public int getInitialStartingGenomeIndex() {return initialStartingGenomeIndex;}
     public int getIndex() {
         return index;
     }
