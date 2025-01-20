@@ -12,8 +12,8 @@ public class AnimalTest
     // move
     // addDescendantsToAllParents <- to reproduce function
 
-    Globe globe = new Globe(20,20, 10, 10, 10, false);
-    Globe globe2 = new Globe(2,2, 0, 0, 0, false);
+    Globe globe = new Globe(20,20, 10, 10, 10, false, false);
+    Globe globe2 = new Globe(2,2, 0, 0, 0, false, false);
 
 
     // we generate randomly the starting index so I cannot check that

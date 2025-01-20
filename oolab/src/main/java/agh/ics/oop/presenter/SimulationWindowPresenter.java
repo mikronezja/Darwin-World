@@ -3,6 +3,7 @@ package agh.ics.oop.presenter;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.util.AnimalStateListener;
 import agh.ics.oop.model.util.DailyDataCollector;
 import agh.ics.oop.model.util.MapChangeListener;
 import agh.ics.oop.model.util.WorldElementVisualizer;
@@ -35,7 +36,7 @@ import static java.lang.Integer.parseInt;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
-public class SimulationWindowPresenter implements MapChangeListener {
+public class SimulationWindowPresenter implements MapChangeListener, AnimalStateListener {
 
     private ProjectWorldMap worldMap;
     private Simulation simulation;
@@ -50,9 +51,29 @@ public class SimulationWindowPresenter implements MapChangeListener {
     private SimulationEngine simulationEngine;
 
     private boolean isPaused = false;
-    private boolean isAnimalSpied = false;
 
+    private Animal followedAnimal;
 
+    @FXML
+    private Label idLabel = new Label();
+    @FXML
+    private Label genomeLabel = new Label();
+    @FXML
+    private Label genomeIndexLabel = new Label();
+    @FXML
+    private Label energyLabel = new Label();
+    @FXML
+    private Label howManyPlantsEatedLabel = new Label();
+    @FXML
+    private Label howManyKidsLabel = new Label();
+    @FXML
+    private Label howManyDescendantLabel = new Label();
+    @FXML
+    private Label howManyDaysAliveLabel = new Label();
+    @FXML
+    private Label onWhichDayDiedLabel = new Label();
+    @FXML
+    private Button stopFollowing = new Button();
 
     @FXML
     private BorderPane mainBorderPane;
@@ -76,6 +97,8 @@ public class SimulationWindowPresenter implements MapChangeListener {
     private Text averageNumberOfKids;
     @FXML
     private Button pauseAndResumeButton;
+    @FXML
+    private VBox descriptionOfSimulation;
 
 
 
@@ -294,23 +317,83 @@ public class SimulationWindowPresenter implements MapChangeListener {
     }
 
     private void onAnimalClick(Animal animal){
-        // No jeszcze jego id
+        descriptionOfSimulation.getChildren().remove(idLabel);
+        descriptionOfSimulation.getChildren().remove(genomeLabel);
+        descriptionOfSimulation.getChildren().remove(genomeIndexLabel);
+        descriptionOfSimulation.getChildren().remove(energyLabel);
+        descriptionOfSimulation.getChildren().remove(howManyPlantsEatedLabel);
+        descriptionOfSimulation.getChildren().remove(howManyKidsLabel);
+        descriptionOfSimulation.getChildren().remove(howManyDescendantLabel);
+        descriptionOfSimulation.getChildren().remove(howManyDaysAliveLabel);
+        descriptionOfSimulation.getChildren().remove(onWhichDayDiedLabel);
+        descriptionOfSimulation.getChildren().remove(stopFollowing);
+
         int id = animal.getIndex();
-//        - jaki ma genom,
-        int[] genomeAsList = animal.getGenomeAsIntList();
-//        - która jego część jest aktywowana,
+        Genome genome = animal.getGenome();
         int genomeIndex = animal.getCurrentGenomeIndex();
-//        - ile ma energii,
         int energy = animal.getEnergy();
-//        - ile zjadł roślin,
         int howManyPlantsEated = animal.getConsumedPlants();
-//        - ile posiada dzieci,
         int howManyKids = animal.getKidsNumber();
-//        - ile posiada potomków (niekoniecznie będących bezpośrednio dziećmi),
         int howManyDescendant = animal.getDescendantsNumber();
-//        - ile dni już żyje (jeżeli żyje),
         int howManyDaysAlive = animal.getDaysAlive();
-//        - którego dnia zmarło (jeżeli żywot już skończyło).
         String onWhichDayDied = animal.getDayOfDeath();
+
+        idLabel.setText("Id of followed animal: %d".formatted(id));
+        descriptionOfSimulation.getChildren().add(idLabel);
+        genomeLabel.setText("Genome of animal: %s".formatted(genome));
+        descriptionOfSimulation.getChildren().add(genomeLabel);
+        genomeIndexLabel.setText("Index of current gen: %d".formatted(genomeIndex));
+        descriptionOfSimulation.getChildren().add(genomeIndexLabel);
+        energyLabel.setText("Energy of animal: %d".formatted(energy));
+        descriptionOfSimulation.getChildren().add(energyLabel);
+        howManyPlantsEatedLabel.setText("Animal eated %d plants".formatted(howManyPlantsEated));
+        descriptionOfSimulation.getChildren().add(howManyPlantsEatedLabel);
+        howManyKidsLabel.setText("Animal has %d kids".formatted(howManyKids));
+        descriptionOfSimulation.getChildren().add(howManyKidsLabel);
+        howManyDescendantLabel.setText("Animal has %d descendant".formatted(howManyDescendant));
+        descriptionOfSimulation.getChildren().add(howManyDescendantLabel);
+        howManyDaysAliveLabel.setText("Animal alive for: %d".formatted(howManyDaysAlive));
+        descriptionOfSimulation.getChildren().add(howManyDaysAliveLabel);
+        onWhichDayDiedLabel.setText("Animal dead on: %s".formatted(onWhichDayDied));
+        descriptionOfSimulation.getChildren().add(onWhichDayDiedLabel);
+
+        stopFollowing.setText("Stop following animal");
+        stopFollowing.setOnAction((e) -> onStopFollowingClick());
+        descriptionOfSimulation.getChildren().add(stopFollowing);
+
+        followedAnimal = animal;
+        followedAnimal.addStateObserver(this);
     }
+
+    @Override
+    public void animalStateChanged(Animal animal){
+        Platform.runLater(()->{
+            if (animal==followedAnimal){
+                idLabel.setText("Id of followed animal: %d".formatted(animal.getIndex()));
+                genomeLabel.setText("Genome of animal: %s".formatted(animal.getGenome()));
+                genomeIndexLabel.setText("Index of current gen: %d".formatted(animal.getCurrentGenomeIndex()));
+                energyLabel.setText("Energy of animal: %d".formatted(animal.getEnergy()));
+                howManyPlantsEatedLabel.setText("Animal eated %d plants".formatted(animal.getConsumedPlants()));
+                howManyKidsLabel.setText("Animal has %d kids".formatted(animal.getKidsNumber()));
+                howManyDescendantLabel.setText("Animal has %d descendant".formatted(animal.getDescendantsNumber()));
+                howManyDaysAliveLabel.setText("Animal alive for: %d".formatted(animal.getDaysAlive()));
+                onWhichDayDiedLabel.setText("Animal dead on: %s".formatted(animal.getDayOfDeath()));
+            }
+        });
+    }
+
+    private void onStopFollowingClick(){
+        descriptionOfSimulation.getChildren().remove(idLabel);
+        descriptionOfSimulation.getChildren().remove(genomeLabel);
+        descriptionOfSimulation.getChildren().remove(genomeIndexLabel);
+        descriptionOfSimulation.getChildren().remove(energyLabel);
+        descriptionOfSimulation.getChildren().remove(howManyPlantsEatedLabel);
+        descriptionOfSimulation.getChildren().remove(howManyKidsLabel);
+        descriptionOfSimulation.getChildren().remove(howManyDescendantLabel);
+        descriptionOfSimulation.getChildren().remove(howManyDaysAliveLabel);
+        descriptionOfSimulation.getChildren().remove(onWhichDayDiedLabel);
+        descriptionOfSimulation.getChildren().remove(stopFollowing);
+        followedAnimal.removeStateObserver(this);
+    }
+
 }

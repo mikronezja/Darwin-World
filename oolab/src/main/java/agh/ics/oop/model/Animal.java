@@ -1,7 +1,9 @@
 package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
+import agh.ics.oop.model.util.AnimalStateListener;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -34,6 +36,7 @@ public class Animal implements WorldElement
     private Genome genome;
     private int currentGenomeIndex;
 
+    private List<AnimalStateListener> animalStateListeners = new ArrayList<>();
 
     private final int minReproductionEnergy;
     private final int subtractingEnergyWhileReproducing;
@@ -122,6 +125,7 @@ public class Animal implements WorldElement
         }
         --energy;
         increaseGenomeIndex();
+        notifyAllObservers();
     }
 
 
@@ -144,6 +148,7 @@ public class Animal implements WorldElement
     private void addKid(Animal kid)
     {
         kids.add(kid);
+        notifyAllObservers();
     }
 
     private void addDescendantsToAllParents(Animal descendant, Set<Animal> processed) {
@@ -176,18 +181,22 @@ public class Animal implements WorldElement
         this.addDescendantsToAllParents(kid);
         parent1.addDescendantsToAllParents(kid);
 
+        notifyAllObservers();
+
         return kid;
     }
 
     public void increaseDaysAlive()
     {
         ++daysAlive;
+        notifyAllObservers();
     }
 
     public void eatPlant(Plant plant)
     {
         this.energy += plant.getEnergy();
         this.consumedPlants += 1;
+        notifyAllObservers();
     }
 
     public boolean isAlive(Simulation simulation)
@@ -195,8 +204,25 @@ public class Animal implements WorldElement
         boolean alive = this.energy > 0;
         if(!alive){
             dayOfDeath = String.valueOf(simulation.getSimulationDays());
+            notifyAllObservers();
         }
         return alive;
+    }
+
+    public synchronized void addStateObserver(AnimalStateListener observer){
+        animalStateListeners.add(observer);
+    }
+
+    public synchronized void removeStateObserver(AnimalStateListener observer){
+        animalStateListeners.remove(observer);
+    }
+
+    private void notifyAllObservers(){
+        if (!animalStateListeners.isEmpty()){
+            for(AnimalStateListener observer : animalStateListeners){
+                observer.animalStateChanged(this);
+            }
+        }
     }
 
     public int getEnergy() { return energy; }
