@@ -2,12 +2,12 @@ package agh.ics.oop;
 
 import agh.ics.oop.model.*;
 import agh.ics.oop.model.WriteDaysToFile.WriteDaysToCSV;
+import agh.ics.oop.model.util.AnimalBornListener;
 import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class Simulation implements Runnable, AnimalBornListener {
@@ -47,35 +47,31 @@ public class Simulation implements Runnable, AnimalBornListener {
 
 
     public void run() {
-
         while (!Thread.interrupted()) {
-            synchronized (aliveAnimals) {
-                for (Animal animal : aliveAnimals) {
-                    if (!animal.isAlive()) {
-                        checkPause();
-                        worldMap.killAnimal(animal);
-                        deadAnimals.add(animal);
-                        animalsToRemove.add(animal);
-                    }
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                if (!animal.isAlive()) {
+                    checkPause();
+                    worldMap.killAnimal(animal);
+                    deadAnimals.add(animal);
+                    animalsToRemove.add(animal);
                 }
-                aliveAnimals.removeAll(animalsToRemove);
-                animalsToRemove.clear();
+            }
+            aliveAnimals.removeAll(animalsToRemove);
+            animalsToRemove.clear();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                checkPause();
+                worldMap.move(animal);
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                for (Animal animal : new ArrayList<>(aliveAnimals)) {
-                    checkPause();
-                    worldMap.move(animal);
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
             }
-
             checkPause();
             worldMap.eatingPlants();
             try {

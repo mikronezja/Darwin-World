@@ -1,6 +1,8 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.AnimalBornListener;
 import agh.ics.oop.model.util.AnimalComparator;
+import agh.ics.oop.model.util.MapChangeListener;
 import agh.ics.oop.model.util.RandomPositionForPlantsGenerator;
 
 import java.util.*;
@@ -119,10 +121,9 @@ public class Globe implements ProjectWorldMap{
 
     @Override
     public synchronized void killAnimal(Animal animal) {
-        mapChanged("Lista zwierzat przed usunieciem: %s".formatted(getAnimalsList()));
         Vector2d position = animal.getPosition();
         TreeSet<Animal> onThisSpace = animals.get(position);
-        onThisSpace.remove(animal);
+        animals.get(position).remove(animal);
         if (onThisSpace.isEmpty()){
             animals.remove(position);
         }

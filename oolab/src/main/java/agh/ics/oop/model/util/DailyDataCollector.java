@@ -4,6 +4,8 @@ import agh.ics.oop.model.*;
 
 import java.util.*;
 
+import static java.lang.Math.min;
+
 public class DailyDataCollector
 {
     private final ProjectWorldMap map;
@@ -83,7 +85,12 @@ public class DailyDataCollector
 
     public int averageEnergyLevel()
     {
-        return (int)(map.getAnimalsList().stream().map(Animal::getEnergy).reduce(0, Integer::sum) / numberOfAliveAnimals());
+        if (numberOfAliveAnimals()>0){
+            return (int)(map.getAnimalsList().stream().map(Animal::getEnergy).reduce(0, Integer::sum) / numberOfAliveAnimals());
+        }
+        else{
+            return 0;
+        }
     }
 
     // średnia długość życia dla martwych zwierzaków
@@ -101,7 +108,12 @@ public class DailyDataCollector
     // średnia ilość dzieci
     public int averageKidsNumber()
     {
-        return (int)(totalNumberOfKids() / numberOfAliveAnimals());
+        if (numberOfAliveAnimals()>0){
+            return (int)(totalNumberOfKids() / numberOfAliveAnimals());
+        }
+        else{
+            return 0;
+        }
     }
 
     private int totalNumberOfKids()

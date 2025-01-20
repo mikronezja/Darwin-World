@@ -1,5 +1,7 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.Simulation;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +18,7 @@ public class Animal implements WorldElement
     private int consumedPlants = 0;
 
     private int daysAlive = 0;
+    private String dayOfDeath = "Not yet dead";
 
     private boolean ifAnimalsMoveSlowerWhenOlder = false;
     private int probabilityOfNotMoving = 0;
@@ -52,6 +55,7 @@ public class Animal implements WorldElement
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ]; // randomly generates how its turned
         index=howManyAnimals;
         howManyAnimals++;
+        this.ifAnimalsMoveSlowerWhenOlder = ifAnimalsMoveSlowerWhenOlder;
     }
 
     // if Animal has been created by
@@ -69,6 +73,7 @@ public class Animal implements WorldElement
         direction = MapDirections.values()[ this.getGenomeAsIntList()[currentGenomeIndex] ];
         index=howManyAnimals;
         howManyAnimals++;
+        this.ifAnimalsMoveSlowerWhenOlder = parents[0].getIfAnimalsMoveSlowerWhenOlder();
     }
 
     public String toString(){
@@ -134,16 +139,21 @@ public class Animal implements WorldElement
         kids.add(kid);
     }
 
-    private void addDescendantsToAllParents(Animal descendant)
-    {
-        this.descendants.add(descendant);
-        if (parents!=null){
-            for (Animal parent : parents)
-            {
-                parent.addDescendantsToAllParents(descendant);
+    private void addDescendantsToAllParents(Animal descendant, Set<Animal> processed) {
+        if (processed.add(this)) {
+
+            this.descendants.add(descendant);
+
+            if (parents != null) {
+                for (Animal parent : parents) {
+                    parent.addDescendantsToAllParents(descendant, processed);
+                }
             }
         }
+    }
 
+    public void addDescendantsToAllParents(Animal descendant) {
+        addDescendantsToAllParents(descendant, new HashSet<>());
     }
 
     public Animal reproduce(Animal parent1)
@@ -173,9 +183,13 @@ public class Animal implements WorldElement
         this.consumedPlants += 1;
     }
 
-    public boolean isAlive()
+    public boolean isAlive(Simulation simulation)
     {
-        return this.energy > 0;
+        boolean alive = this.energy > 0;
+        if(!alive){
+            dayOfDeath = String.valueOf(simulation.getSimulationDays());
+        }
+        return alive;
     }
 
     public int getEnergy() { return energy; }
@@ -207,4 +221,8 @@ public class Animal implements WorldElement
     public int getIndex() {
         return index;
     }
+    public int getCurrentGenomeIndex(){return currentGenomeIndex;}
+    public int getConsumedPlants(){return consumedPlants;}
+    public boolean getIfAnimalsMoveSlowerWhenOlder(){return ifAnimalsMoveSlowerWhenOlder;}
+    public String getDayOfDeath(){return dayOfDeath;}
 }
