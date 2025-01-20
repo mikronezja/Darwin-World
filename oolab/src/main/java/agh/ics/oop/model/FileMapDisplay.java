@@ -1,10 +1,12 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.MapChangeListener;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileMapDisplay implements MapChangeListener{
+public class FileMapDisplay implements MapChangeListener {
 
     @Override
     public void mapChanged(ProjectWorldMap worldMap, String message) {

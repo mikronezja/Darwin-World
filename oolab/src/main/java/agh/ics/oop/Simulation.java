@@ -2,12 +2,12 @@ package agh.ics.oop;
 
 import agh.ics.oop.model.*;
 import agh.ics.oop.model.WriteDaysToFile.WriteDaysToCSV;
+import agh.ics.oop.model.util.AnimalBornListener;
 import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class Simulation implements Runnable, AnimalBornListener {

@@ -1,5 +1,7 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.AnimalBornListener;
+
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;

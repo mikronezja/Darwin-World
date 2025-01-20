@@ -1,6 +1,8 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.model.util.AnimalBornListener;
 import agh.ics.oop.model.util.AnimalComparator;
+import agh.ics.oop.model.util.MapChangeListener;
 import agh.ics.oop.model.util.RandomPositionForPlantsGenerator;
 
 import java.util.*;

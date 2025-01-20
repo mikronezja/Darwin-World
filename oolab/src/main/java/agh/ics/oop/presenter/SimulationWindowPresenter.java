@@ -4,6 +4,7 @@ import agh.ics.oop.Simulation;
 import agh.ics.oop.SimulationEngine;
 import agh.ics.oop.model.*;
 import agh.ics.oop.model.util.DailyDataCollector;
+import agh.ics.oop.model.util.MapChangeListener;
 import agh.ics.oop.model.util.WorldElementVisualizer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -17,7 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
@@ -42,7 +42,6 @@ public class SimulationWindowPresenter implements MapChangeListener {
     private Stage stage;
 
     private WorldElementVisualizer worldElementVisualizer = new WorldElementVisualizer();
-
     private DailyDataCollector collectData;
 
     private Image tile = new Image("tile.png");
@@ -51,6 +50,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
     private SimulationEngine simulationEngine;
 
     private boolean isPaused = false;
+    private boolean isAnimalSpied = false;
 
 
 
@@ -93,7 +93,6 @@ public class SimulationWindowPresenter implements MapChangeListener {
         simulationsMap.put(worldMap.getID(), simulation);
         simulationEngine = new SimulationEngine(simulationsMap);
         simulationEngine.runAsync();
-        collectData = new DailyDataCollector(worldMap, simulation.getDeadAnimals(),simulation.getSimulationDays());
     }
 
     public void drawMap(ProjectWorldMap map) {
@@ -159,6 +158,7 @@ public class SimulationWindowPresenter implements MapChangeListener {
 
     public void drawCurrentDayInfo(ProjectWorldMap worldMap)
     {
+        collectData = new DailyDataCollector(worldMap, simulation.getDeadAnimals(),simulation.getSimulationDays());
 
         numberOfDays.setText(String.valueOf(collectData.getCurrentSimulationDay()));
         numberOfAnimals.setText(String.valueOf(collectData.numberOfAliveAnimals()));
@@ -231,6 +231,8 @@ public class SimulationWindowPresenter implements MapChangeListener {
         ColorAdjust colorAdjust = new ColorAdjust();
         colorAdjust.setHue(1.0);
 
+        double fullHealth = cellSideLength-cellSideLength/10.0;
+        Insets healthBarMargin = new Insets(0,0,0,cellSideLength/10.0);
 
         for (int i = 0; i <= widthtOfMap;i++){
             for (int j = 0; j <= heightOfMap;j++){
@@ -252,7 +254,6 @@ public class SimulationWindowPresenter implements MapChangeListener {
             mapGrid.getRowConstraints().add(new RowConstraints(cellSideLength));
         }
         List<WorldElement> elements = map.getElements();
-        int colouredAnimals =0;
         for (WorldElement element : elements ){
             Vector2d positionOfElement = element.getPosition();
             ImageView worldElement = worldElementVisualizer.getImageView(element);
@@ -275,13 +276,43 @@ public class SimulationWindowPresenter implements MapChangeListener {
                     }
                     if(genomeIsPopular){
                         worldElement.setEffect(colorAdjust);
-                        colouredAnimals++;
                     }
                 }
+                Rectangle healthbar = new Rectangle(fullHealth,cellSideLength/10.0, new Color(0,0,0,1));
+                Rectangle health = new Rectangle(fullHealth*(min(1.0, ((Animal) element).getEnergy()/(double)((Animal) element).getMinReproductionEnergy())),cellSideLength/10.0, new Color(0,1,0,1));
+                mapGrid.add(healthbar, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
+                mapGrid.add(health, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
+                GridPane.setHalignment(healthbar, HPos.LEFT);
+                GridPane.setValignment(healthbar, VPos.BOTTOM);
+                GridPane.setHalignment(health, HPos.LEFT);
+                GridPane.setValignment(health, VPos.BOTTOM);
+                GridPane.setMargin(healthbar, healthBarMargin);
+                GridPane.setMargin(health, healthBarMargin);
             }
             mapGrid.add(worldElement, positionOfElement.getX() , heightOfMap - positionOfElement.getY());
             GridPane.setHalignment(worldElement, HPos.CENTER);
+            worldElement.setOnMouseClicked((e)->onAnimalClick((Animal) element));
         }
-        System.out.println(colouredAnimals);
+    }
+
+    private void onAnimalClick(Animal animal){
+        // No jeszcze jego id
+        int id = animal.getIndex();
+//        - jaki ma genom,
+        int[] genomeAsList = animal.getGenomeAsIntList();
+//        - która jego część jest aktywowana,
+        int genomeIndex = animal.getCurrentGenomeIndex();
+//        - ile ma energii,
+        int energy = animal.getEnergy();
+//        - ile zjadł roślin,
+        int howManyPlantsEated = animal.getConsumedPlants();
+//        - ile posiada dzieci,
+        int howManyKids = animal.getKidsNumber();
+//        - ile posiada potomków (niekoniecznie będących bezpośrednio dziećmi),
+        int howManyDescendant = animal.getDescendantsNumber();
+//        - ile dni już żyje (jeżeli żyje),
+        int howManyDaysAlive = animal.getDaysAlive();
+//        - którego dnia zmarło (jeżeli żywot już skończyło).
+        String onWhichDayDied = animal.getDayOfDeath();
     }
 }

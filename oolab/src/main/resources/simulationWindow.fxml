@@ -17,7 +17,7 @@
 
 
     <left>
-        <VBox>
+        <VBox spacing="5">
         <HBox>
             <Label>Current day: </Label>
             <Text fx:id="numberOfDays"></Text>
