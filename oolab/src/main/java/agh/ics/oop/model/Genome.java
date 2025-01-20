@@ -130,4 +130,13 @@ public class Genome
     public int hashCode() {
         return Objects.hash(genome);
     }
+
+    @Override
+    public String toString(){
+       String string = "[";
+       for (int gen : getGenome()){
+           string += gen + ", ";
+       }
+       return string + "]";
+    }
 }
