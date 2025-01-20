@@ -55,9 +55,16 @@ public class Globe implements ProjectWorldMap{
     @Override
     public synchronized void place(Animal animal) throws IncorrectPositionException {
         Vector2d position = animal.getPosition();
-        animals.computeIfAbsent(position, k -> new HashSet<>())
-                .add(animal);
-        mapChanged("Zwierze zostało położone na "+position.toString());
+        if(!canMoveTo(position))
+        {
+         throw new IncorrectPositionException(position);
+        }
+        else
+        {
+            animals.computeIfAbsent(position, k -> new HashSet<>())
+                    .add(animal);
+            mapChanged("Zwierze zostało położone na " + position.toString());
+        }
     }
 
     @Override
