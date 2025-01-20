@@ -9,12 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AnimalTest
 {
-    // move
-    // addDescendantsToAllParents <- to reproduce function
-
     Globe globe = new Globe(20,20, 10, 10, 10, false, false);
     Globe globe2 = new Globe(2,2, 0, 0, 0, false, false);
-
 
     // we generate randomly the starting index so I cannot check that
     @Test
@@ -47,7 +43,7 @@ public class AnimalTest
 
     @Test
     public void testIfMoveGivesCorrectOutputOutsideOfGlobesBoundaries() {
-        Animal animal1 = new Animal(new Vector2d(1, 1), 10, 3, 2, 2, 0, 0, false);
+        Animal animal1 = new Animal(new Vector2d(1, 1), 20, 3, 2, 2, 0, 0, false);
 
         int[] moves = animal1.getGenomeAsIntList();
 
@@ -55,7 +51,7 @@ public class AnimalTest
         MapDirections previousDirection = animal1.getDirection();
         int initialIndex = animal1.getInitialStartingGenomeIndex();
         int currentIndex;
-        for (int i = 0; i < 7; ++i) {
+        for (int i = 0; i < 20; ++i) {
 
             currentIndex = (i + initialIndex) % moves.length;
 
@@ -77,8 +73,8 @@ public class AnimalTest
                         assertEquals(animal1.getDirection(), NORTH);
                     }
                     case SOUTH_EAST -> {
-                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
-                        assertEquals(animal1.getDirection(), SOUTH_WEST);
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getDirection(), NORTH_WEST);
                     }
                 }
 
@@ -98,7 +94,7 @@ public class AnimalTest
                     }
                     case NORTH_EAST ->
                     {
-                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
                         assertEquals(animal1.getDirection(), SOUTH_WEST);
                     }
                 }
@@ -119,7 +115,7 @@ public class AnimalTest
                     }
                     case SOUTH_WEST ->
                     {
-                        assertEquals(animal1.getPosition(), new Vector2d(1, 0));
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 0));
                         assertEquals(animal1.getDirection(), NORTH_EAST);
                     }
                 }
@@ -131,7 +127,7 @@ public class AnimalTest
                     }
                     case NORTH_EAST -> {
                         assertEquals(animal1.getPosition(), new Vector2d(0, 1));
-                        assertEquals(animal1.getDirection(), NORTH_WEST);
+                        assertEquals(animal1.getDirection(), SOUTH_WEST);
                     }
                     case EAST -> {
                         assertEquals(animal1.getPosition(), new Vector2d(0, 1));
@@ -139,8 +135,8 @@ public class AnimalTest
                     }
                     case NORTH_WEST ->
                     {
-                        assertEquals(animal1.getPosition(), new Vector2d(1, 1));
-                        assertEquals(animal1.getDirection(), NORTH_EAST);
+                        assertEquals(animal1.getPosition(), new Vector2d(0, 1));
+                        assertEquals(animal1.getDirection(), SOUTH_EAST);
                     }
                 }
             } else {
