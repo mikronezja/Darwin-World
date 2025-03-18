@@ -1,4 +1,4 @@
-# # ✨ Darwin World Simulation ✨
+# ✨ Darwin World Simulation ✨
 
 ![](public/video.mp4)
 
