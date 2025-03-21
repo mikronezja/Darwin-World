@@ -1,6 +1,6 @@
 # ✨ Darwin World Simulation ✨
 
-<video controls src="video.mp4" title="Title"></video>
+![video](public/video.mp4)
 
 **Darwin World Simulation** is a project that we did for a **Object Oriented Programming** subject at our University. 
 It has to simulate how animals would: 
