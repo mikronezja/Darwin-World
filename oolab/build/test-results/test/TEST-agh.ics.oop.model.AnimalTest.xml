@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ics.oop.model.AnimalTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-01-20T19:03:36" hostname="DOM" time="0.019">
+  <properties/>
+  <testcase name="testIfMoveGivesCorrectOutputOutsideOfGlobesBoundaries()" classname="agh.ics.oop.model.AnimalTest" time="0.014"/>
+  <testcase name="testIfMoveGivesCorrectOutput()" classname="agh.ics.oop.model.AnimalTest" time="0.001"/>
+  <testcase name="testingIfAddDescendantsToAllParentsWorksAsExpected()" classname="agh.ics.oop.model.AnimalTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
