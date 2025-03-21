@@ -1,60 +1,156 @@
 package agh.ics.oop;
 
 import agh.ics.oop.model.*;
+import agh.ics.oop.model.WriteDaysToFile.WriteDaysToCSV;
+import agh.ics.oop.model.util.AnimalBornListener;
+import agh.ics.oop.model.util.RandomPositionForSpawningAnimalsGenerator;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Simulation implements Runnable{
+public class Simulation implements Runnable, AnimalBornListener {
 
-    private final List<MoveDirections> directions;
-    private final List<Animal> animals = new ArrayList<>();
-    private final WorldMap worldMap;
-    private static final int genomLength = 10; // cos sie tu zrobi
-    private static final int startingEnergy = 10;
-    // Moim zdaniem w tym wypadku będzie lepszym wyborem ArrayList, gdyż
-    // chcemy sprawnie iterować po kolejnych elementach naszej listy, a ArrayList
-    // zapewnia nam szybszy dostęp gdy odwołujemy się do elementu po indeksie
 
-    public Simulation(List<Vector2d> positions, List<MoveDirections> directions, WorldMap worldMap) {
-        this.directions = directions;
+    private List<Animal> aliveAnimals = new ArrayList<>();
+    private final List<Animal> deadAnimals = new ArrayList<>();
+    List<Animal> animalsToRemove = new ArrayList<>();
+    private int simulationDays = 0; // jak dlugo trwa symulacja
+    private final ProjectWorldMap worldMap;
+    boolean shouldWriteIntoCSVFile = false;
+    private volatile boolean paused = false;
+    private final Object pauseLock = new Object();
+
+    // jak najpopularniejszy genotyp wydobyc
+
+
+    public Simulation(ProjectWorldMap worldMap, int howManyAnimalsToStartWith, int howManyEnergyAnimalsStartWith,
+                      int energyNeededToReproduce, int energyGettingPassedToDescendant, int minMutationInNewborn,
+                      int maxMutationInNewborn, int genomeLength, boolean ifAnimalsMoveSlowerWhenOlder,
+                      boolean writeIntoACSVFile){
         this.worldMap = worldMap;
-        for (Vector2d position : positions) {
-            Animal animal = new Animal(position);
+        worldMap.addAnimalBornListener(this);
+        RandomPositionForSpawningAnimalsGenerator randomPositionForSpawningAnimalsGenerator = new RandomPositionForSpawningAnimalsGenerator(worldMap.getCurrentBounds().upperRightCorner().getX() + 1, worldMap.getCurrentBounds().upperRightCorner().getY() + 1);
+        shouldWriteIntoCSVFile = writeIntoACSVFile;
+
+        for (int i = 0; i < howManyAnimalsToStartWith; i++) {
+            Animal animal = new Animal(randomPositionForSpawningAnimalsGenerator.getRandomPosition(), genomeLength, howManyEnergyAnimalsStartWith, energyNeededToReproduce, energyGettingPassedToDescendant, minMutationInNewborn, maxMutationInNewborn, ifAnimalsMoveSlowerWhenOlder);
             try {
                 worldMap.place(animal);
-                animals.add(animal);
+                aliveAnimals.add(animal);
             } catch (IncorrectPositionException e) {
                 System.out.println(e.getMessage());
             }
-
         }
     }
 
-    public void run(){
-        int howManyAnimals = animals.size();
-        if (howManyAnimals > 0) {
-            for (int i=0; i<directions.size(); i++){
-                try{
-                    Thread.sleep(500);
-                    int ind = i%howManyAnimals;
-                    worldMap.move(animals.get(ind), directions.get(i));
-                }
-                catch(InterruptedException e){
-                    System.out.println("Poruszanie zwierzaka zostało przerwane");
-                }
 
+    public void run() {
+        while (!Thread.interrupted()) {
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                if (!animal.isAlive(this)) {
+                    checkPause();
+                    worldMap.killAnimal(animal);
+                    deadAnimals.add(animal);
+                    animalsToRemove.add(animal);
+                }
+            }
+            aliveAnimals.removeAll(animalsToRemove);
+            animalsToRemove.clear();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                checkPause();
+                worldMap.move(animal);
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            checkPause();
+            worldMap.eatingPlants();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            checkPause();
+            worldMap.animalsReproducing();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            checkPause();
+            worldMap.growPlants();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (Animal animal : new ArrayList<>(aliveAnimals)) {
+                checkPause();
+                animal.increaseDaysAlive();
+            }
+            if (shouldWriteIntoCSVFile) {
+                WriteDaysToCSV writeIntoCSVFile = new WriteDaysToCSV(worldMap, deadAnimals, simulationDays);
+                try {
+                    writeIntoCSVFile.givenDataArray_whenConvertToCSV_thenOutputCreated();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            simulationDays++;
+        }
+    }
+    public void pause() {
+        paused = true;
+    }
+
+    public void resume() {
+        synchronized (pauseLock) {
+            paused = false;
+            pauseLock.notifyAll();
+        }
+    }
+
+    private void checkPause() {
+        if (paused) {
+            synchronized (pauseLock) {
+                while (paused) {
+                    try {
+                        pauseLock.wait();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    }
+                }
             }
         }
+    }
 
+    public int getSimulationDays() {
+        return simulationDays;
+    }
+
+    public List<Animal> getDeadAnimals() {
+        return Collections.unmodifiableList(deadAnimals);
     }
 
     public List<Animal> getAnimals() {
-        return Collections.unmodifiableList(animals);
+        return Collections.unmodifiableList(aliveAnimals);
     }
 
-    public static int getGenomLength() { return genomLength; }
+    @Override
+    public void onAnimalBorn(Animal newAnimal) {
+        aliveAnimals.add(newAnimal);
 
-    public static int getStartingEnergy() {return startingEnergy;}
+    }
 }

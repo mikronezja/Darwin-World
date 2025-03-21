@@ -2,20 +2,32 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
 
+import java.util.Objects;
+import java.util.Random;
+
 public class Genome
 {
    private final int[] genome; // since not resizeable we can use a static array
-   public Genome()
+
+    private final int minNumberOfMutations;
+    private final int maxNumberOfMutations;
+
+
+   public Genome(int genomLength, int minNumberOfMutations, int maxNumberOfMutations)
    {
-        genome = new int[Simulation.getGenomLength()];
+       this.minNumberOfMutations = minNumberOfMutations;
+       this.maxNumberOfMutations = maxNumberOfMutations;
+        genome = new int[genomLength];
         createGenome();
    }
 
-    public Genome(int[] genome1, int energy1, int[] genome2, int energy2)
+    public Genome(int[] genome1, int energy1, int[] genome2, int energy2, int minNumberOfMutations, int maxNumberOfMutations)
     {
-        genome = new int[Simulation.getGenomLength()];
+        this.minNumberOfMutations = minNumberOfMutations;
+        this.maxNumberOfMutations = maxNumberOfMutations;
+        genome = new int[genome1.length];
         createGenome(genome1, energy1, genome2, energy2);
-        mutate();
+        mutate(mutationNumber());
     }
 
    public int[] getGenome()
@@ -61,9 +73,70 @@ public class Genome
         }
     }
 
-   private void mutate()
+   private void mutate( int mutations )
    {
-        int position = Math.min(genome.length-1,(int)(Math.random() * genome.length));
-        genome[position] = (int)Math.round(Math.random() * 7);
+       int[] mutatingPossibilities = new int[8];
+       int[] indexes = new int[genome.length];
+
+       for (int i = 0; i < genome.length; i++) { indexes[i] = i; } //wpisuje indeksy od 0 ... genome.length - 1
+       for(int i = 0; i < 8; i++){ mutatingPossibilities[i] = i; }
+
+
+       for (int i = 0; i < Math.min(mutations,genome.length); i++ )
+       {
+           int generatedPosition = (int)(Math.random() * ( genome.length - 1 - i)); // losuje pozycje ktora ma zmienic
+           int whatIsInsideOfGenomeInThatPosition = genome[indexes[generatedPosition]];
+
+           // last element of mutating possibilities
+           mutatingPossibilities[7] = whatIsInsideOfGenomeInThatPosition;
+           mutatingPossibilities[whatIsInsideOfGenomeInThatPosition] = 7;
+           // last element of muting possibilities
+
+           genome[indexes[generatedPosition]] = mutatingPossibilities[(int)Math.round(Math.random() * 7)]; //  losuje na jaki genom ma byc genom zmieniony
+
+           // go back to stage 1 of generation
+           mutatingPossibilities[whatIsInsideOfGenomeInThatPosition] = whatIsInsideOfGenomeInThatPosition;
+           mutatingPossibilities[7] = 7;
+
+
+           // swap positions
+           int tempIndex = indexes[indexes.length - 1 - i];
+           indexes[indexes.length - 1 - i] = indexes[generatedPosition];
+           indexes[generatedPosition] = tempIndex;
+       }
    }
+
+   private int mutationNumber()
+   {
+       return (int)Math.floor(Math.random() * (maxNumberOfMutations - minNumberOfMutations + 1) + minNumberOfMutations);
+   }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Genome genome2 = (Genome) o;
+        if (genome.length != genome2.genome.length) return false;
+
+        for (int i = 0; i < genome.length; i++)
+        {
+            if(genome[i] != genome2.genome[i])
+                return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(genome);
+    }
+
+    @Override
+    public String toString(){
+       String string = "[";
+       for (int gen : getGenome()){
+           string += gen + ", ";
+       }
+       return string + "]";
+    }
 }
